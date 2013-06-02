@@ -1,0 +1,28 @@
+Alexander Fabisch
+=================
+
+.. toctree::
+   :maxdepth: 1
+
+   publications
+   software
+   studies
+
+Contact Details
+---------------
+
+| Dipl.-Inf. Alexander Fabisch
+
+| `Universität Bremen <http://www.uni-bremen.de/>`__
+| `FB 3 - Mathematik und Informatik <http://www.fb3.uni-bremen.de>`__
+| `AG Robotik <http://robotik.dfki-bremen.de>`__
+| Robert-Hooke-Straße 5
+| 28359 Bremen, Germany
+
+| Besuchsadresse im Gebäude Unicom 1:
+| Mary-Somerville-Str. 9
+| 28359 Bremen, Germany
+
+| E-Mail
+| afabisch@informatik.uni-bremen.de
+| afabisch@googlemail.com

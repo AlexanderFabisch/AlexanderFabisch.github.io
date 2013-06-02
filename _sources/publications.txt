@@ -1,0 +1,103 @@
+Publications
+============
+
+Neural Networks
+---------------
+
+| Fabisch, Alexander; Kassahun, Yohannes; Wöhrle, Hendrik; Kirchner, Frank:
+| **Learning in Compressed Space**,
+| Neural Networks 42, pp. 83-93, ISSN 0893-6080, 2013.
+| `PDF <http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf>`__
+  `ScienceDirect <http://dx.doi.org/10.1016/j.neunet.2013.01.020>`__
+
+    *Abstract: We examine two methods which are used to deal with complex
+    machine learning problems: compressed sensing and model compression. We
+    discuss both methods in the context of feed-forward artificial neural
+    networks and develop the backpropagation method in compressed parameter
+    space. We further show that compressing the weights of a layer of a
+    multilayer perceptron is equivalent to compressing the input of the layer.
+    Based on this theoretical framework, we will use orthogonal functions and
+    especially random projections for compression and perform experiments in
+    supervised and reinforcement learning to demonstrate that the presented
+    methods reduce training time significantly.*
+
+| Kassahun, Yohannes; Wöhrle, Hendrik; Fabisch, Alexander; Tabie, Marc:
+| **Learning Parameters of Linear Models in Compressed Parameter Space**,
+| Artificial Neural Networks and Machine Learning – ICANN 2012, Eds: Villa,
+  Alessandro E. and Duch, Włodzisław and Érdi, Péter and Masulli, Francesco
+  and Palm, Günther, 2012.
+| `Springer <http://link.springer.com/content/pdf/10.1007%2F978-3-642-33266-1_14>`__
+
+    *Abstract: We present a novel method of reducing the training time by
+    learning parameters of a model at hand in compressed parameter space. In
+    compressed parameter space the parameters of the model are represented by
+    fewer parameters, and hence training can be faster. After training, the
+    parameters of the model can be generated from the parameters in compressed
+    parameter space. We show that for supervised learning, learning the
+    parameters of a model in compressed parameter space is equivalent to
+    learning parameters of the model in compressed input space. We have
+    applied our method to a supervised learning domain and show that a
+    solution can be obtained at much faster speed than learning in
+    uncompressed parameter space. For reinforcement learning, we show
+    empirically that searching directly the parameters of a policy in
+    compressed parameter space accelerates learning.*
+
+RoboCup
+-------
+
+| Röfer, Thomas; Laue, Tim; Müller, Judith; Fabisch, Alexander; Feldpausch,
+  Fynn; Gillmann, Katharina; Graf, Colin; de Haas, Thijs Jeffry; Härtl,
+  Alexander; Humann, Arne; Honsel, Daniel; Kastner, Philipp; Kastner, Tobias;
+  Könemann, Carsten; Markowsky, Benjamin; Riemann, Ole Jan Lars; Wenk, Felix:
+| **B-Human Team Report and Code Release 2011**,
+| 2011, Only available online
+| `PDF <http://www.b-human.de/downloads/bhuman11_coderelease.pdf>`__
+  `BibTeX <http://www.b-human.de/downloads/BHumanCodeRelease2011.bib>`__
+  `Code Release <http://www.b-human.de/downloads/bhuman11_coderelease.tar.bz2>`__
+
+| Röfer, Thomas; Laue, Tim; Müller, Judith; Fabisch, Alexander; Gillmann,
+  Katharina; Graf, Colin; Härtl, Alexander; Humann, Arne; and Wenk, Felix:
+| **B-Human Team Description for RoboCup 2011**,
+| RoboCup 2011: Robot Soccer World Cup XV Preproceedings, RoboCup Federation,
+  Eds: Röfer, Thomas, Mayer, Norbert Michael, Savage, Jesus, and Saranli, Uluc,
+  2011.
+| `PDF <http://www.b-human.de/downloads/bhuman11_tdp.pdf>`__
+
+| Fabisch, Alexander; Laue, Tim; and Röfer, Thomas:
+| **Robot Recognition and Modeling in the RoboCup Standard Platform League**,
+| Proceedings of the Fifth Workshop on Humanoid Soccer Robots in conjunction with
+  the 2010 IEEE-RAS International Conference on Humanoid Robots, Eds: Pagello,
+  Enrico, Zhou, Changjiu, Behnke, Sven, Menegatti, Emanuele, Röfer, Thomas, and
+  Stone, Peter, 2010.
+| `PDF <http://www.b-human.de/downloads/Humanoids-Fabisch-etal-10.pdf>`__
+  `BibTeX <http://www.b-human.de/downloads/Humanoids-Fabisch-etal-10.bib>`__
+
+    *Abstract: To achieve a reasonable level of play in the RoboCup Standard
+    Platform League, a number of basic abilities such as obstacle avoidance and
+    passing are necessary. Most of these abilities have one thing in common: they
+    rely on information about other robots. In this paper, we present a vision-based
+    approach for robot recognition in the RoboCup Standard Platform League as well as
+    an algorithm to track the recognized robots. Both approaches were developed
+    considering the limited computing resources of the Nao to allow an application in
+    actual games.*
+
+| Röfer, Thomas; Laue, Tim; Müller, Judith; Burchardt, Armin; Damrose, Erik; Fabisch,
+  Alexander; Feldpausch, Fynn; Gillmann, Katharina; Graf, Colin; de Haas, Thijs Jeffry;
+  Härtl, Alexander; Honsel, Daniel; Kastner, Philipp; Kastner, Tobias; Markowsky,
+  Benjamin; Mester, Michael; Peter, Jonas; Riemann, Ole Jan Lars; Ring, Martin;
+  Sauerland, Wiebke; Schreck, André; Sieverdingbeck, Ingo; Wenk, Felix; and Worch,
+  Jan-Hendrik:
+| **B-Human Team Report and Code Release 2010**,
+| 2010. Only available online
+| `PDF <http://www.b-human.de/downloads/bhuman10_coderelease.pdf>`__
+  `BibTex <http://www.b-human.de/downloads/BHumanCodeRelease2010.bib>`__
+  `Code Release <http://www.b-human.de/downloads/bhuman10_coderelease.tar.bz2>`__
+
+| Röfer, Thomas; Laue, Tim; Graf, Colin; Kastner, Tobias; Fabisch, Alexander; and
+  Thedieck, Christian:
+| **B-Human Team Description for RoboCup 2010**,
+| RoboCup 2010: Robot Soccer World Cup XIV Preproceedings, RoboCup Federation,
+  Eds: Chown, Eric, Matsumoto, Akihiro, Plöger, Paul, and Ruiz-del-Solar,
+  Javier, 2010.
+| `PDF <http://www.b-human.de/downloads/bhuman10_tdp.pdf>`__
+  `BibTeX <http://www.b-human.de/downloads/BHuman2010.bib>`__
