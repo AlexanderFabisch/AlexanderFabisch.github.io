@@ -3,12 +3,6 @@ markdown: redcarpet
 pygments: true
 
 email: afabisch@informatik.uni-bremen.de
-github:
-    username: AlexanderFabisch
-scholar:
-    url: http://scholar.google.de/citations?user=HhlbbxMAAAAJ
-gplus:
-    url: https://plus.google.com/113318873687438713676
 
 scholar:
     style: chicago-fullnote-bibliography
