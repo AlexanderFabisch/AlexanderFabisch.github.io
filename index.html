@@ -4,9 +4,32 @@ title: Alexander Fabisch
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <p>
+    Dipl.-Inf. Alexander Fabisch<br/>
+    Universität Bremen<br/>
+    FB 3 - Mathematik und Informatik
+  </p>
+  <p>
+    AG Robotik<br/>
+    Robert-Hooke-Straße 5<br/>
+    28359 Bremen, Germany<br/>
+    Besuchsadresse im Gebäude Unicom 1:<br/>
+    Mary-Somerville-Str. 9<br/>
+    28359 Bremen, Germany
+  </p>
+  <p>
+    E-Mail<br/>
+    afabisch@informatik.uni-bremen.de<br/>
+    afabisch@googlemail.com
+  </p>
+  <h1>Content</h1>
   <ul class="posts">
-    {% for post in site.posts %}
+    {% for post in site.categories.static %}
+      <li>&raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul class="posts">
+    {% for post in site.categories.blog %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
