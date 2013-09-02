@@ -1,6 +1,8 @@
 name: Alexander Fabisch
 markdown: redcarpet
 pygments: true
+safe: true
+lsi: false
 
 email: afabisch@informatik.uni-bremen.de
 
