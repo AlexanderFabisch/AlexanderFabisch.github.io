@@ -1,9 +1,13 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Publications"
 date:   2013-09-02 07:40:59
-categories: jekyll update
+categories: AF
 ---
+
+Fabisch, Alexander; Kassahun, Yohannes; Wöhrle, Hendrik; Kirchner, Frank:<br/>
+**Learning in Compressed Space**,<br/>
+*Neural Networks 42*, pp. 83-93, ISSN 0893-6080, 2013.
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
