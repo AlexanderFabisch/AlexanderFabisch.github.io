@@ -19,7 +19,10 @@
           <div class="site">
             <div class="header">
               <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
+              <a class="extra" href="/">&raquo; home</a>
+              {% for post in site.categories.static %}
+                <a href="{{ post.url }}">&raquo; {{ post.title }}</a>
+              {% endfor %}
             </div>
 
                 {{ content }}
