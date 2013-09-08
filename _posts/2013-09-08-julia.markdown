@@ -9,7 +9,7 @@ categories: blog
 scientific community. Its main advantage over Matlab, R, etc. is its
 speed. Although it is still under heavy developement I would say it
 is worth taking a look at. There are already some interesting
-libraries available. Most of them come from the R community
+libraries available. Some of them come from the R community
 ([DataFrames.jl](https://github.com/JuliaStats/DataFrames),
 [GLM](https://github.com/JuliaStats/GLM), ...), others are wrappers
 for existing libraries ([NLOpt](https://github.com/stevengj/NLopt.jl),
