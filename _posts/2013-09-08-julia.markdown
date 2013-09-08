@@ -11,7 +11,7 @@ speed. Although it is still under heavy developement I would say it
 is worth taking a look at. There are already some interesting
 libraries available. Some of them come from the R community
 ([DataFrames](https://github.com/JuliaStats/DataFrames.jl),
-[GLM](https://github.com/JuliaStats/GLM), ...), others are wrappers
+[GLM](https://github.com/JuliaStats/GLM.jl), ...), others are wrappers
 for existing libraries ([NLOpt](https://github.com/stevengj/NLopt.jl),
 [PyPlot](https://github.com/stevengj/PyPlot.jl), ...) and because of
 its speed and at the same time high level of abstraction, there will
