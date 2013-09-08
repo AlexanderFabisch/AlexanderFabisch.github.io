@@ -18,4 +18,5 @@ its speed and at the same time high level of abstraction, there will
 soon be coming packages that do not exist in other languages. For
 those who are interested in trying it out I wrote a small
 [Gist](https://gist.github.com/AlexanderFabisch/6343090) that compares
-the syntax of Julia, Octave and NumPy.
+the syntax of Julia, Octave and NumPy. You can find a very motivating
+introduction [here](http://julialang.org/blog/2012/02/why-we-created-julia/).
