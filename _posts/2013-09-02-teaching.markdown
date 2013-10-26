@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Teaching"
+date:   2013-10-26 18:00:00
+categories: static
+---
+
+Tutorials at University of Bremen
+---------------------------------
+
+* WiSe 2013/14: Lernverfahren für autonome Roboter
+* SoSe 2013: Praktische Informatik 2
