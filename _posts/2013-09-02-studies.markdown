@@ -5,7 +5,7 @@ date:   2013-09-02 07:40:59
 categories: static
 ---
 
-I have studied computer science at the University of Bremen. I am interested in artificial intelligence, robotics and machine learning. I was member of the RoboCup team B-Human from 2009 to 2011. In 2012 I wrote my diploma thesis about learning in compressed space.
+I have studied computer science at the University of Bremen. I am interested in artificial intelligence, robotics and machine learning. I was a member of the RoboCup team B-Human from 2009 to 2011. In 2012 I wrote my diploma thesis about *learning in compressed space*.
 
 Slides and Texts (in German)
 ----------------------------
