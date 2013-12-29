@@ -7,11 +7,15 @@ categories: static
 
 I am researcher at the University of Bremen and I am currently working in the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). My focus is at the moment on imitation learning and reinforcement learning. Previously, I have been working as a student in the RoboCup team [B-Human](http://www.b-human.de/) and I wrote my Diploma thesis in the field of artificial neural networks.
 
+Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:</br>
+**Towards Learning of Generic Skills for Robotic Manipulation**.</br>
+Künstliche Intelligenz (2013): 1-6.</br>
+[Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1)
+
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:</br>
 **Learning In Compressed Space**.</br>
 *Neural Networks* 42 (2013): 83–93.</br>
 [ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf).
-
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:</br>
 **Learning Parameters of Linear Models In Compressed Parameter Space**.</br>
