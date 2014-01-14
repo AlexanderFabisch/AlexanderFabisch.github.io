@@ -6,10 +6,10 @@ categories: blog
 ---
 
 [scikit learn](https://github.com/scikit-learn/scikit-learn) is a great
-machine learning library in Python. It offers broad range of machine
+machine learning library for Python. It offers broad range of machine
 learning algorithms and tools. *Learning curves* are a new tool that
 has been merged last week and I want to use that feature to point out why
-scikit learn is a great library.
+scikit learn is such a great library.
 
 A learning curve shows the training scores and the test scores for varying
 number of training samples. It is a tool that can be used to find out
