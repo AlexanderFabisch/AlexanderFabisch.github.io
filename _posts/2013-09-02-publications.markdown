@@ -9,7 +9,7 @@ I am researcher at the University of Bremen and I am currently working in the pr
 
 Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:</br>
 **Towards Learning of Generic Skills for Robotic Manipulation**.</br>
-Künstliche Intelligenz (2013): 1-6.</br>
+*Künstliche Intelligenz* 28 (2014): 15-20.</br>
 [Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1)
 
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:</br>
