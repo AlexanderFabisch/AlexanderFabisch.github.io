@@ -91,7 +91,7 @@ string that will be mapped to a built-in scorer like for example `r2`,
 scores for unsupervised learners.
 
 With only
-[a few lines of code](https://github.com/scikit-learn/scikit-learn/blob/master/examples/plot_learning_curve.py)
+[a few lines of code](https://github.com/scikit-learn/scikit-learn/blob/master/examples/model_selection/plot_learning_curve.py)
 we can now plot beautiful learning curves like these:
 
 <img width="480" height="360" src="http://www.informatik.uni-bremen.de/~afabisch/files/blog/lc_nb.png" />
