@@ -2,22 +2,41 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am researcher at the University of Bremen and I am currently working in the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). My focus is at the moment on imitation learning and reinforcement learning. Previously, I have been working as a student in the RoboCup team [B-Human](http://www.b-human.de/) and I wrote my Diploma thesis in the field of artificial neural networks.
+I am researcher at the University of Bremen and I currently work in the project
+[BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). At
+the moment my work focuses on imitation learning and reinforcement learning.
+Previously, I have been working as a student in the RoboCup SPL team
+[B-Human](http://www.b-human.de/) and I wrote my Diploma thesis in the field of
+artificial neural networks.
+
+Robot Skill Learning
+--------------------
+
+Fabisch, Alexander, Jan Hendrik Metzen:</br>
+**Active Contextual Policy Search**.</br>
+*Journal of Machine Learning Research* 15 (2014): 3371-3399.</br>
+[JMLR](http://jmlr.org/papers/v15/fabisch14a.html)
 
 Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:</br>
 **Towards Learning of Generic Skills for Robotic Manipulation**.</br>
 *Künstliche Intelligenz* 28 (2014): 15-20.</br>
 [Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1)
 
+Neural Networks
+---------------
+
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:</br>
 **Learning In Compressed Space**.</br>
 *Neural Networks* 42 (2013): 83–93.</br>
-[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf).
+[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:</br>
 **Learning Parameters of Linear Models In Compressed Parameter Space**.</br>
 In *Proceedings of the 22nd International Conference on Artificial Neural Networks and Machine Learning* (2012): 108–115.</br>
 [Springer](http://link.springer.com/content/pdf/10.1007%2F978-3-642-33266-1_14)
+
+RoboCup SPL
+-----------
 
 Röfer, Thomas, Tim Laue, Judith Müller, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Arne Humann, Daniel Honsel, Philipp Kastner, Tobias Kastner, Carsten Könemann, Benjamin Markowsky, Ole Jan Lars Riemann, and Felix Wenk:</br>
 **B-Human Team Report and Code Release 2011**.</br>
