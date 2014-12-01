@@ -19,6 +19,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+THEME = 'pelican-themes/bootstrap2'
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.include_code',
+           'liquid_tags.notebook', 'liquid_tags.literal']
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+
 # Blogroll
 LINKS = ()
 
