@@ -12,6 +12,16 @@ artificial neural networks.
 Robot Skill Learning
 --------------------
 
+Metzen, Jan Hendrik, Alexander Fabisch, Jonas Hansen:</br>
+**Bayesian Optimization for Contextual Policy Search**.</br>
+In: *Proceedings of the Second Machine Learning in Planning and Control of Robot Motion Workshop (IROS)* (2015).</br>
+[PDF](http://www.cs.unm.edu/~afaust/MLPC15_proceedings/MLPC15_paper_Metzen.pdf)
+
+Fabisch, Alexander, Jan Hendrik Metzen, Mario Michael Krell, Frank Kirchner:</br>
+**Accounting for Task-Difficulty in Active Multi-Task Robot Control Learning**.</br>
+*Künstliche Intelligenz* 29 (2015): 369-377.</br>
+[Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2)
+
 Fabisch, Alexander, Jan Hendrik Metzen:</br>
 **Active Contextual Policy Search**.</br>
 *Journal of Machine Learning Research* 15 (2014): 3371-3399.</br>
