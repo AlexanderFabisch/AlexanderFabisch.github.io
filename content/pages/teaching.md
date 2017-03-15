@@ -5,11 +5,13 @@ Category: Teaching
 Tutorials and Lectures at University of Bremen
 ----------------------------------------------
 
+03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2016/17, tutorials
+
 03-ME-712.03  Reinforcement Lernen, SoSe 2016, tutorials and lectures
 
-03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2015/16, tutorials, [teaching materials](https://github.com/AlexanderFabisch/ml_tutorials)
+03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2015/16, tutorials
 
-03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2014/15, tutorials and lectures, [teaching materials](https://github.com/AlexanderFabisch/ml_tutorials)
+03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2014/15, tutorials and lectures
 
 03-ME-712.07 Lernverfahren für autonome Roboter (Machine Learning for Autonomous Robots), WiSe 2013/14, tutorials, [teaching materials](https://github.com/AlexanderFabisch/ml_tutorials)
 
