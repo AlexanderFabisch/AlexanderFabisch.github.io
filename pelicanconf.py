@@ -31,8 +31,7 @@ LINKS = ()
 # Social widget
 SOCIAL = (('DFKI', 'http://robotik.dfki-bremen.de/en/about-us/staff/alfa02.html'),
           ('Scholar', 'http://scholar.google.de/citations?user=HhlbbxMAAAAJ'),
-          ('Github', 'https://github.com/AlexanderFabisch'),
-          ('Google+', 'https://plus.google.com/113318873687438713676'),)
+          ('Github', 'https://github.com/AlexanderFabisch'),)
 
 DEFAULT_PAGINATION = 10
 
