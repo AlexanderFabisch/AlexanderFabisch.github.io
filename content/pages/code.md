@@ -3,10 +3,15 @@ Date: 2014-11-19 07:40
 Category: Software
 
 I have written code in C++, Python, Ruby, Java and a little bit of Julia,
-Haskell, and JavaScript. Here are some of my own projects.
+Haskell, and JavaScript. Here are some of my projects.
 
 <table style="border-spacing: 15px; border-collapse: separate;">
   <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/AlexanderFabisch/bolero/master/doc/source/_static/logo.png" width=200px /></td>
+      <td>
+        <a href="https://github.com/AlexanderFabisch/bolero">BOLeRo</a> - Behavior Optimization and Learning for Robots. (C++, Python)</td>
+    </tr>
     <tr>
       <td><img src="http://www.informatik.uni-bremen.de/~afabisch/files/openann-logo.png" width=200px /></td>
       <td>

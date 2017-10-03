@@ -2,12 +2,24 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am researcher at the University of Bremen and I currently work in the project
-[BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). At
-the moment my work focuses on imitation learning and reinforcement learning.
-Previously, I have been working as a student in the RoboCup SPL team
+I am researcher at the DFKI RIC and I currently work in the projects
+[InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse.html)
+and [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html).
+At the moment my scientific work focuses on imitation learning and
+reinforcement learning. Previously, I worked at the Robotics Research Group of
+the University of Bremen in the project
+[BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
+As a student I participated in the RoboCup SPL team
 [B-Human](http://www.b-human.de/) and I wrote my Diploma thesis in the field of
 artificial neural networks.
+
+Software Development
+--------------------
+
+Shashank Govindaraj, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:</br>
+**InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.</br>
+In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).</br>
+[PDF](https://hal.archives-ouvertes.fr/hal-01536099/document)
 
 Robot Skill Learning
 --------------------
