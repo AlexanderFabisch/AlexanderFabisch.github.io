@@ -1,10 +1,10 @@
 Title: Learning Curves #2
-Date: 2017-10-30 13:00
+Date: 2017-10-31 10:40
 Category: Blog
 
-Everyone working in the field of machine learning usually is pretty sure
-to know what a learning curve is. It seems to be intuitive. The problem is
-that each field has its own typical definition of a learning curve and it
+Almost everyone working in the field of machine learning is usually pretty
+sure about what a learning curve is. It seems to be intuitive. The problem
+is that each field has its own typical definition of a learning curve and it
 is unusual to write it down explicitely. The only general definition that
 I found is in the first sentence of a [section of a Wikipedia article](
 https://en.wikipedia.org/wiki/Learning_curve#In_machine_learning). The rest
@@ -12,7 +12,7 @@ of the paragraph does not even apply to everything any more. The essence is:
 
 > **A learning curve is a plot relating performance to experience.**
 
-## General Machine Learning
+## Machine Learning in General
 
 For machine learning in general, the definition is quite clear: "A learning
 curve shows the validation and training score of an estimator for varying
@@ -81,12 +81,14 @@ not so clear, however. There are numerous options:
 
 Performance metrics are quite similar to those used for classification,
 regression, or to whatever is used in the domain in which the neural network
-is used. Often a learning curve just shows the error that is optimized.
+is used. Often a learning curve just shows the loss, cost, or error that is
+optimized.
 
 Because of the incremental and often expensive training of neural networks,
 cross validation is not an option for these learning curves. The standard
 procedure is to use a holdout validation set on which we can evaluate the
-neural network each time we want to paint in the learning curve.
+neural network each time we want to compute a data point for the learning
+curve.
 
 Here are some examples:
 
@@ -111,7 +113,7 @@ Here are some examples:
   Learning? (2010),
   [PMLR](http://proceedings.mlr.press/v9/erhan10a.html). Figure 7:
   Relates "online classification error" to number of examples seen to test how
-  Unsupervised pretraining affects supervised training.
+  unsupervised pretraining affects supervised training.
 * Chung, Gulcehre, Cho, Bengio - Empirical Evaluation of Gated Recurrent Neural
   Networks (2014),
   [arxiv](https://arxiv.org/abs/1412.3555). Figure 2 (left bottom):
@@ -128,7 +130,7 @@ Let's start with experience. We have a classification that is very similar to
 the one for neural networks:
 
 * updates, iterations
-* episodes, trials, rollouts, (training epochs)
+* episodes, trials, rollouts
 * time steps
 
 One thing to note is that there are multiple categories of algorithms: some
