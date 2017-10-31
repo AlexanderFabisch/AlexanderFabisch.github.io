@@ -31,8 +31,8 @@ regression (e.g. mean squared error).
 Here are some examples:
 
 <center>
-<img width="320" height="240" src="../images/sklearn1.png" />
-<img width="320" height="240" src="../images/sklearn2.png" /><br/>
+<img width="320" height="240" src="http://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_001.png" />
+<img width="320" height="240" src="http://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_002.png" /><br/>
 scikit-learn documentation,
 [source](http://scikit-learn.org/stable/modules/learning_curve.html#learning-curve).
 </center>
