@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Alexander Fabisch</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/software.html">Software</a></li>
+            <li><a href="/pages/publications.html">Publications</a></li>
+            <li><a href="/pages/teaching.html">Teaching</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/slither.html" rel="bookmark"
+         title="Permalink to Slither">Slither</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2017-01-20T01:00:00+01:00">
+      Fri 20 January 2017
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>All the commercial services that allow you to record your sport activities
+like <a href="https://flow.polar.com/">Polar Flow</a>,
+<a href="https://www.runtastic.com/">Runtastic</a>,
+<a href="https://www.endomondo.com/">Endomondo</a>,
+<a href="https://runkeeper.com">Runkeeper</a>,
+<a href="https://www.strava.com/">Strava</a>,
+<a href="https://fit.google.com/">Google Fit</a>,
+or whatever store your data on some server which you cannot control.
+You do not know what they use the data for and you cannot write your one
+tools to analyze your own data.</p>
+<p>This is the reason why I wanted to develop a small tool that can be modified
+easily to fit my needs and stores the data on my computer. All features
+that are important to me are now implemented:</p>
+<ul>
+<li>add and edit activities manually</li>
+<li>import TCX files</li>
+<li>detailed view: plot of velocitiy and heartrate, map that shows the path, pace, best splits</li>
+<li>personal records</li>
+<li>calendar view</li>
+<li>summary of weeks, months, years</li>
+</ul>
+<p>It was very simple to implement the application with Python. I have a database
+to which I communicate with <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>, the
+GUI is written with PyQt, the map is rendered with
+<a href="http://leafletjs.com/">Leaflet</a> and
+<a href="https://www.openstreetmap.org">OpenStreetMap</a>. I use
+<a href="http://matplotlib.org/">Matplotlib</a> for plotting. Parsing XML files is very
+easy with <a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>.</p>
+<p>The result can be seen here:</p>
+<p><img width="480" height="360" src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/slither.png" /></p>
+<p>The code is available on <a href="https://github.com/AlexanderFabisch/slither">github</a>.</p>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

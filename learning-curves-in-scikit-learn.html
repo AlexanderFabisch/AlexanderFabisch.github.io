@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Alexander Fabisch</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/software.html">Software</a></li>
+            <li><a href="/pages/publications.html">Publications</a></li>
+            <li><a href="/pages/teaching.html">Teaching</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/learning-curves-in-scikit-learn.html" rel="bookmark"
+         title="Permalink to Learning Curves in scikit learn">Learning Curves in scikit learn</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2014-01-12T14:49:00+01:00">
+      Sun 12 January 2014
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p><a href="https://github.com/scikit-learn/scikit-learn">scikit learn</a> is a great
+machine learning library for Python. It offers broad range of machine
+learning algorithms and tools. <em>Learning curves</em> are a new tool that
+has been merged last week and I want to use that feature to point out why
+scikit learn is such a great library.</p>
+<p>A learning curve shows the training scores and the test scores for varying
+number of training samples. It is a tool that can be used to find out
+whether we benefit from more training samples. At a first look, it seems to
+be very easy to implement. We could do something like:</p>
+<div class="highlight"><pre><span></span>estimator = ...
+X_train, y_train, X_test, y_test = split(X, y)
+n_samples = X_train.shape[0]
+train_scores, test_scores = [], []
+for n in range(10, 10, n_samples):
+    estimator.fit(X_train[:n], y_train[n])
+    train_scores.append(estimator.score(X_train[:n], y_train[n]))
+    test_scores.append(estimator.score(X_test, y_test))
+plot(range(10, 10, n_samples), train_scores)
+plot(range(10, 10, n_samples), test_scores)
+</pre></div>
+
+
+<p>However, there are some flaws in the code that make the implementation
+actually much worse than the version that is implemented in scikit learn:</p>
+<ul>
+<li>We have to define the split function.</li>
+<li>Actually, real cross-validation would be even better to generate more
+  stable learning curves. But that would require an additional loop and
+  afterwards averaging over the runs. (Fortunately, scikit learn could
+  generate the cross-validation splits for us: <code>sklearn.cross_validation</code>.)</li>
+<li>If we would like to use another scoring, we would have to change that
+  in the code. Fortunately, scikit-learn comes already with a wide range
+  of predefined scorers in <code>sklearn.metrics</code>.</li>
+<li>We can parallelize over cross-validation runs and different numbers of
+  training samples and that would require even more code.</li>
+<li>Incremental learning could be exploited! If we would like to train an
+  online learning algorithm like <code>sklearn.linear_model.SGDClassifier</code> on
+  a large dataset, we can reuse models that have been fitted on parts of
+  the training set to speed up the generation of the learning curve.</li>
+<li>This works only for supervised learning. We can of course compute scores
+  for unsupervised learners like clustering algorithms but that would require
+  additional code.</li>
+<li>Maybe we are not interested in the exact number of training examples
+  but want something like a plot for 10%, 20%, ..., 100% of the training
+  examples.</li>
+</ul>
+<p>The three required arrays that are used to actually plot the curves can be
+generated in just one call to <code>sklearn.learning_curve.learning_curve</code>
+without all these flaws.</p>
+<p>Lets take a look at the signature of the function <code>learning_curve</code>:</p>
+<div class="highlight"><pre><span></span>train_sizes_abs, train_scores, test_scores = \
+    learning_curve(estimator, X, y,
+                   train_sizes=np.linspace(0.1, 1.0, 10),
+                   cv=None, scoring=None,
+                   exploit_incremental_learning=False,
+                   n_jobs=1, pre_dispatch=&quot;all&quot;, verbose=0)
+</pre></div>
+
+
+<p>It takes an <code>estimator</code> and the whole training set <code>(X, y)</code> where <code>y</code>
+could be <code>None</code>. We already have a good default for <code>train_sizes</code>:
+an array with <code>dtype == float</code> is interpreted as fractions of the
+maximum number of training examples, i.e. the default is like
+10%, 20%, ..., 100%. Otherwise the sizes are interpreted as absolute
+numbers of training samples. We can set some standard parallelization
+options for <code>joblib</code> like <code>n_jobs</code> and <code>pre_dispatch</code> and we can
+even exploit incremental learning.</p>
+<p>But the magic happens in the arguments <code>cv</code> and <code>scoring</code>. These
+parameters rely on the huge feature range of scikit learn. <code>cv</code> can be
+a cross-validation generator like <code>sklearn.cross_validation.KFold</code>,
+a list of train and test indices for each test run or just an integer
+that is interpreted as the number of folds for k-fold cross-validation.
+If the <code>estimator</code> is a classifier it will be interpreted as the number
+of folds for <strong>stratified</strong> k-fold cross-validation. scikit learn supports
+even more cross-validation methods like leave-one-out CV etc. The default
+value (<code>None</code>) will be interpreted as 3-fold cross-validation.</p>
+<p>Similar things happen with the <code>scoring</code> parameter. If it is <code>None</code>, the
+function assumes that there is a member function <code>estimator.score</code>. We can
+also pass a callable with the signature <code>scorer(estimator, X[, y])</code> or a
+string that will be mapped to a built-in scorer like for example <code>r2</code>,
+<code>accuracy</code> or <code>precision_scorer</code>. Note that the scorer could also compute
+scores for unsupervised learners.</p>
+<p>With only
+<a href="https://github.com/scikit-learn/scikit-learn/blob/master/examples/model_selection/plot_learning_curve.py">a few lines of code</a>
+we can now plot beautiful learning curves like these:</p>
+<p><img width="480" height="360" src="http://www.informatik.uni-bremen.de/~afabisch/files/blog/lc_nb.png" />
+<img width="480" height="360" src="http://www.informatik.uni-bremen.de/~afabisch/files/blog/lc_svm.png" /></p>
+<p>scikit learn offers many more tools like this, for example model selection
+with grid search or random search, a pipeline that combines preprocessing
+and learners, simple dataset access and dataset generators and a really
+great explanatory documentation.</p>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

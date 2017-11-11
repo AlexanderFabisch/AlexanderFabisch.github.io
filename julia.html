@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Alexander Fabisch</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/software.html">Software</a></li>
+            <li><a href="/pages/publications.html">Publications</a></li>
+            <li><a href="/pages/teaching.html">Teaching</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/julia.html" rel="bookmark"
+         title="Permalink to Julia">Julia</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2013-09-08T12:11:00+02:00">
+      Sun 08 September 2013
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p><a href="http://julialang.org/">Julia</a> is a new programming language for the
+scientific community. Its main advantage over Matlab, R, etc. is its
+speed. Although it is still under heavy developement I would say it
+is worth taking a look at. There are already some interesting
+libraries available. Some of them come from the R community
+(<a href="https://github.com/JuliaStats/DataFrames.jl">DataFrames</a>,
+<a href="https://github.com/JuliaStats/GLM.jl">GLM</a>, ...), others are wrappers
+for existing libraries (<a href="https://github.com/stevengj/NLopt.jl">NLOpt</a>,
+<a href="https://github.com/stevengj/PyPlot.jl">PyPlot</a>, ...) and because of
+its speed and at the same time high level of abstraction, there will
+soon be coming packages that do not exist in other languages. For
+those who are interested in trying it out I wrote a small
+<a href="https://gist.github.com/AlexanderFabisch/6343090">Gist</a> that compares
+the syntax of Julia, Octave and NumPy. You can find a very motivating
+introduction <a href="http://julialang.org/blog/2012/02/why-we-created-julia/">here</a>.</p>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Software</title>
+        <meta charset="utf-8" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+
+        <link rel="stylesheet" href="/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li class="active"><a href="/pages/software.html">Software</a></li>
+            <li><a href="/pages/publications.html">Publications</a></li>
+            <li><a href="/pages/teaching.html">Teaching</a></li>
+        </ul></nav><!-- /#menu -->
+    <h1>Software</h1>
+    
+
+    <p>I am involved in some open source projects. Here are some of them. I also have
+a <a href="https://github.com/AlexanderFabisch">Github account</a>.</p>
+<table style="border-spacing: 15px; border-collapse: separate;">
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/AlexanderFabisch/bolero/master/doc/source/_static/logo.png" width=200px /></td>
+      <td style="vertical-align:top;">
+        <a href="https://github.com/AlexanderFabisch/bolero">BOLeRo</a> - Behavior Optimization and Learning for Robots. (C++, Python)</td>
+    </tr>
+    <tr>
+      <td><img src="http://www.informatik.uni-bremen.de/~afabisch/files/openann-logo.png" width=200px /></td>
+      <td style="vertical-align:top;">
+        <a href="https://github.com/OpenANN/OpenANN">OpenANN</a> - A library for artificial neural networks. (C++, Python)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top;">
+        <img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=200px /></td>
+      <td><a href="https://github.com/AlexanderFabisch/gmr">gmr</a> - An implementation of Gaussian mixture models for clustering and regression. (Python)</td>
+    </tr>
+    <tr>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Concept_of_directional_optimization_in_CMA-ES_algorithm.png" width=200px /></td>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/CMA-ESpp">CMA-ESpp</a> - Implementation of the derivative-free optimization algorithm CMA-ES. (C++)</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/slither.png" width=200px /></td>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/slither">slither</a> - A private replacement for online training logs. (Python)</td>
+    </tr>
+    <tr>
+      <td><img src="http://www.informatik.uni-bremen.de/~afabisch/files/cythonwrapper.png" width=200px /></td>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a> - Automatically generates a Cython wrapper for C++ code. (Python, Cython)</td>
+    </tr>
+  </tbody>
+</table>
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
