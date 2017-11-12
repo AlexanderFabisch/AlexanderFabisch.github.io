@@ -2,7 +2,7 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am researcher at the DFKI RIC and I currently work in the projects
+I am a researcher at the DFKI RIC and I currently work in the projects
 [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse.html)
 and [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html).
 At the moment my scientific work focuses on imitation learning and
@@ -23,6 +23,14 @@ Shashank Govindaraj, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvan
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.</br>
 In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).</br>
 [PDF](https://hal.archives-ouvertes.fr/hal-01536099/document)
+
+Lifelong Learning
+-----------------
+
+Bilal Wehbe, Alexander Fabisch, Mario Michael Krell:</br>
+**Online Model Identification for Underwater Vehicles through Incremental Support Vector Regression**.</br>
+In: *Proceedings of IROS* (2017).</br>
+*No public version available yet.*
 
 Robot Skill Learning
 --------------------
