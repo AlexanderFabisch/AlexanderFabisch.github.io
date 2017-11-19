@@ -10,7 +10,7 @@ like [Polar Flow](https://flow.polar.com/),
 [Strava](https://www.strava.com/),
 [Google Fit](https://fit.google.com/),
 or whatever store your data on some server which you cannot control.
-You do not know what they use the data for and you cannot write your one
+You do not know what they use the data for and you cannot write your own
 tools to analyze your own data.
 
 This is the reason why I wanted to develop a small tool that can be modified
