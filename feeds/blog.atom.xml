@@ -13198,7 +13198,7 @@ like &lt;a href="https://flow.polar.com/"&gt;Polar Flow&lt;/a&gt;,
 &lt;a href="https://www.strava.com/"&gt;Strava&lt;/a&gt;,
 &lt;a href="https://fit.google.com/"&gt;Google Fit&lt;/a&gt;,
 or whatever store your data on some server which you cannot control.
-You do not know what they use the data for and you cannot write your one
+You do not know what they use the data for and you cannot write your own
 tools …&lt;/p&gt;</summary><content type="html">&lt;p&gt;All the commercial services that allow you to record your sport activities
 like &lt;a href="https://flow.polar.com/"&gt;Polar Flow&lt;/a&gt;,
 &lt;a href="https://www.runtastic.com/"&gt;Runtastic&lt;/a&gt;,
@@ -13207,7 +13207,7 @@ like &lt;a href="https://flow.polar.com/"&gt;Polar Flow&lt;/a&gt;,
 &lt;a href="https://www.strava.com/"&gt;Strava&lt;/a&gt;,
 &lt;a href="https://fit.google.com/"&gt;Google Fit&lt;/a&gt;,
 or whatever store your data on some server which you cannot control.
-You do not know what they use the data for and you cannot write your one
+You do not know what they use the data for and you cannot write your own
 tools to analyze your own data.&lt;/p&gt;
 &lt;p&gt;This is the reason why I wanted to develop a small tool that can be modified
 easily to fit my needs and stores the data on my computer. All features
