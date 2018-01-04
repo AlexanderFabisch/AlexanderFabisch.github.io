@@ -10,8 +10,9 @@ reinforcement learning. Previously, I worked at the Robotics Research Group of
 the University of Bremen in the project
 [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
 As a student I participated in the RoboCup SPL team
-[B-Human](http://www.b-human.de/) and I wrote my Diploma thesis in the field of
-artificial neural networks.
+[B-Human](http://www.b-human.de/) and I wrote my
+[Diploma thesis](http://www.informatik.uni-bremen.de/~afabisch/files/diplomarbeit.pdf)
+in the field of artificial neural networks.
 
 You can also find an overview of my publications at
 [Google scholar](http://scholar.google.de/citations?user=HhlbbxMAAAAJ).
