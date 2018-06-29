@@ -20,7 +20,17 @@ You can also find an overview of my publications at
 Software Development
 --------------------
 
-Shashank Govindaraj, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
+Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
+Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
+Andrea de Maio, Quentin Labourey, Fabrice Souvannavong, Vincent Bissonnette,
+Michal Smisek, Xiu Yan:<br/>
+**A Common Data Fusion Framework for Space Robotics: Architecture and Data
+Fusion Methods**.<br/>
+In: *International Symposium on Artificial Intelligence, Robotics and Automation
+in Space* (2018)<br/>
+[PDF](https://strathprints.strath.ac.uk/64166/1/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space_robotics.pdf)
+
+Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
 In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).<br/>
 [PDF](https://hal.archives-ouvertes.fr/hal-01536099/document)
@@ -40,7 +50,7 @@ Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
 **The BesMan Learning Platform for Automated Robot Skill Learning**.<br/>
 In: *Frontiers in Robotics and AI* (2018).<br/>
-[Frontiers](https://www.frontiersin.org/articles/10.3389/frobt.2018.00043/abstract)
+[Frontiers](https://www.frontiersin.org/articles/10.3389/frobt.2018.00043/full)
 
 Metzen, Jan Hendrik, Alexander Fabisch, Jonas Hansen:<br/>
 **Bayesian Optimization for Contextual Policy Search**.<br/>
