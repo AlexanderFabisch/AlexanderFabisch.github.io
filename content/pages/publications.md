@@ -110,3 +110,13 @@ Röfer, Thomas, Tim Laue, Colin Graf, Tobias Kastner, Alexander Fabisch, and Chr
 **B-Human Team Description For RoboCup 2010**.<br/>
 In *RoboCup 2010: Robot Soccer World Cup XIV Preproceedings* (2010), edited by Eric Chown, Akihiro Matsumoto, Paul Ploeger and Javier Ruiz–del–Solar.<br/>
 [PDF](http://www.b-human.de/downloads/bhuman10_tdp.pdf)
+
+Other Publications
+------------------
+
+I have been interviewed for a study by Fraunhofer-Gesellschaft about machine
+learning research in Germany and relevant fields of research. It seems like
+I have an unusual view on machine learning because I work in a robotics
+institute. Although I do not agree with all of the results, some of my
+suggestions have been considered. The study is available for download
+[here](https://www.bigdata.fraunhofer.de/de/big-data/kuenstliche-intelligenz-und-maschinelles-lernen/ml-studie.html).
