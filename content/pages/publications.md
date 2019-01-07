@@ -121,6 +121,10 @@ institute. Although I do not agree with all of the results, some of my
 suggestions have been considered. The study is available for download
 [here](https://www.bigdata.fraunhofer.de/de/big-data/kuenstliche-intelligenz-und-maschinelles-lernen/ml-studie.html).
 
+I maintain a quite popular answer at Stack Overflow that contains links to
+the most popular open source libraries for neural networks:
+[link](https://stackoverflow.com/a/11477815/915743).
+
 Acknowledgements
 ----------------
 
