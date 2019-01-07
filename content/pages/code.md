@@ -15,9 +15,9 @@ a [Github account](https://github.com/AlexanderFabisch).
       </td>
     </tr>
     <tr>
-      <td><img src="https://rock-learning.github.io/pytransform/_images/rotations.svg" width=200px /></td>
+      <td><img src="https://rock-learning.github.io/pytransform3d/_images/rotations.svg" width=200px /></td>
       <td style="vertical-align:top;">
-        <a href="https://github.com/rock-learning/pytransform">pytransform</a>
+        <a href="https://github.com/rock-learning/pytransform3d">pytransform3d</a>
         - A tool for handling transformations (conversions, plotting, editing, ...) (Python)<br/>
         A Python library for transformations in three dimensions. It makes conversions between rotation and transformation conventions as easy as possible. The library focuses on readability and debugging, not on computational efficiency. If you want to have an efficient implementation of some function from the library you can easily extract the relevant code and implement it more efficiently in a language of your choice.
       </td>
