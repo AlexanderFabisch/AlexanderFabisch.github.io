@@ -20,6 +20,15 @@ You can also find an overview of my publications at
 Software Development
 --------------------
 
+Fabisch, Alexander:<br/>
+**pytransform3d: 3D Transformations for Python**.<br/>
+In: *Journal of Open Source Software* (2019).<br/>
+[JOSS](http://joss.theoj.org/papers/10.21105/joss.01159)
+
+Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
+**InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
+In: *69th International Astronautical Congress (IAC)* (2018).
+
 Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
 Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
 Andrea de Maio, Quentin Labourey, Fabrice Souvannavong, Vincent Bissonnette,
@@ -28,7 +37,7 @@ Michal Smisek, Xiu Yan:<br/>
 Fusion Methods**.<br/>
 In: *International Symposium on Artificial Intelligence, Robotics and Automation
 in Space* (2018)<br/>
-[PDF](https://strathprints.strath.ac.uk/64166/1/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space_robotics.pdf)
+[PDF](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
 
 Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
@@ -45,6 +54,11 @@ In: *Proceedings of IROS* (2017).<br/>
 
 Robot Skill Learning
 --------------------
+
+Fabisch, Alexander:<br/>
+**A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
+In: *Proceedings of the 28th International Conference on Robotics in Alpe-Adria Danube Region (RAAD 2019)* (2020).<br/>
+Status: accepted.
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
@@ -133,3 +147,12 @@ I have also been mentioned in acknowledgements of the following publications:
 * [A Capacity Scaling Law for Artificial Neural Networks](https://arxiv.org/abs/1708.06019)
 * [A Practical Approach to Sizing Neural Networks](https://arxiv.org/abs/1810.02328)
 * [Intrinsic Interactive Reinforcement Learning – Using Error-related Potentials for Real World Human-robot Interaction](https://www.nature.com/articles/s41598-017-17682-7)
+
+Videos
+------
+
+* Project video: InFuse - [YouTube](https://youtu.be/EfbMpRMZEqI)
+* Talk: Learning to Grasp - [YouTube](https://youtu.be/PX4-1lBf5VY)
+* Project video: COROMA, learning - [YouTube](https://youtu.be/xhXZKRTWH3U)
+* Project video: BesMan, 3rd demonstration - [YouTube](https://youtu.be/fG0srsYfmbA)
+* Project video: BesMan, 2nd demonstration - [YouTube](https://youtu.be/reHxPDtpv_E)
