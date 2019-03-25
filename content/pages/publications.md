@@ -3,11 +3,12 @@ Date: 2013-09-02 07:40:59
 Category: Publications
 
 I am a researcher at the DFKI RIC and I currently work in the projects
-[InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse.html)
-and [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html).
+[TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html)
+and [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html)
+and previously in [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html).
 At the moment my scientific work focuses on imitation learning and
-reinforcement learning. Previously, I worked at the Robotics Research Group of
-the University of Bremen in the project
+reinforcement learning. Before joining DFKI I worked at the Robotics Research
+Group of the University of Bremen in the project
 [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
 As a student I participated in the RoboCup SPL team
 [B-Human](http://www.b-human.de/) and I wrote my
