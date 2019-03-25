@@ -56,6 +56,11 @@ Robot Skill Learning
 --------------------
 
 Fabisch, Alexander:<br/>
+**Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
+In: *Genetic and Evolutionary Computation Conference* (2019)<br/>
+Status: accepted, DOI: 10.1145/3319619.3321935.
+
+Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
 In: *Proceedings of the 28th International Conference on Robotics in Alpe-Adria Danube Region (RAAD 2019)* (2020).<br/>
 Status: accepted.
@@ -90,12 +95,12 @@ Neural Networks
 ---------------
 
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
-**Learning In Compressed Space**.<br/>
+**Learning in Compressed Space**.<br/>
 *Neural Networks* 42 (2013): 83–93.<br/>
 [ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
-**Learning Parameters of Linear Models In Compressed Parameter Space**.<br/>
+**Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
 In *Proceedings of the 22nd International Conference on Artificial Neural Networks and Machine Learning* (2012): 108–115.<br/>
 [Springer](http://link.springer.com/content/pdf/10.1007%2F978-3-642-33266-1_14)
 
@@ -113,7 +118,7 @@ In *RoboCup 2011: Robot Soccer World Cup XV Preproceedings* (2011), edited by Th
 
 Fabisch, Alexander, Tim Laue, and Thomas Röfer:<br/>
 **Robot Recognition and Modeling In the RoboCup Standard Platform League**.<br/>
-In *Proceedings of the Fifth Workshop On Humanoid Soccer Robots* (2010), edited by Enrico Pagello, Changjiu Zhou, Sven Behnke, Emanuele Menegatti, Thomas Röfer and Peter Stone.<br/>
+In *Proceedings of the Fifth Workshop On Humanoid Soccer Robots (Humanoids)* (2010), edited by Enrico Pagello, Changjiu Zhou, Sven Behnke, Emanuele Menegatti, Thomas Röfer and Peter Stone.<br/>
 [PDF](http://www.informatik.uni-bremen.de/kogrob/papers/Humanoids-Fabisch-etal-10.pdf)
 
 Röfer, Thomas, Tim Laue, Judith Müller, Armin Burchardt, Erik Damrose, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Daniel Honsel, Philipp Kastner, Tobias Kastner, Benjamin Markowsky, Michael Mester, Jonas Peter, Ole Jan Lars Riemann, Martin Ring, Wiebke Sauerland, André Schreck, Ingo Sieverdingbeck, Felix Wenk, and Jan-Hendrik Worch:<br/>
