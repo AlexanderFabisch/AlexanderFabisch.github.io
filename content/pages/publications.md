@@ -157,6 +157,7 @@ I have also been mentioned in acknowledgements of the following publications:
 Videos
 ------
 
+* Project video: Field Trials Morocco 2018 - [YouTube](https://youtu.be/-zqve9baOzM) ([news article on phys.org](https://phys.org/news/2018-12-self-driving-rovers-mars-like-morocco.html))
 * Project video: InFuse - [YouTube](https://youtu.be/EfbMpRMZEqI)
 * Talk: Learning to Grasp - [YouTube](https://youtu.be/PX4-1lBf5VY)
 * Project video: COROMA, learning - [YouTube](https://youtu.be/xhXZKRTWH3U)
