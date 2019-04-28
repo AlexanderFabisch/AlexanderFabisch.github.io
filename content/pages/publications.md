@@ -28,7 +28,8 @@ In: *Journal of Open Source Software* (2019).<br/>
 
 Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
 **InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
-In: *69th International Astronautical Congress (IAC)* (2018).
+In: *69th International Astronautical Congress (IAC)* (2018).<br/>
+[PDF](https://hal.laas.fr/hal-02092238/document)
 
 Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
 Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
@@ -59,12 +60,14 @@ Robot Skill Learning
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
 In: *Genetic and Evolutionary Computation Conference* (2019)<br/>
-Status: accepted, DOI: 10.1145/3319619.3321935.
+Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
+[arxiv (long version)](https://arxiv.org/abs/1810.11491)
 
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
 In: *Proceedings of the 28th International Conference on Robotics in Alpe-Adria Danube Region (RAAD 2019)* (2020).<br/>
-Status: accepted.
+Status: accepted.<br/>
+[arxiv](https://arxiv.org/abs/1904.06765)
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
