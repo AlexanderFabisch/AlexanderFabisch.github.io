@@ -155,7 +155,7 @@ I have also been mentioned in acknowledgements of the following publications:
 
 * [A Capacity Scaling Law for Artificial Neural Networks](https://arxiv.org/abs/1708.06019)
 * [A Practical Approach to Sizing Neural Networks](https://arxiv.org/abs/1810.02328)
-* [Intrinsic Interactive Reinforcement Learning – Using Error-related Potentials for Real World Human-robot Interaction](https://www.nature.com/articles/s41598-017-17682-7)
+* [Intrinsic Interactive Reinforcement Learning - Using Error-related Potentials for Real World Human-robot Interaction](https://www.nature.com/articles/s41598-017-17682-7)
 
 Videos
 ------
