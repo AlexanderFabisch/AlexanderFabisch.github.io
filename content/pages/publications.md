@@ -65,7 +65,7 @@ Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
 
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
-In: *Proceedings of the 28th International Conference on Robotics in Alpe-Adria Danube Region (RAAD 2019)* (2020).<br/>
+In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2020).<br/>
 Status: accepted.<br/>
 [arxiv](https://arxiv.org/abs/1904.06765)
 
