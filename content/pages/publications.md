@@ -57,17 +57,26 @@ In: *Proceedings of IROS* (2017).<br/>
 Robot Skill Learning
 --------------------
 
+Fabisch, Alexander, Christoph Petzoldt, Marc Otto, Frank Kirchner:<br/>
+**A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
+Status: submitted.<br/>
+[arXiv.org](https://arxiv.org/abs/1906.01868)
+
+Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirchner:<br/>
+**Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
+In: *KI 2019: Advances in Artificial Intelligence* (2019)<br/>
+Status: accepted.
+
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
 In: *Genetic and Evolutionary Computation Conference* (2019)<br/>
 Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
-[arxiv (long version)](https://arxiv.org/abs/1810.11491)
+[arXiv.org (long version)](https://arxiv.org/abs/1810.11491)
 
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
-In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2020).<br/>
-Status: accepted.<br/>
-[arxiv](https://arxiv.org/abs/1904.06765)
+In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2019).<br/>
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [arXiv.org](https://arxiv.org/abs/1904.06765) [Slides](http://www.informatik.uni-bremen.de/~afabisch/files/raad2019.pdf)
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
@@ -93,7 +102,7 @@ Fabisch, Alexander, Jan Hendrik Metzen:<br/>
 Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:<br/>
 **Towards Learning of Generic Skills for Robotic Manipulation**.<br/>
 *Künstliche Intelligenz* 28 (2014): 15-20.<br/>
-[Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1)
+[Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [PDF](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
 
 Neural Networks
 ---------------
