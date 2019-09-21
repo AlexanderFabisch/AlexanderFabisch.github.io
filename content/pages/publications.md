@@ -69,7 +69,7 @@ Status: accepted.
 
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
-In: *Genetic and Evolutionary Computation Conference* (2019)<br/>
+In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019)<br/>
 Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
 [arXiv.org (long version)](https://arxiv.org/abs/1810.11491)
 
