@@ -23,7 +23,7 @@ a [Github account](https://github.com/AlexanderFabisch).
       </td>
     </tr>
     <tr>
-      <td><img src="http://www.informatik.uni-bremen.de/~afabisch/files/openann-logo.png" width=200px /></td>
+      <td><img src="https://raw.githubusercontent.com/OpenANN/OpenANN/master/doc/images/openann-logo.svg" width=200px /></td>
       <td style="vertical-align:top;">
         <a href="https://github.com/OpenANN/OpenANN">OpenANN</a>
         - A library for artificial neural networks. (C++, Python)<br/>
