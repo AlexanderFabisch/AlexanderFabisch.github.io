@@ -110,7 +110,7 @@ Neural Networks
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
 **Learning in Compressed Space**.<br/>
 *Neural Networks* 42 (2013): 83–93.<br/>
-[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://informatik.uni-bremen.de/~afabisch/files/2013_NN_LCS.pdf)
+[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://h2326337.stratoserver.net/public_files/papers/2013_nn_lcs.pdf)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
