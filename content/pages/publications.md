@@ -76,7 +76,7 @@ Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
 In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2019).<br/>
-[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [arXiv.org](https://arxiv.org/abs/1904.06765) [Slides](http://www.informatik.uni-bremen.de/~afabisch/files/raad2019.pdf)
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [arXiv.org](https://arxiv.org/abs/1904.06765) [Slides](http://www.informatik.uni-bremen.de/~afabisch/files/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
