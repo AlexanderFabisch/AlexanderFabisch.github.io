@@ -12,7 +12,7 @@ Group of the University of Bremen in the project
 [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
 As a student I participated in the RoboCup SPL team
 [B-Human](http://www.b-human.de/) and I wrote my
-[Diploma thesis](http://www.informatik.uni-bremen.de/~afabisch/files/diplomarbeit.pdf)
+[Diploma thesis](http://h2326337.stratoserver.net/public_files/papers/diplomarbeit.pdf)
 in the field of artificial neural networks.
 
 You can also find an overview of my publications at
