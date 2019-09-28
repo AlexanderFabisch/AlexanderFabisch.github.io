@@ -66,6 +66,7 @@ Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirch
 **Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
 In: *KI 2019: Advances in Artificial Intelligence* (2019)<br/>
 Status: accepted.
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-30179-8_14) [heise.de](https://www.heise.de/newsticker/meldung/KI-2019-Roboter-muessen-immer-noch-viel-lernen-4541544.html)
 
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
