@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - Regression</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,38 +27,43 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/regression.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/regression.html" rel="bookmark"
          title="Permalink to Regression">Regression</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2015-04-22T09:00:00+02:00">
-      Wed 22 April 2015
+      Mi 22 April 2015
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Approximate an unknown function $f$ that maps from $\mathbb{R}^D$ to $\mathbb{R}^F$.</em></p>
 
@@ -66,8 +71,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Model:</strong></p>
 <ul>
@@ -80,16 +84,14 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Algorithms</strong></p>
 <ul>
@@ -110,16 +112,14 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>All samples $\{(\boldsymbol{x}_1, \boldsymbol{y}_1), \ldots, (\boldsymbol{x}_N, \boldsymbol{y}_N)\}$ are called <strong>dataset</strong>.</p>
 <p>Here is an example.</p>
@@ -139,7 +139,7 @@
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -161,7 +161,7 @@
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -178,7 +178,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -188,7 +188,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -201,7 +201,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -503,8 +503,7 @@ AQiCIDQp/w/t82jwyWWu8AAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will only consider the case $F = 1$.</p>
 <p>In this case, we can organize the whole dataset in a <strong>design matrix</strong> $\boldsymbol{X} \in \mathbb{R}^{N \times D}$ which contains the input $\boldsymbol{x}_n$ of one sample in each row and a vector $\boldsymbol{y} \in \mathbb{R}^N$ that contains the output $y_n$ of one sample in each entry.</p>
@@ -513,11 +512,10 @@ AQiCIDQp/w/t82jwyWWu8AAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Design matrix</p>
-<p>$$\boldsymbol{X}
+$$\boldsymbol{X}
 = \begin{pmatrix}
     \boldsymbol{x}_1^T\\
     \boldsymbol{x}_2^T\\
@@ -531,22 +529,19 @@ AQiCIDQp/w/t82jwyWWu8AAAAABJRU5ErkJggg==
     \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
     x_{N,1}&amp;x_{N,2}&amp;\ldots&amp;x_{N,D}
   \end{pmatrix}
-  }^\textrm{Features}$$</p>
-
+  }^\textrm{Features}$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Model:</strong> We assume that there is some latent function $f: \mathbb{R}^D \rightarrow \mathbb{R}$. We observe samples $(\boldsymbol{x}_n, y_n)$ with $$f(\boldsymbol{x}_n) + \epsilon_n = y_n, \quad \epsilon_n \sim \mathcal{N}(0, \sigma^2).$$</p>
 
@@ -554,8 +549,7 @@ AQiCIDQp/w/t82jwyWWu8AAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We assume that $f$ is a linear function of the form
 $$f(\boldsymbol{x}_n) = \boldsymbol{w}^T \boldsymbol{x}$$
@@ -567,8 +561,7 @@ $$\boldsymbol{y} = \boldsymbol{X}\boldsymbol{w} + \boldsymbol{\epsilon}$$</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will learn by minimizing the <strong>sum of squared errors</strong> (SSE)
 $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} ||^2_2.$$</p>
@@ -577,16 +570,14 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \bolds
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can find a solution for the vector $\boldsymbol{w}$ by setting the derivative of the objective function to 0 and solving for $\boldsymbol{w}$.</p>
-<p>\begin{eqnarray*}
+\begin{eqnarray*}
 &amp;&amp; 0 = \boldsymbol{X}^T \left( \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} \right) \boldsymbol{X} = \boldsymbol{X}^T \boldsymbol{y} - \boldsymbol{X}^T \boldsymbol{X} \boldsymbol{w}\\
 &amp;\Leftrightarrow&amp; \boldsymbol{X}^T \boldsymbol{X} \boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{y}\\
 &amp;\Leftrightarrow&amp; \boldsymbol{w} = \left( \boldsymbol{X}^T \boldsymbol{X} \right)^{-1} \boldsymbol{X}^T \boldsymbol{y}
-\end{eqnarray*}</p>
-<p>(Now we actually have to prove that the second derivative is greater than 0.)</p>
+\end{eqnarray*}<p>(Now we actually have to prove that the second derivative is greater than 0.)</p>
 
 </div>
 </div>
@@ -612,7 +603,7 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \bolds
         <span class="k">return</span> <span class="n">X_bias</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -631,7 +622,7 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \bolds
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -645,7 +636,7 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \bolds
 <span class="n">plot_model</span><span class="p">(</span><span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -655,7 +646,7 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \bolds
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -984,8 +975,7 @@ iXsAAAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -998,8 +988,7 @@ iXsAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Nonlinear-Regression">Nonlinear Regression<a class="anchor-link" href="#Nonlinear-Regression">&#182;</a></h2><p>We can extend the linear model to approximate nonlinear functions by</p>
 <ul>
@@ -1013,8 +1002,7 @@ iXsAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ingredients-for-Machine-Learning">Ingredients for Machine Learning<a class="anchor-link" href="#Ingredients-for-Machine-Learning">&#182;</a></h2><p>Machine learning algorithms often consist of</p>
 <ul>
@@ -1027,16 +1015,14 @@ iXsAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Polynomial-Regression">Polynomial Regression<a class="anchor-link" href="#Polynomial-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can approximate nonlinear functions with linear regression by generating nonlinear features $\phi(\boldsymbol{x})$.</p>
 
@@ -1044,8 +1030,7 @@ iXsAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For example:
 $$\left( x_1, x_2 \right) \rightarrow \left( x_1^3, x_2^3, x_1^2x_2, x_1 x_2^2, x_1^2, x_2^2, x_1 x_2, x_1, x_2, 1 \right)$$</p>
@@ -1076,7 +1061,7 @@ $$\left( x_1, x_2 \right) \rightarrow \left( x_1^3, x_2^3, x_1^2x_2, x_1 x_2^2, 
         <span class="k">return</span> <span class="n">X_poly</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1089,7 +1074,7 @@ $$\left( x_1, x_2 \right) \rightarrow \left( x_1^3, x_2^3, x_1^2x_2, x_1 x_2^2, 
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">PolynomialRegression</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1099,7 +1084,7 @@ $$\left( x_1, x_2 \right) \rightarrow \left( x_1^3, x_2^3, x_1^2x_2, x_1 x_2^2, 
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1498,8 +1483,7 @@ QdChhAEIgiDoUMIABEEQdCj/B/xszdZqt506AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -1512,8 +1496,7 @@ QdChhAEIgiDoUMIABEEQdCj/B/xszdZqt506AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Bias-vs.-Variance">Bias vs. Variance<a class="anchor-link" href="#Bias-vs.-Variance">&#182;</a></h2>
 </div>
@@ -1538,7 +1521,7 @@ QdChhAEIgiDoUMIABEEQdCj/B/xszdZqt506AAAAAElFTkSuQmCC
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1552,7 +1535,7 @@ QdChhAEIgiDoUMIABEEQdCj/B/xszdZqt506AAAAAElFTkSuQmCC
     <span class="n">plot_bias_variance_error</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1562,7 +1545,7 @@ QdChhAEIgiDoUMIABEEQdCj/B/xszdZqt506AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2109,7 +2092,7 @@ RK5CYII=
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="mf">0.8</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="mf">0.8</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2123,7 +2106,7 @@ RK5CYII=
     <span class="n">plot_bias_variance</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2133,7 +2116,7 @@ RK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3846,34 +3829,29 @@ gj/BqwAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ridge-Regression">Ridge Regression<a class="anchor-link" href="#Ridge-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To reduce overfitting, we minimize</p>
-<p>$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} ||^2_2 + \frac{\gamma}{2} \boldsymbol{w}^T \boldsymbol{w},$$</p>
-<p>which means that we set a prior for $\boldsymbol{w}$.</p>
+$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} ||^2_2 + \frac{\gamma}{2} \boldsymbol{w}^T \boldsymbol{w},$$<p>which means that we set a prior for $\boldsymbol{w}$.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{eqnarray*}
+\begin{eqnarray*}
 &amp;&amp; 0 = -\boldsymbol{X}^T \left( \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} \right) + \gamma \boldsymbol{w}\\
 &amp;\Leftrightarrow&amp; \boldsymbol{X}^T \boldsymbol{X} \boldsymbol{w} + \gamma \boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{y}\\
 &amp;\Leftrightarrow&amp; \boldsymbol{w} = \left( \boldsymbol{X}^T \boldsymbol{X} + \gamma \boldsymbol{I} \right)^{-1} \boldsymbol{X}^T \boldsymbol{y}
-\end{eqnarray*}</p>
-
+\end{eqnarray*}
 </div>
 </div>
 </div>
@@ -3899,7 +3877,7 @@ gj/BqwAAAABJRU5ErkJggg==
         <span class="k">return</span> <span class="n">X_poly</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3912,7 +3890,7 @@ gj/BqwAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">PolynomialRidgeRegression</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3922,7 +3900,7 @@ gj/BqwAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -4311,8 +4289,7 @@ cBzHaVDcATiO4zQo7gAcx3EaFHcAjuM4Dcr/Aco9Rj1aFQiKAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -4324,16 +4301,14 @@ cBzHaVDcATiO4zQo7gAcx3EaFHcAjuM4Dcr/Aco9Rj1aFQiKAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Kernel-Regression">Kernel Regression<a class="anchor-link" href="#Kernel-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can express $\boldsymbol{w}$ as a weighted sum of the training data
 $$\boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{\alpha}$$</p>
@@ -4342,8 +4317,7 @@ $$\boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{\alpha}$$</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Which leads to the <strong>dual problem</strong>
 $$\arg \min_\boldsymbol{\alpha} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{X}^T \boldsymbol{\alpha}||^2_2$$</p>
@@ -4352,8 +4326,7 @@ $$\arg \min_\boldsymbol{\alpha} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We call $\boldsymbol{K} = \boldsymbol{X}\boldsymbol{X}^T \in \mathbb{R}^{N \times N}$ the Gram matrix so that we can find the minimum at
 \begin{eqnarray*}
@@ -4367,8 +4340,7 @@ $$\arg \min_\boldsymbol{\alpha} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Kernel-Trick">Kernel Trick<a class="anchor-link" href="#Kernel-Trick">&#182;</a></h3><p>Instead of the <em>linear kernel</em> $k(\boldsymbol{x}, \boldsymbol{x}') = \boldsymbol{x}^T \boldsymbol{x}'$, we can use any Mercer kernel to build the Gram matrix $\boldsymbol{K}$. The intuition behind this is that we use another <strong>definition of similarity</strong> when we use another kernel.</p>
 
@@ -4376,8 +4348,7 @@ $$\arg \min_\boldsymbol{\alpha} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Linear kernel: $k(\boldsymbol{x}, \boldsymbol{x}') = \boldsymbol{x}^T \boldsymbol{x}'$</li>
@@ -4416,7 +4387,7 @@ $k(\boldsymbol{x}, \boldsymbol{x}') = \exp \left( - \gamma ||\boldsymbol{x} - \b
         <span class="k">return</span> <span class="n">K_star</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4429,7 +4400,7 @@ $k(\boldsymbol{x}, \boldsymbol{x}') = \exp \left( - \gamma ||\boldsymbol{x} - \b
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">KernelRegression</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4439,7 +4410,7 @@ $k(\boldsymbol{x}, \boldsymbol{x}') = \exp \left( - \gamma ||\boldsymbol{x} - \b
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -4775,7 +4746,7 @@ CIIg1CmiAARBEOoUUQCCIAh1yv8Dhi3tGjMYyJIAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">KernelRegression</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4785,7 +4756,7 @@ CIIg1CmiAARBEOoUUQCCIAh1yv8Dhi3tGjMYyJIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -5182,8 +5153,7 @@ AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -5196,30 +5166,24 @@ AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Kernel-Ridge-Regression">Kernel Ridge Regression<a class="anchor-link" href="#Kernel-Ridge-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We start from <strong>ridge regression</strong></p>
-<p>$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} ||^2_2 + \frac{\gamma}{2} \boldsymbol{w}^T \boldsymbol{w}.$$</p>
-<p>and replace again $\boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{\alpha},$ so that</p>
-<p>$$\boldsymbol{w}^T \boldsymbol{w} = \left( \boldsymbol{X}^T \boldsymbol{\alpha} \right)^T \left( \boldsymbol{X}^T \boldsymbol{\alpha} \right) = \boldsymbol{\alpha}^T \boldsymbol{X} \boldsymbol{X}^T \boldsymbol{\alpha} = \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{\alpha},$$</p>
-<p>which results in a modification of the dual problem</p>
-<p>$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{K} \boldsymbol{\alpha} ||^2_2 + \frac{\gamma}{2} \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{\alpha}.$$</p>
-
+$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{X} \boldsymbol{w} ||^2_2 + \frac{\gamma}{2} \boldsymbol{w}^T \boldsymbol{w}.$$<p>and replace again $\boldsymbol{w} = \boldsymbol{X}^T \boldsymbol{\alpha},$ so that</p>
+$$\boldsymbol{w}^T \boldsymbol{w} = \left( \boldsymbol{X}^T \boldsymbol{\alpha} \right)^T \left( \boldsymbol{X}^T \boldsymbol{\alpha} \right) = \boldsymbol{\alpha}^T \boldsymbol{X} \boldsymbol{X}^T \boldsymbol{\alpha} = \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{\alpha},$$<p>which results in a modification of the dual problem</p>
+$$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \boldsymbol{K} \boldsymbol{\alpha} ||^2_2 + \frac{\gamma}{2} \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{\alpha}.$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The solution is
 \begin{eqnarray*}
@@ -5253,7 +5217,7 @@ AAAAAElFTkSuQmCC
         <span class="k">return</span> <span class="n">K_star</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5266,7 +5230,7 @@ AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">KernelRidgeRegression</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">lmbda</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5276,7 +5240,7 @@ AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -5652,16 +5616,14 @@ AGOMKSkrAMYYU1JWAIwxpqSsABhjTEn9DxkUcAl7XYQkAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gaussian-Process-Regression">Gaussian Process Regression<a class="anchor-link" href="#Gaussian-Process-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Kernels that are used for GPR (covariance functions) usually have <strong>more hyperparameters</strong> than kernels that we have been looking at before. However, the hyperparameter optimization of GPR is much better than other methods (but more computationally complex).</p>
 
@@ -5669,8 +5631,7 @@ AGOMKSkrAMYYU1JWAIwxpqSsABhjTEn9DxkUcAl7XYQkAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>RBF kernel:
@@ -5683,8 +5644,7 @@ $$k(\boldsymbol{x}^{(1)}, \boldsymbol{x}^{(2)}) = \exp \left( - \sum_i l_i \lver
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We maximize the marginal likelihood $p(\boldsymbol{y}|\boldsymbol{X})$.</p>
 
@@ -5692,8 +5652,7 @@ $$k(\boldsymbol{x}^{(1)}, \boldsymbol{x}^{(2)}) = \exp \left( - \sum_i l_i \lver
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We minimize the log-likelihood
 $$\log p(\boldsymbol{y}|\boldsymbol{X}) = - \frac{1}{2} \boldsymbol{y} \boldsymbol{K}^{-1} \boldsymbol{y} - \frac{1}{2} \log |\boldsymbol{K}| - \frac{N}{2} \log (2 \pi)$$
@@ -5703,8 +5662,7 @@ with respect to the kernel's hyperparameters $\boldsymbol{\theta}$.</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The derivative can be computed as
 $$\frac{\partial}{\partial \theta_j} \log p(\boldsymbol{y}|\boldsymbol{X}) = \frac{1}{2} tr \left( (\boldsymbol{\alpha} \boldsymbol{\alpha}^T - \boldsymbol{K}^{-1}) \frac{\partial \boldsymbol{K}}{\partial \theta_j} \right)$$</p>
@@ -5726,7 +5684,7 @@ $$\frac{\partial}{\partial \theta_j} \log p(\boldsymbol{y}|\boldsymbol{X}) = \fr
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_pred</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y_mse</span><span class="p">),</span> <span class="n">y_pred</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y_mse</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5736,7 +5694,7 @@ $$\frac{\partial}{\partial \theta_j} \log p(\boldsymbol{y}|\boldsymbol{X}) = \fr
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -5749,7 +5707,7 @@ $$\frac{\partial}{\partial \theta_j} \log p(\boldsymbol{y}|\boldsymbol{X}) = \fr
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -6272,8 +6230,7 @@ AAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -6284,16 +6241,14 @@ AAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Support-Vector-Regression">Support Vector Regression<a class="anchor-link" href="#Support-Vector-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Support vector algorithms usually have constrained optimization problem. In this case, we want to optimize</p>
 <p>$\arg \min_{\boldsymbol{w}} \frac{1}{2} ||\boldsymbol{w}||^2$ subject to $\begin{cases}
@@ -6324,7 +6279,7 @@ AAAASUVORK5CYII=
 <span class="n">plot_svr</span><span class="p">(</span><span class="n">svr</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -6334,7 +6289,7 @@ AAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -6990,7 +6945,7 @@ pvwfxxKD48W+JdsAAAAASUVORK5CYII=
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -7000,7 +6955,7 @@ pvwfxxKD48W+JdsAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -7013,7 +6968,7 @@ pvwfxxKD48W+JdsAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -7904,8 +7859,7 @@ KaWUUkqpGuH/AZaMsWeW+ICgAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -7916,16 +7870,14 @@ KaWUUkqpGuH/AZaMsWeW+ICgAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="http://upload.wikimedia.org/wikipedia/en/1/1d/Neural_network_example.png" alt="ANN">
 Source: <a href="http://en.wikipedia.org/wiki/File:Neural_network_example.png">http://en.wikipedia.org/wiki/File:Neural_network_example.png</a></p>
@@ -7934,8 +7886,7 @@ Source: <a href="http://en.wikipedia.org/wiki/File:Neural_network_example.png">h
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>A neural net is an interconnected assembly of neurons.</li>
@@ -7947,8 +7898,7 @@ Source: <a href="http://en.wikipedia.org/wiki/File:Neural_network_example.png">h
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Objective function:
 $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \hat{\boldsymbol{y}} ||^2_2.$$</p>
@@ -7958,8 +7908,7 @@ $$\arg \min_\boldsymbol{w} \frac{1}{2} || \boldsymbol{y} - \hat{\boldsymbol{y}} 
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Each neuron computes
 $$g(\boldsymbol{X}\boldsymbol{w}).$$</p>
@@ -7998,7 +7947,7 @@ $$g(\boldsymbol{X}\boldsymbol{w}).$$</p>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8011,7 +7960,7 @@ $$g(\boldsymbol{X}\boldsymbol{w}).$$</p>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">NeuralNet</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8021,7 +7970,7 @@ $$g(\boldsymbol{X}\boldsymbol{w}).$$</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -8438,7 +8387,7 @@ gqYAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">NeuralNet</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8448,7 +8397,7 @@ gqYAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -8836,8 +8785,7 @@ zjnXoDwBOOdcg/IE4JxzDer/Yw5w2H0DhLUAAAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Problems:</strong></p>
 <ul>
@@ -8850,8 +8798,7 @@ zjnXoDwBOOdcg/IE4JxzDer/Yw5w2H0DhLUAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Comparison">Comparison<a class="anchor-link" href="#Comparison">&#182;</a></h2>
 </div>
@@ -8888,7 +8835,7 @@ zjnXoDwBOOdcg/IE4JxzDer/Yw5w2H0DhLUAAAAASUVORK5CYII=
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8907,7 +8854,7 @@ zjnXoDwBOOdcg/IE4JxzDer/Yw5w2H0DhLUAAAAASUVORK5CYII=
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8917,7 +8864,7 @@ zjnXoDwBOOdcg/IE4JxzDer/Yw5w2H0DhLUAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -9502,7 +9449,7 @@ gg==
         <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -9515,7 +9462,7 @@ gg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">LinearRegression</span><span class="p">())</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -9525,7 +9472,7 @@ gg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -10246,7 +10193,7 @@ RK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">PolynomialRegression</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -10256,7 +10203,7 @@ RK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -10961,7 +10908,7 @@ EQFkchAREREREUUmBxERERERAWRyEBERERERRSYHEREREREBZHIQERERERFFJgcREREREQHA/wBW
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">PolynomialRidgeRegression</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -10971,7 +10918,7 @@ EQFkchAREREREUUmBxERERERAWRyEBERERERRSYHEREREREBZHIQERERERFFJgcREREREQHA/wBW
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -11676,7 +11623,7 @@ RK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">KernelRegression</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">100.0</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11686,7 +11633,7 @@ RK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -12419,7 +12366,7 @@ IiKAJgciIiIiIpLQ5EBERERERAD4f8ktzxijrK4KAAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">KernelRidgeRegression</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">lmbda</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">100.0</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12429,7 +12376,7 @@ IiKAJgciIiIiIpLQ5EBERERERAD4f8ktzxijrK4KAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13120,7 +13067,7 @@ AAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">GaussianProcess</span><span class="p">(</span><span class="n">nugget</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13130,7 +13077,7 @@ AAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13825,7 +13772,7 @@ EEIIIQAZHIQQQgghhBAKGRyEEEIIIYQQAPgXH9Mt4BDD1aMAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">SVR</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">10.0</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13835,7 +13782,7 @@ EEIIIQAZHIQQQgghhBAKGRyEEEIIIYQQAPgXH9Mt4BDD1aMAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -14531,7 +14478,7 @@ QgghhBAKaQ5CCCGEEEIIAPwLXsZIadMRywIAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">NeuralNet</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14541,7 +14488,7 @@ QgghhBAKaQ5CCCGEEEIIAPwLXsZIadMRywIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -15263,7 +15210,7 @@ AP4H7rnvHtDBc1oAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_model_on_datasets</span><span class="p">(</span><span class="n">NeuralNet</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -15273,7 +15220,7 @@ AP4H7rnvHtDBc1oAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -15954,16 +15901,14 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Model-Selection">Model Selection<a class="anchor-link" href="#Model-Selection">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>How can I evaluate my result?</strong></p>
 <p>Appropriate metrics for regression are e.g.</p>
@@ -15977,8 +15922,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>What is the best model for me?</strong></p>
 <p>That depends on...</p>
@@ -15995,8 +15939,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>How do we select appropriate parameters?</strong></p>
 <ul>
@@ -16009,8 +15952,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Do I have enough samples? Is my model complex enough?</strong></p>
 
@@ -16053,7 +15995,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -16063,7 +16005,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -16076,7 +16018,7 @@ SQD8Ad5V/IZzFb//AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -16535,7 +16477,7 @@ uwHOjRZPHM61mKT3AM+V3Q7nRosnDuda7whgedmNcG60+M1x55xzhXiPwznnXCGeOJxzzhXiicM5
     <span class="k">return</span> <span class="n">plt</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -16572,7 +16514,7 @@ uwHOjRZPHM61mKT3AM+V3Q7nRosnDuda7whgedmNcG60+M1x55xzhXiPwznnXCGeOJxzzhXiicM5
 <span class="n">plot_learning_curve</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.01</span><span class="p">),</span> <span class="n">cv</span><span class="o">=</span><span class="n">cv</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -16582,7 +16524,7 @@ uwHOjRZPHM61mKT3AM+V3Q7nRosnDuda7whgedmNcG60+M1x55xzhXiPwznnXCGeOJxzzhXiicM5
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -16595,7 +16537,7 @@ uwHOjRZPHM61mKT3AM+V3Q7nRosnDuda7whgedmNcG60+M1x55xzhXiPwznnXCGeOJxzzhXiicM5
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -16964,7 +16906,7 @@ RK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -17262,16 +17204,14 @@ MQzDMHLDRMUwDMPIDRMVwzAMIzdMVAzDMIzcMFExDMMwcuP/AbePL5JR4LkDAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="More-Topics">More Topics<a class="anchor-link" href="#More-Topics">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Generalized_linear_model">Generalized linear models</a></li>

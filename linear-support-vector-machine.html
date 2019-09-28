@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - Linear Support Vector Machine</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,46 +27,50 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/linear-support-vector-machine.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/linear-support-vector-machine.html" rel="bookmark"
          title="Permalink to Linear Support Vector Machine">Linear Support Vector Machine</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2016-06-08T23:15:00+02:00">
-      Wed 08 June 2016
+      Mi 08 Juni 2016
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Model">Model<a class="anchor-link" href="#Model">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A linear Support Vector Machine implements the linear model
 $$y = \text{sign}\left(\boldsymbol{w}^T\boldsymbol{x} + b\right),$$
@@ -76,28 +80,23 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Objective-Function">Objective Function<a class="anchor-link" href="#Objective-Function">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The original objective function for a Support Vector Machine is</p>
-<p>$$\min_{\boldsymbol{w}} ||\boldsymbol{w}||^2 \text{ subject to } y_i \left( \boldsymbol{w}^T \boldsymbol{x}_i + b \right) \geq 1 \text{ for } i=1,\ldots,n.$$</p>
-<p>To allow missclassification to some degree, we can formulate a relaxed version. The objective function of <em>soft</em> margin SVM is</p>
-<p>$$\min_{\boldsymbol{w},\xi_i}||\boldsymbol{w}||^2 + C \sum_{i=1}^{n} \xi_i \text{ subject to } y_i \left( \boldsymbol{w}^T \boldsymbol{x}_i + b \right) \geq 1 - \xi_i \text{ and } \xi_i \geq 0 \text{ for } i=1,\ldots,n.$$</p>
-
+$$\min_{\boldsymbol{w}} ||\boldsymbol{w}||^2 \text{ subject to } y_i \left( \boldsymbol{w}^T \boldsymbol{x}_i + b \right) \geq 1 \text{ for } i=1,\ldots,n.$$<p>To allow missclassification to some degree, we can formulate a relaxed version. The objective function of <em>soft</em> margin SVM is</p>
+$$\min_{\boldsymbol{w},\xi_i}||\boldsymbol{w}||^2 + C \sum_{i=1}^{n} \xi_i \text{ subject to } y_i \left( \boldsymbol{w}^T \boldsymbol{x}_i + b \right) \geq 1 - \xi_i \text{ and } \xi_i \geq 0 \text{ for } i=1,\ldots,n.$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can measure both parts of the objective.</p>
 
@@ -112,7 +111,7 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -122,7 +121,7 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -146,22 +145,20 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">svm</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Implementation">Implementation<a class="anchor-link" href="#Implementation">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A simple SVM implementation can be found at <a href="https://github.com/AlexanderFabisch/svm">github</a>. It is based on Andrej Karpathy's <a href="https://github.com/karpathy/svmjs">svm.js</a>. The main part of a good SVM implementation is the optimization algorithm that is used to minimize the objective. Probably the most widely used library at the moment is <a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">libsvm</a> which is wrapped in <a href="http://scikit-learn.org/stable/">sklearn</a>.</p>
 
@@ -169,16 +166,14 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Regularization">Regularization<a class="anchor-link" href="#Regularization">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We take a look at a simple dataset. We define a function to compare several values of $C$.</p>
 
@@ -222,14 +217,13 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The dataset consists of samples drawn from two Gaussian distributions.</p>
 
@@ -253,7 +247,7 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -263,7 +257,7 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -276,7 +270,7 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -537,8 +531,7 @@ AElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A linear SVM with a low value for C will have a low weight vector norm and a higher classification error. With $C=\infty$ the classification error will have the lowest possible value.</p>
 
@@ -553,7 +546,7 @@ AElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_decision_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Cs</span><span class="o">=</span><span class="p">[</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -563,7 +556,7 @@ AElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1004,8 +997,7 @@ rkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the previous example, a high value of C is not a problem at all because both classes are well separated. Let's take a look at the same dataset with just one more point.</p>
 
@@ -1031,7 +1023,7 @@ rkJggg==
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1041,7 +1033,7 @@ rkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -1054,7 +1046,7 @@ rkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1316,8 +1308,7 @@ oq6NCs/FJzbp8SB7SIV/Iy9Lug+YArQCV5nZfyMMuyYqfF/8FPiTpOcJCfA7ZvZBdFHXhqQbCJU3
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>High values of C don't work at all in this case.</p>
 
@@ -1332,7 +1323,7 @@ oq6NCs/FJzbp8SB7SIV/Iy9Lug+YArQCV5nZfyMMuyYqfF/8FPiTpOcJCfA7ZvZBdFHXhqQbCJU3
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_decision_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Cs</span><span class="o">=</span><span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1342,7 +1333,7 @@ oq6NCs/FJzbp8SB7SIV/Iy9Lug+YArQCV5nZfyMMuyYqfF/8FPiTpOcJCfA7ZvZBdFHXhqQbCJU3
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 

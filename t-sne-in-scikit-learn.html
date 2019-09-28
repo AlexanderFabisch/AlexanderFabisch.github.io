@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - t-SNE in scikit learn</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,32 +27,38 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/t-sne-in-scikit-learn.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/t-sne-in-scikit-learn.html" rel="bookmark"
          title="Permalink to t-SNE in scikit learn">t-SNE in scikit learn</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2014-06-05T00:27:00+02:00">
-      Thu 05 June 2014
+      Do 05 Juni 2014
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>The algorithm t-SNE has been merged in the master of scikit learn
@@ -70,7 +76,7 @@ that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -80,7 +86,7 @@ that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -94,35 +100,28 @@ that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="t-Distributed-Stochastic-Neighbor-Embedding-(t-SNE)-in-sklearn">t-Distributed Stochastic Neighbor Embedding (t-SNE) in sklearn<a class="anchor-link" href="#t-Distributed-Stochastic-Neighbor-Embedding-(t-SNE)-in-sklearn">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>t-SNE is a tool for data visualization. It reduces the dimensionality of data to 2 or 3 dimensions so that it can be plotted easily. Local similarities are preserved by this embedding.</p>
 <p>t-SNE converts distances between data in the original space to probabilities. First, we compute conditional probabilites</p>
-<p>$$p_{j|i} = \frac{\exp{(-d(\boldsymbol{x}_i, \boldsymbol{x}_j) / (2 \sigma_i^2)})}{\sum_{i \neq k} \exp{(-d(\boldsymbol{x}_i, \boldsymbol{x}_k) / (2 \sigma_i^2)})}, \quad p_{i|i} = 0,$$</p>
-<p>which will be used to generate joint probabilities</p>
-<p>$$p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}.$$</p>
-<p>The $\sigma_i$ will be determined automatically. This procedure can be influenced by setting the <code>perplexity</code> of the algorithm.</p>
+$$p_{j|i} = \frac{\exp{(-d(\boldsymbol{x}_i, \boldsymbol{x}_j) / (2 \sigma_i^2)})}{\sum_{i \neq k} \exp{(-d(\boldsymbol{x}_i, \boldsymbol{x}_k) / (2 \sigma_i^2)})}, \quad p_{i|i} = 0,$$<p>which will be used to generate joint probabilities</p>
+$$p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}.$$<p>The $\sigma_i$ will be determined automatically. This procedure can be influenced by setting the <code>perplexity</code> of the algorithm.</p>
 <p>A heavy-tailed distribution will be used to measure the similarities in the embedded space</p>
-<p>$$q_{ij} = \frac{(1 + ||\boldsymbol{y}_i - \boldsymbol{y}_j)||^2)^{-1}}{\sum_{k \neq l} (1 + ||\boldsymbol{y}_k - \boldsymbol{y}_l)||^2)^{-1}},$$</p>
-<p>and then we minimize the Kullback-Leibler divergence</p>
-<p>$$KL(P|Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$</p>
-<p>between both distributions with gradient descent (and some tricks). Note that the cost function is not convex and multiple runs might yield different results.</p>
+$$q_{ij} = \frac{(1 + ||\boldsymbol{y}_i - \boldsymbol{y}_j)||^2)^{-1}}{\sum_{k \neq l} (1 + ||\boldsymbol{y}_k - \boldsymbol{y}_l)||^2)^{-1}},$$<p>and then we minimize the Kullback-Leibler divergence</p>
+$$KL(P|Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$<p>between both distributions with gradient descent (and some tricks). Note that the cost function is not convex and multiple runs might yield different results.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>More information can be found in these resources and in the documentation of t-SNE:</p>
 <ul>
@@ -143,7 +142,7 @@ that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gi
 <span class="n">help</span><span class="p">(</span><span class="n">TSNE</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -153,7 +152,7 @@ that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -334,8 +333,7 @@ class TSNE(sklearn.base.BaseEstimator)
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="A-simple-example:-the-Iris-dataset">A simple example: the Iris dataset<a class="anchor-link" href="#A-simple-example:-the-Iris-dataset">&#182;</a></h2>
 </div>
@@ -354,14 +352,13 @@ class TSNE(sklearn.base.BaseEstimator)
 <span class="n">X_pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>t-SNE can help us to decide whether classes are separable in some linear or nonlinear representation. Here we can see that the 3 classes of the Iris dataset can be separated quite easily. They can even be separated linearly which we can conclude from the low-dimensional embedding of the <code>PCA</code>.</p>
 
@@ -380,7 +377,7 @@ class TSNE(sklearn.base.BaseEstimator)
 <span class="n">scatter</span><span class="p">(</span><span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -390,7 +387,7 @@ class TSNE(sklearn.base.BaseEstimator)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -403,7 +400,7 @@ class TSNE(sklearn.base.BaseEstimator)
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1139,16 +1136,14 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="High-dimensional-sparse-data:-the-20-newsgroups-dataset">High-dimensional sparse data: the 20 newsgroups dataset<a class="anchor-link" href="#High-dimensional-sparse-data:-the-20-newsgroups-dataset">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In high-dimensional and nonlinear domains, PCA is not applicable any more and many other manifold learning algorithms do not yield good visualizations either because they try to preserve the global data structure.</p>
 
@@ -1168,7 +1163,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 <span class="n">vectors</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">newsgroups</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1181,7 +1176,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">vectors</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1191,7 +1186,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1206,8 +1201,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For high-dimensional sparse data it is helpful to first reduce the dimensions to 50 dimensions with <code>TruncatedSVD</code> and then perform t-SNE. This will usually improve the visualization.</p>
 
@@ -1224,7 +1218,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1237,7 +1231,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_embedded</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_reduced</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1247,7 +1241,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1301,7 +1295,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
         <span class="n">c</span><span class="o">=</span><span class="n">newsgroups</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1311,7 +1305,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -1324,7 +1318,7 @@ aMn/A7GKqsy7Rf1gAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -4035,8 +4029,7 @@ AAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="MNIST-dataset">MNIST dataset<a class="anchor-link" href="#MNIST-dataset">&#182;</a></h1>
 </div>
@@ -4062,7 +4055,7 @@ AAAASUVORK5CYII=
 <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">indices</span><span class="p">[:</span><span class="n">n_train_samples</span><span class="p">]]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4105,7 +4098,7 @@ AAAASUVORK5CYII=
             <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">imagebox</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4118,7 +4111,7 @@ AAAASUVORK5CYII=
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_embedded</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4128,7 +4121,7 @@ AAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -4192,7 +4185,7 @@ AAAASUVORK5CYII=
            <span class="s2">&quot;t-SNE&quot;</span><span class="p">,</span> <span class="n">min_dist</span><span class="o">=</span><span class="mf">20.0</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4202,7 +4195,7 @@ AAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -9902,16 +9895,14 @@ AElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Outlook">Outlook<a class="anchor-link" href="#Outlook">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are some modifications of t-SNE that already have been published. A huge disadvantage of t-SNE is that it scales quadratically with the number of samples ($O(N^2)$) and the optimization is quite slow. These issues and more have been adressed in the following papers:</p>
 
@@ -9919,8 +9910,7 @@ AElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Parametric t-SNE: <a href="http://jmlr.csail.mit.edu/proceedings/papers/v5/maaten09a/maaten09a.pdf">Learning a Parametric Embedding by Preserving Local Structure</a></li>

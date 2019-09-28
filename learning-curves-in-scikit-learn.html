@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - Learning Curves in scikit learn</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,32 +27,38 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/learning-curves-in-scikit-learn.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/learning-curves-in-scikit-learn.html" rel="bookmark"
          title="Permalink to Learning Curves in scikit learn">Learning Curves in scikit learn</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2014-01-12T14:49:00+01:00">
-      Sun 12 January 2014
+      So 12 Januar 2014
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p><a href="https://github.com/scikit-learn/scikit-learn">scikit learn</a> is a great
@@ -64,16 +70,16 @@ scikit learn is such a great library.</p>
 number of training samples. It is a tool that can be used to find out
 whether we benefit from more training samples. At a first look, it seems to
 be very easy to implement. We could do something like:</p>
-<div class="highlight"><pre><span></span>estimator = ...
-X_train, y_train, X_test, y_test = split(X, y)
-n_samples = X_train.shape[0]
-train_scores, test_scores = [], []
-for n in range(10, 10, n_samples):
-    estimator.fit(X_train[:n], y_train[n])
-    train_scores.append(estimator.score(X_train[:n], y_train[n]))
-    test_scores.append(estimator.score(X_test, y_test))
-plot(range(10, 10, n_samples), train_scores)
-plot(range(10, 10, n_samples), test_scores)
+<div class="highlight"><pre><span></span><span class="nv">estimator</span> <span class="o">=</span> ...
+<span class="nv">X_train</span>, <span class="nv">y_train</span>, <span class="nv">X_test</span>, <span class="nv">y_test</span> <span class="o">=</span> <span class="nv">split</span><span class="ss">(</span><span class="nv">X</span>, <span class="nv">y</span><span class="ss">)</span>
+<span class="nv">n_samples</span> <span class="o">=</span> <span class="nv">X_train</span>.<span class="nv">shape</span>[<span class="mi">0</span>]
+<span class="nv">train_scores</span>, <span class="nv">test_scores</span> <span class="o">=</span> [], []
+<span class="k">for</span> <span class="nv">n</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span>, <span class="mi">10</span>, <span class="nv">n_samples</span><span class="ss">)</span>:
+    <span class="nv">estimator</span>.<span class="nv">fit</span><span class="ss">(</span><span class="nv">X_train</span>[:<span class="nv">n</span>], <span class="nv">y_train</span>[<span class="nv">n</span>]<span class="ss">)</span>
+    <span class="nv">train_scores</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">estimator</span>.<span class="nv">score</span><span class="ss">(</span><span class="nv">X_train</span>[:<span class="nv">n</span>], <span class="nv">y_train</span>[<span class="nv">n</span>]<span class="ss">))</span>
+    <span class="nv">test_scores</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">estimator</span>.<span class="nv">score</span><span class="ss">(</span><span class="nv">X_test</span>, <span class="nv">y_test</span><span class="ss">))</span>
+<span class="nv">plot</span><span class="ss">(</span><span class="nv">range</span><span class="ss">(</span><span class="mi">10</span>, <span class="mi">10</span>, <span class="nv">n_samples</span><span class="ss">)</span>, <span class="nv">train_scores</span><span class="ss">)</span>
+<span class="nv">plot</span><span class="ss">(</span><span class="nv">range</span><span class="ss">(</span><span class="mi">10</span>, <span class="mi">10</span>, <span class="nv">n_samples</span><span class="ss">)</span>, <span class="nv">test_scores</span><span class="ss">)</span>
 </pre></div>
 
 
@@ -105,12 +111,12 @@ actually much worse than the version that is implemented in scikit learn:</p>
 generated in just one call to <code>sklearn.learning_curve.learning_curve</code>
 without all these flaws.</p>
 <p>Lets take a look at the signature of the function <code>learning_curve</code>:</p>
-<div class="highlight"><pre><span></span>train_sizes_abs, train_scores, test_scores = \
-    learning_curve(estimator, X, y,
-                   train_sizes=np.linspace(0.1, 1.0, 10),
-                   cv=None, scoring=None,
-                   exploit_incremental_learning=False,
-                   n_jobs=1, pre_dispatch=&quot;all&quot;, verbose=0)
+<div class="highlight"><pre><span></span><span class="n">train_sizes_abs</span><span class="p">,</span> <span class="n">train_scores</span><span class="p">,</span> <span class="n">test_scores</span> <span class="o">=</span> <span class="err">\</span>
+    <span class="n">learning_curve</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+                   <span class="n">train_sizes</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                   <span class="n">cv</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="k">None</span><span class="p">,</span>
+                   <span class="n">exploit_incremental_learning</span><span class="o">=</span><span class="k">False</span><span class="p">,</span>
+                   <span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pre_dispatch</span><span class="o">=</span><span class="ss">&quot;all&quot;</span><span class="p">,</span> <span class="k">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 
@@ -138,10 +144,10 @@ string that will be mapped to a built-in scorer like for example <code>r2</code>
 <code>accuracy</code> or <code>precision_scorer</code>. Note that the scorer could also compute
 scores for unsupervised learners.</p>
 <p>With only
-<a href="https://github.com/scikit-learn/scikit-learn/blob/master/examples/model_selection/plot_learning_curve.py">a few lines of code</a>
+<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html#sphx-glr-auto-examples-model-selection-plot-learning-curve-py">a few lines of code</a>
 we can now plot beautiful learning curves like these:</p>
-<p><img width="480" height="360" src="http://www.informatik.uni-bremen.de/~afabisch/files/blog/lc_nb.png" />
-<img width="480" height="360" src="http://www.informatik.uni-bremen.de/~afabisch/files/blog/lc_svm.png" /></p>
+<p><img width="480" height="360" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_001.png" />
+<img width="480" height="360" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_002.png" /></p>
 <p>scikit learn offers many more tools like this, for example model selection
 with grid search or random search, a pipeline that combines preprocessing
 and learners, simple dataset access and dataset generators and a really

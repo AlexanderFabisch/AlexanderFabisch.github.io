@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - CrKR</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,38 +27,43 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/crkr.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/crkr.html" rel="bookmark"
          title="Permalink to CrKR">CrKR</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2017-12-10T23:00:00+01:00">
-      Sun 10 December 2017
+      So 10 Dezember 2017
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I will take a look at how kernel ridge regression can be derived from linear regression and ridge regression in this article. I will further show how this knowledge can be used to derive a more specialized model that can be used for reinforcement learning: cost-regularized kernel regression (CrKR). CrKR  also predicts the standard deviation similar to Gaussian process regression.</p>
 
@@ -66,26 +71,22 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In linear regression we seek to maximize the <a href="http://alexanderfabisch.github.io/maximum-likelihood.html#Linear-Regression">likelihood of the model given the data</a>. This is equivalent to minimizing the negative log-likelihood, which is the <a href="http://alexanderfabisch.github.io/regression.html#Linear-Regression">sum of squared errors</a>. Our model is $\boldsymbol{y} = \boldsymbol{\Phi} \boldsymbol{w}$, where $\boldsymbol{y} \in \mathbb{R}^N$ contains the predictions of a 1D regression problem, $\boldsymbol{\Phi} \in \mathbb{R}^{N \times D}$ contains features of input vectors $\phi(\boldsymbol{x_n})$ in each row, $\boldsymbol{w} \in \mathbb{R}^D$ are the model parameters. For a dataset $(\boldsymbol{\Phi}, \boldsymbol{y})$ we want to find</p>
-<p>$$\arg\min_\boldsymbol{w} \mathcal{L}(\boldsymbol{w}) = \arg\min_\boldsymbol{w} \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2$$</p>
-
+$$\arg\min_\boldsymbol{w} \mathcal{L}(\boldsymbol{w}) = \arg\min_\boldsymbol{w} \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us rewrite the objective function (loss) a little bit:
 $$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} \left( \boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w} \right)^T \left( \boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w} \right) = \frac{1}{2} \boldsymbol{y}^T \boldsymbol{y} - \left[ \frac{1}{2} \boldsymbol{y}^T \boldsymbol{\Phi} \boldsymbol{w} - \frac{1}{2} \boldsymbol{w}^T \boldsymbol{\Phi}^T \boldsymbol{y} \right] + \frac{1}{2} \boldsymbol{w}^T\boldsymbol{\Phi}^T \boldsymbol{\Phi} \boldsymbol{w}$$</p>
@@ -94,8 +95,7 @@ $$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} \left( \boldsymbol{y} - \boldsymbol{
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Because $\boldsymbol{y}^T \boldsymbol{\Phi} \boldsymbol{w} = \sum_n \sum_d \boldsymbol{y}_n \boldsymbol{\Phi_{n,d} \boldsymbol{w}_d} = \sum_n \sum_d \boldsymbol{w}_d \boldsymbol{\Phi}^T_{d,n} \boldsymbol{y}_n = \boldsymbol{w}^T \boldsymbol{\Phi}^T \boldsymbol{y}$, we can write
 $$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} \boldsymbol{y}^T \boldsymbol{y} - \boldsymbol{w}^T \boldsymbol{\Phi}^T \boldsymbol{y} + \frac{1}{2} \boldsymbol{w}^T\boldsymbol{\Phi}^T \boldsymbol{\Phi} \boldsymbol{w}$$</p>
@@ -104,8 +104,7 @@ $$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} \boldsymbol{y}^T \boldsymbol{y} - \b
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now it is easy to compute the derivatives (see Section 2.4.4 of <a href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">The Matrix Cookbook</a>).</p>
 <p><strong>Gradient:</strong>
@@ -120,50 +119,42 @@ $$\nabla \nabla \mathcal{L}(\boldsymbol{w}) = \boldsymbol{\Phi}^T \boldsymbol{\P
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The optimum (minimum error) can be found at the zero of the gradient:</p>
-<p>\begin{eqnarray}
+\begin{eqnarray}
 &amp;&amp; \boldsymbol{0} = - \boldsymbol{\Phi}^T \boldsymbol{y} + \boldsymbol{\Phi}^T \boldsymbol{\Phi} \boldsymbol{w}\\
 &amp;\Leftrightarrow&amp; \boldsymbol{\Phi}^T \boldsymbol{y} = \boldsymbol{\Phi}^T \boldsymbol{\Phi} \boldsymbol{w}\\
 &amp;\Leftrightarrow&amp; \left( \boldsymbol{\Phi}^T \boldsymbol{\Phi} \right)^{-1} \boldsymbol{\Phi}^T \boldsymbol{y} = \boldsymbol{w}
-\end{eqnarray}</p>
-
+\end{eqnarray}
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ridge-Regression">Ridge Regression<a class="anchor-link" href="#Ridge-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That was the hard part. The extension to ridge regression (linear regression with regularization) is <a href="http://alexanderfabisch.github.io/regression.html#Ridge-Regression">straightforward</a>. The loss</p>
-<p>$$\arg\min_\boldsymbol{w} \mathcal{L}(\boldsymbol{w}) = \arg\min_\boldsymbol{w} \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{w}||_2^2$$</p>
-<p>leads to the solution</p>
-<p>$$\left( \boldsymbol{\Phi}^T \boldsymbol{\Phi} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{\Phi}^T \boldsymbol{y} = \boldsymbol{w}$$</p>
-
+$$\arg\min_\boldsymbol{w} \mathcal{L}(\boldsymbol{w}) = \arg\min_\boldsymbol{w} \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{w}||_2^2$$<p>leads to the solution</p>
+$$\left( \boldsymbol{\Phi}^T \boldsymbol{\Phi} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{\Phi}^T \boldsymbol{y} = \boldsymbol{w}$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Kernel-Ridge-Regression">Kernel Ridge Regression<a class="anchor-link" href="#Kernel-Ridge-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now there are two way to derive Kernel Ridge Regression from this.</p>
 
@@ -171,41 +162,34 @@ $$\nabla \nabla \mathcal{L}(\boldsymbol{w}) = \boldsymbol{\Phi}^T \boldsymbol{\P
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Replacing-Weights-by-Weighted-Sum-of-Training-Data">Replacing Weights by Weighted Sum of Training Data<a class="anchor-link" href="#Replacing-Weights-by-Weighted-Sum-of-Training-Data">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us take the loss</p>
-<p>$$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{w}||_2^2$$</p>
-<p>and replace $\boldsymbol{w} = \boldsymbol{\Phi}^T \boldsymbol{\alpha}$</p>
-<p>$$\mathcal{L}(\boldsymbol{\alpha}) = \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{\Phi}^T \boldsymbol{\alpha}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{\Phi}^T \boldsymbol{\alpha}||_2^2$$</p>
-<p>$\boldsymbol{\Phi} \boldsymbol{\Phi}^T = \boldsymbol{K} \in \mathbb{R}^{N \times N}$ is a Gram matrix, that is, it contains inner products of all inputs of the dataset.</p>
+$$\mathcal{L}(\boldsymbol{w}) = \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{w}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{w}||_2^2$$<p>and replace $\boldsymbol{w} = \boldsymbol{\Phi}^T \boldsymbol{\alpha}$</p>
+$$\mathcal{L}(\boldsymbol{\alpha}) = \frac{1}{2} ||\boldsymbol{y} - \boldsymbol{\Phi} \boldsymbol{\Phi}^T \boldsymbol{\alpha}||_2^2 + \frac{\lambda}{2} ||\boldsymbol{\Phi}^T \boldsymbol{\alpha}||_2^2$$<p>$\boldsymbol{\Phi} \boldsymbol{\Phi}^T = \boldsymbol{K} \in \mathbb{R}^{N \times N}$ is a Gram matrix, that is, it contains inner products of all inputs of the dataset.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can rewrite this to
 $$\mathcal{L}(\boldsymbol{\alpha}) = \frac{1}{2} \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{K} \boldsymbol{\alpha} - \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{y} + \frac{1}{2} \boldsymbol{y}^T \boldsymbol{y} + \frac{\lambda}{2} \boldsymbol{\alpha}^T \boldsymbol{K} \boldsymbol{\alpha}$$</p>
 <p>The optimum is</p>
-<p>$$\boldsymbol{\alpha} = \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y}$$</p>
-
+$$\boldsymbol{\alpha} = \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y}$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can predict a new feature vector $\boldsymbol{\phi} = \phi(\boldsymbol{x})$ with
 $$y = \boldsymbol{w}^T \boldsymbol{\phi} = \boldsymbol{\alpha}^T \boldsymbol{\Phi} \boldsymbol{\phi}$$</p>
@@ -218,26 +202,22 @@ $$y = \boldsymbol{\alpha}^T \boldsymbol{k}$$</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Using-a-Complicated-Formula">Using a Complicated Formula<a class="anchor-link" href="#Using-a-Complicated-Formula">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://www.ics.uci.edu/~welling/classnotes/papers_class/Kernel-Ridge.pdf">Max Welling</a> uses the formula (see also Bishop, Appendix C, Equation C.5)</p>
-<p>$$(\boldsymbol{P}^{-1} + \boldsymbol{B}^T \boldsymbol{R}^{-1} \boldsymbol{B})^{-1} \boldsymbol{B}^T \boldsymbol{R}^{-1} = \boldsymbol{P} \boldsymbol{B}^T (\boldsymbol{B} \boldsymbol{P} \boldsymbol{B}^T + \boldsymbol{R})^{-1}$$</p>
-
+$$(\boldsymbol{P}^{-1} + \boldsymbol{B}^T \boldsymbol{R}^{-1} \boldsymbol{B})^{-1} \boldsymbol{B}^T \boldsymbol{R}^{-1} = \boldsymbol{P} \boldsymbol{B}^T (\boldsymbol{B} \boldsymbol{P} \boldsymbol{B}^T + \boldsymbol{R})^{-1}$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>to go directly from the solution of ridge regression to kernel ridge regression. Let us assign the variables:</p>
 <ul>
@@ -250,8 +230,7 @@ $$y = \boldsymbol{\alpha}^T \boldsymbol{k}$$</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Using the formula, we can transform the solution of ridge regression:
 $$\boldsymbol{w} = \left[\left( \boldsymbol{\Phi}^T \boldsymbol{\Phi} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{\Phi}^T \right] \boldsymbol{y} = \left[ \lambda^{-1} \boldsymbol{\Phi}^T \left( \lambda^{-1} \boldsymbol{\Phi} \boldsymbol{\Phi}^T + \boldsymbol{I} \right)^{-1} \right] \boldsymbol{y} = \left[ \boldsymbol{\Phi}^T \left( \boldsymbol{\Phi} \boldsymbol{\Phi}^T + \lambda \boldsymbol{I} \right)^{-1} \right] \boldsymbol{y} = \boldsymbol{\Phi}^T \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y}$$</p>
@@ -260,20 +239,17 @@ $$\boldsymbol{w} = \left[\left( \boldsymbol{\Phi}^T \boldsymbol{\Phi} + \lambda 
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can make new predictions for a feature vector $\boldsymbol{\phi}$ with</p>
-<p>$$y = \boldsymbol{w}^T \boldsymbol{\phi} = \left( \boldsymbol{\Phi}^T \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} \right)^T \boldsymbol{\phi} = \left( \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} \right)^T \boldsymbol{\Phi} \boldsymbol{\phi}$$</p>
-<p>This is exactly the same solution because
+$$y = \boldsymbol{w}^T \boldsymbol{\phi} = \left( \boldsymbol{\Phi}^T \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} \right)^T \boldsymbol{\phi} = \left( \left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} \right)^T \boldsymbol{\Phi} \boldsymbol{\phi}$$<p>This is exactly the same solution because
 $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \boldsymbol{\alpha}$$</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There is even a third way to derive this solution if you formulate it as a constraint optimization problem (see <a href="https://www.ics.uci.edu/~welling/classnotes/papers_class/Kernel-Ridge.pdf">Section 3 of this note</a>) but that is unnecessarily complex.</p>
 
@@ -281,8 +257,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
 </div>
@@ -296,7 +271,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -306,7 +281,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -320,8 +295,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is a very simple and naive implementation of Kernel Ridge Regression.</p>
 
@@ -354,14 +328,13 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
         <span class="k">return</span> <span class="n">K_star</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can see that it easily approximates a nonlinear function.</p>
 
@@ -385,7 +358,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -404,7 +377,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -418,7 +391,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 <span class="n">plot_model</span><span class="p">(</span><span class="n">KernelRidgeRegression</span><span class="p">(</span><span class="s2">&quot;rbf&quot;</span><span class="p">,</span> <span class="n">lmbda</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -428,7 +401,7 @@ $$\left( \boldsymbol{K} + \lambda \boldsymbol{I} \right)^{-1} \boldsymbol{y} = \
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -768,16 +741,14 @@ pYd7AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Cost-regularized-Kernel-Regression">Cost-regularized Kernel Regression<a class="anchor-link" href="#Cost-regularized-Kernel-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In reinforcement learning, we often rely on regression algorithms. Most of them are based on standard algorithms like linear regression, kernel ridge regression or Gaussian process regression but they often take into account sample weights. Samples with high rewards usually get high weights and samples with low rewards get low weights.</p>
 
@@ -785,8 +756,7 @@ pYd7AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One of these regression algorithms is reward-weighted regression (RWR) from this paper:</p>
 
@@ -794,8 +764,7 @@ pYd7AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Peters, Schaal: <strong>Using Reward-weighted Regression for Reinforcement Learning of Task Space Control</strong> (2007). <a href="https://pdfs.semanticscholar.org/bfae/5789c3f742816df4baa86b97a1e3bacd856b.pdf">PDF</a></p>
 
@@ -803,19 +772,16 @@ pYd7AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It is essentially linear regression with weighted samples, that is,</p>
-<p>$$\boldsymbol{W} = (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda \boldsymbol{I})^{-1}\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{Y},$$</p>
-<p>where $\boldsymbol{R}$ is a diagonal matrix that contains a weight per sample. $\lambda = 0$ in this paper, but I already introduced regularization here to save one step.</p>
+$$\boldsymbol{W} = (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda \boldsymbol{I})^{-1}\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{Y},$$<p>where $\boldsymbol{R}$ is a diagonal matrix that contains a weight per sample. $\lambda = 0$ in this paper, but I already introduced regularization here to save one step.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This has been extended to a form of kernel ridge regression similar to the second method that we used to derive kernel ridge regression from ridge regression in the following paper:</p>
 
@@ -823,8 +789,7 @@ pYd7AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Kober, Wilhelm, Oztop, Peters: <strong>Reinforcement Learning to Adjust Parametrized Motor Primitives to New Situations</strong> (2012). <a href="https://link.springer.com/article/10.1007/s10514-012-9290-3">Autonomous Robots</a> <a href="https://pdfs.semanticscholar.org/131f/7b7404c0f3896f7234299a936122c5b0e5fa.pdf">PDF</a></p>
 
@@ -832,32 +797,26 @@ pYd7AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From reward-weighted regression,</p>
-<p>$$\boldsymbol{w} = (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda \boldsymbol{I})^{-1}\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{y},$$</p>
-<p>we can go to cost-regularized kernel regression</p>
-<p>$$\left[ (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda I)^{-1} \boldsymbol{\Phi}^T \boldsymbol{R} \right] \boldsymbol{y} = \left[ \lambda^{-1} \boldsymbol{\Phi}^T (\boldsymbol{\Phi} \lambda^{-1} \boldsymbol{\Phi}^T + \boldsymbol{R}^{-1})^{-1} \right] \boldsymbol{y} = \left[ \boldsymbol{\Phi}^T(\boldsymbol{\Phi} \boldsymbol{\Phi}^T + \lambda \boldsymbol{R}^{-1})^{-1} \right] \boldsymbol{y}$$</p>
-<p>Note that we have to learn a separate model for each output dimension.</p>
+$$\boldsymbol{w} = (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda \boldsymbol{I})^{-1}\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{y},$$<p>we can go to cost-regularized kernel regression</p>
+$$\left[ (\boldsymbol{\Phi}^T \boldsymbol{R} \boldsymbol{\Phi} + \lambda I)^{-1} \boldsymbol{\Phi}^T \boldsymbol{R} \right] \boldsymbol{y} = \left[ \lambda^{-1} \boldsymbol{\Phi}^T (\boldsymbol{\Phi} \lambda^{-1} \boldsymbol{\Phi}^T + \boldsymbol{R}^{-1})^{-1} \right] \boldsymbol{y} = \left[ \boldsymbol{\Phi}^T(\boldsymbol{\Phi} \boldsymbol{\Phi}^T + \lambda \boldsymbol{R}^{-1})^{-1} \right] \boldsymbol{y}$$<p>Note that we have to learn a separate model for each output dimension.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Predictions can be made with:</p>
-<p>$$\phi(\boldsymbol{x})^T \boldsymbol{w} = \phi(\boldsymbol{x})^T \boldsymbol{\Phi}^T(\boldsymbol{\Phi} \boldsymbol{\Phi}^T + \lambda R^{-1})^{-1} \boldsymbol{y} = \boldsymbol{\phi}^T (\boldsymbol{K} + \lambda \boldsymbol{R}^{-1})^{-1} \boldsymbol{y},$$</p>
-<p>where $\boldsymbol{\alpha} = (\boldsymbol{K} + \lambda \boldsymbol{R}^{-1})^{-1} \boldsymbol{y}$ can be precomputed.</p>
+$$\phi(\boldsymbol{x})^T \boldsymbol{w} = \phi(\boldsymbol{x})^T \boldsymbol{\Phi}^T(\boldsymbol{\Phi} \boldsymbol{\Phi}^T + \lambda R^{-1})^{-1} \boldsymbol{y} = \boldsymbol{\phi}^T (\boldsymbol{K} + \lambda \boldsymbol{R}^{-1})^{-1} \boldsymbol{y},$$<p>where $\boldsymbol{\alpha} = (\boldsymbol{K} + \lambda \boldsymbol{R}^{-1})^{-1} \boldsymbol{y}$ can be precomputed.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Similar to <a href="http://alexanderfabisch.github.io/regression.html#Gaussian-Process-Regression">Gaussian process regression</a>, we can also compute a standard deviation of the prediction:
 $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \left(\boldsymbol{K} + \lambda \boldsymbol{R}^{-1}\right)^{-1} k(\boldsymbol{x}),$$</p>
@@ -867,16 +826,14 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is an implementation of Cost-regularized Kernel Regression (CrKR).</p>
 
@@ -920,14 +877,13 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
             <span class="k">return</span> <span class="n">y</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us generate a simple dataset with sample weights.</p>
 
@@ -948,14 +904,13 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
     <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weights</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This plot shows the dataset and compares the prediction of kernel ridge regression and CrKR. The size of the data points indicates their weights. Hence, an good weighted regression algorithm should almost only take the upper samples into account. This is what CrKR does. Kernel Ridge Regression does not know the sample weights and tries to predict the mean of all data points at a location.</p>
 
@@ -976,7 +931,7 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -996,7 +951,7 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
     <span class="n">X_w</span><span class="p">,</span> <span class="n">y_w</span><span class="p">,</span> <span class="n">sample_weights</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1006,7 +961,7 @@ $$\sigma^2 = k(\boldsymbol{x}, \boldsymbol{x}) + \lambda - k(\boldsymbol{x})^T \
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1529,8 +1484,7 @@ AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can also plot the predicted standard deviation:</p>
 
@@ -1557,7 +1511,7 @@ AAAAAElFTkSuQmCC
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1567,7 +1521,7 @@ AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -1580,7 +1534,7 @@ AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 

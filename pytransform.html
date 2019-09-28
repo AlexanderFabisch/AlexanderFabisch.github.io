@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - pytransform</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,38 +27,43 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/pytransform.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/pytransform.html" rel="bookmark"
          title="Permalink to pytransform">pytransform</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2017-11-19T19:00:00+01:00">
-      Sun 19 November 2017
+      So 19 November 2017
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>My work often combines motion capture, reinforcement learning, and robotics. There are many different systems involved, like proprietary motion capturing software, our own <a href="https://github.com/rock-learning/bolero">machine learning library</a>, robotic simulations (e.g. <a href="https://github.com/rock-simulation/mars">MARS</a>, <a href="http://gazebosim.org/">Gazebo</a>, or <a href="http://bulletphysics.org">Bullet</a>), and robotic middleware (e.g. <a href="http://www.ros.org/">ROS</a> or <a href="https://www.rock-robotics.org">RoCK</a>). All of them come with their own complex visualization tools, tools for handling transformations, and usually with their own conventions for transformations.</p>
 <p>For example, the following conventions can be found in various tools:</p>
@@ -75,16 +80,14 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Example:-From-Hand-to-Gripper-Trajectories">Example: From Hand to Gripper Trajectories<a class="anchor-link" href="#Example:-From-Hand-to-Gripper-Trajectories">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us take a look at a typical problem that involves a lot of transformations and usually some different systems and conventions.</p>
 
@@ -92,16 +95,14 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Motion-Capture">Motion Capture<a class="anchor-link" href="#Motion-Capture">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Step 1:</strong> We have a marker-based motion capture (MoCap) system. We measure the pose of an object with three markers ($p_{object,1},p_{object,2},p_{object,3}$) and we have another marker $p_{other}$ (usually more than one) that should be transformed in the object's coordinate system. All measured positions are represented in the MoCap's coordinate system.</p>
 
@@ -116,7 +117,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -126,7 +127,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -154,7 +155,7 @@
         <span class="n">object_marker3_2_mocap</span><span class="p">,</span> <span class="n">another_marker_2_mocap</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -176,7 +177,7 @@
 <span class="n">plot_markers</span><span class="p">(</span><span class="n">markers2mocap</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -186,7 +187,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -199,7 +200,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1309,8 +1310,7 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can put a coordinate system at the object's markers. $p_{object,2} - p_{object,1}$ and $p_{object,3} - p_{object,3}$ will be normalized and represent the x-axis and the y-axis of this coordinate system. We can compute the cross product to obtain the third basis vector.</p>
 
@@ -1328,14 +1328,13 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 <span class="n">object_z</span> <span class="o">=</span> <span class="n">perpendicular_to_vectors</span><span class="p">(</span><span class="n">object_x</span><span class="p">,</span> <span class="n">object_y</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The three vectors are not really orthogonal at the moment because of measurement errors or because the markers might not be aligned perfectly. We can use a trick and recompute the 2nd basis vector with the cross product:</p>
 
@@ -1350,14 +1349,13 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">object_y</span> <span class="o">=</span> <span class="n">perpendicular_to_vectors</span><span class="p">(</span><span class="n">object_z</span><span class="p">,</span> <span class="n">object_x</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we can compute the transformation matrix to rotate a point from the object's coordinate system to the global coordinate system by writing the basis vectors in the columns of the matrix and we can draw the coordinate system.</p>
 
@@ -1377,7 +1375,7 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 <span class="n">plot_basis</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">object_marker1_2_mocap</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1387,7 +1385,7 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -1400,7 +1398,7 @@ hUKhUDRABZJCoVAoFA1QgaRQKBQKRQNUICkUCoVC0cD/B2PJDUMTWm91AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2525,8 +2523,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now, we have a translation (first object marker in MoCap coordinate system) and a rotation. Let us combine both to the transformation of the object to the MoCap coordinate system.</p>
 
@@ -2543,7 +2540,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <span class="n">object2mocap</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2553,7 +2550,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -2572,8 +2569,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is a homogeneous transformation matrix. You can multiply a vector with it to transform it from the object's coordinate system to the MoCap coordinate system. For example, this happens when you transform the basis vectors (a 1 must be added as a 4th coordinate if you want to transform positions):</p>
 
@@ -2588,7 +2584,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">object2mocap</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2598,7 +2594,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -2621,7 +2617,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">object2mocap</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2631,7 +2627,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -2654,7 +2650,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">object2mocap</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2664,7 +2660,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -2680,8 +2676,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There is a convenience function to plot these transformations directly.</p>
 
@@ -2698,7 +2693,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <span class="n">plot_transform</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">A2B</span><span class="o">=</span><span class="n">object2mocap</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2708,7 +2703,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -2721,7 +2716,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3846,8 +3841,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us transform the point $p_{other}$ to object-relative coordinates. This requires the inversion of the transformation from object's to MoCap's coordinate system.</p>
 
@@ -3864,7 +3858,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <span class="n">mocap2object</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3874,7 +3868,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -3893,8 +3887,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That seems to be a lot of work if there are more transformations chained up. Well, there is a TransformManager that can help us and compute these kind of transformations automatically:</p>
 
@@ -3913,7 +3906,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <span class="n">mocap2object</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3923,7 +3916,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -3942,8 +3935,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The TransformManager can plot itself:</p>
 
@@ -3961,7 +3953,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 <span class="n">ax</span><span class="o">.</span><span class="n">set_zlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3971,7 +3963,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -3984,7 +3976,7 @@ KFqgAkmhUCgUihaoQFIoFAqFogUqkBQKhUKhaOH/AT7nug1kLVd6AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -4443,8 +4435,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Again, we have to add a 1 at the end of the vector to transform the point:</p>
 
@@ -4461,7 +4452,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 <span class="n">another_marker2object</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4471,7 +4462,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -4487,16 +4478,14 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Transfer-to-Robot">Transfer to Robot<a class="anchor-link" href="#Transfer-to-Robot">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Step 2:</strong> Suppose the point that we just transformed was the position of a hand. Instead of a hand, we want to move a robotic gripper at this position. Instead of measuring the object's position with the MoCap system, we will measure the position with some kind of object detection method. There are several problems:</p>
 <ul>
@@ -4509,8 +4498,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Fortunately, we can simply measure the transformation from the object position and orientation that the robot will detect and the object position and orientation that is measured by the MoCap system. (We assume that the position and orientation of the object can be detected very accurately.) We will just write it down manually here.</p>
 
@@ -4529,7 +4517,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 <span class="n">tm</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="s2">&quot;detected_object&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="n">detected_object2object</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4539,7 +4527,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -4564,7 +4552,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
                   <span class="n">whitelist</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;detected_object&quot;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4574,7 +4562,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -4587,7 +4575,7 @@ D86rczQVICUPAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -5769,8 +5757,7 @@ gg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we can add the detected position and orientation of the object in camera coordinates. This usually involves complex object detection algorithms that are integrated in some robotic middleware. For example, the <a href="http://www.uco.es/investiga/grupos/ava/node/26">ArUco</a> library will give you directly a transformation matrix based on markers that are attached to the object.</p>
 
@@ -5790,7 +5777,7 @@ gg==
 <span class="n">tm</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="s2">&quot;detected_object&quot;</span><span class="p">,</span> <span class="s2">&quot;camera&quot;</span><span class="p">,</span> <span class="n">detected_object2camera</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5800,7 +5787,7 @@ gg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -5824,7 +5811,7 @@ gg==
 <span class="n">tm</span><span class="o">.</span><span class="n">plot_frames_in</span><span class="p">(</span><span class="s2">&quot;mocap&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">whitelist</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;detected_object&quot;</span><span class="p">,</span> <span class="s2">&quot;camera&quot;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5834,7 +5821,7 @@ gg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -5847,7 +5834,7 @@ gg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -7058,8 +7045,7 @@ SUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The camera is mounted somewhere on or in the robot. It is often not static. We need a kinematic description of the robot and its current joint states to compute the forward kinematics so that we can compute the position of the camera in the robot's base. This is usually done by the robotic middleware, for example, with <a href="http://wiki.ros.org/tf">ROS tf</a> or you can use <a href="http://www.orocos.org/kdl">KDL</a> directly. There is also a UrdfTransformManager in pytransform that is able to load URDF files and you can set the joint angles. We will just assume that we know the current kinematic configuration of the robot. and add the current camera position in the robot's base.</p>
 
@@ -7079,7 +7065,7 @@ SUVORK5CYII=
 <span class="n">tm</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="s2">&quot;camera&quot;</span><span class="p">,</span> <span class="s2">&quot;robot&quot;</span><span class="p">,</span> <span class="n">camera2robot</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -7089,7 +7075,7 @@ SUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -7114,7 +7100,7 @@ SUVORK5CYII=
                   <span class="n">whitelist</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;detected_object&quot;</span><span class="p">,</span> <span class="s2">&quot;camera&quot;</span><span class="p">,</span> <span class="s2">&quot;robot&quot;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -7124,7 +7110,7 @@ SUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -7137,7 +7123,7 @@ SUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -8373,8 +8359,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Our last step here is to compute the transformation of the point $p_{other}$ to the robots coordinate system.</p>
 
@@ -8390,7 +8375,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 <span class="n">hand2robot</span> <span class="o">=</span> <span class="n">mocap2robot</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vector_to_point</span><span class="p">(</span><span class="n">another_marker_2_mocap</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8403,7 +8388,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="s2">&quot;camera&quot;</span><span class="p">,</span> <span class="s2">&quot;robot&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8413,7 +8398,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -8445,7 +8430,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 <span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8455,7 +8440,7 @@ QgjRgQokIYQQogMVSEIIIUSH/weF5C0XUp62YQAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -9884,8 +9869,7 @@ B7t1JgrGzQAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can use any library that solves the inverse kinematics of the robot to reach this point with a gripper. Usually we also want to reach it with a certain orientation of the gripper. Furthermore, we usually do not just want to reach one point but we would like to reproduce a trajectory... Problems are a little bit more complicated in reality but I hope this article gives a good idea of what pytransform can do.</p>
 
@@ -9893,16 +9877,14 @@ B7t1JgrGzQAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="pytransform">pytransform<a class="anchor-link" href="#pytransform">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>pytransform is available at <a href="https://github.com/rock-learning/pytransform">Github</a>. You can install it from sources with</p>
 

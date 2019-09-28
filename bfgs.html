@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - BFGS</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,70 +27,70 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/bfgs.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/bfgs.html" rel="bookmark"
          title="Permalink to BFGS">BFGS</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2017-12-03T23:00:00+01:00">
-      Sun 03 December 2017
+      So 03 Dezember 2017
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Machine learning often involves optimization, that is solving</p>
-<p>$$\arg\min_{x} f(x),\ f: \mathbb{R}^n \rightarrow \mathbb{R},$$</p>
-<p>where $f(x)$ is an objective function, for example, <a href="http://alexanderfabisch.github.io/maximum-likelihood.html">negative log-likelihood</a>.</p>
+$$\arg\min_{x} f(x),\ f: \mathbb{R}^n \rightarrow \mathbb{R},$$<p>where $f(x)$ is an objective function, for example, <a href="http://alexanderfabisch.github.io/maximum-likelihood.html">negative log-likelihood</a>.</p>
 <p>Often you cannot find the optimum directly. That is the reason why we need numerical, iterative optimization methods. I will take a closer look at these methods that are the fundamentals of machine learning but we need some basic tools first.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Minimizing-Quadratic-Functions">Minimizing Quadratic Functions<a class="anchor-link" href="#Minimizing-Quadratic-Functions">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Optimizing quadratic functions is the simplest case.</p>
 <p>A general quadratic function has the form</p>
-<p>$$\arg\min x^T A x + b^T x + c,\ A \in \mathbb{R}^{n \times n}, b \in \mathbb{R}^n, c \in \mathbb{R}$$</p>
-<p>By the way, we can approximate functions locally with a quadratic Taylor expansion.</p>
+$$\arg\min x^T A x + b^T x + c,\ A \in \mathbb{R}^{n \times n}, b \in \mathbb{R}^n, c \in \mathbb{R}$$<p>By the way, we can approximate functions locally with a quadratic Taylor expansion.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Elementary-Rules-of-Matrix-Differentiation">Elementary Rules of Matrix Differentiation<a class="anchor-link" href="#Elementary-Rules-of-Matrix-Differentiation">&#182;</a></h3><p>Similar to <a href="https://en.wikipedia.org/wiki/Differentiation_rules#Elementary_rules_of_differentiation">elementary rules of differentiation</a>, there are several rules for differentiation with matrices and vectors:</p>
 <ul>
@@ -105,8 +105,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A quadratic function has the following derivatives:</p>
 <ul>
@@ -119,8 +118,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If the Hessian is <a href="https://en.wikipedia.org/wiki/Positive-definite_matrix">positive definite</a>, that is $x^T(A + A^T)x &gt; 0$ for all $x$ (or: it has only positive eigenvalues), then the quadratic function is convex and has a unique minimum. If it is negative definite, it is concave and has a unique maximum. Let us assume the Hessian is positive definite and we can minimize it.</p>
 
@@ -128,8 +126,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Optimization is closely connected to root finding. We can find optima where $\nabla f(x) = 0$, that is, we have to find the roots of the gradient.</p>
 
@@ -137,27 +134,23 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For quadratic functions it is easy. The gradient has its zero at</p>
-<p>$$0 = (A + A^T) x^* + b \Leftrightarrow x^* = -(A + A^T)^{-1}b$$</p>
-<p>There is an "iterative" way to reach this solution from any point $x$:</p>
-<p>\begin{eqnarray}
+$$0 = (A + A^T) x^* + b \Leftrightarrow x^* = -(A + A^T)^{-1}b$$<p>There is an "iterative" way to reach this solution from any point $x$:</p>
+\begin{eqnarray}
 x^* &amp;=&amp; -(A + A^T)^{-1} b\\
     &amp;=&amp; x - x - (A + A^T)^{-1} b\\
     &amp;=&amp; x - (A + A^T)^{-1} (A + A^T) x - (A + A^T)^{-1} b\\
     &amp;=&amp; x - (A + A^T)^{-1} \left[ (A + A^T) x + b \right]\\
     &amp;=&amp; x - \nabla \nabla \left[ f(x) \right]^{-1} \nabla f(x)\\
-\end{eqnarray}</p>
-<p>This gives a method to reach the optimum of a quadratic function from any point $x$ if we know the gradient $\nabla f(x)$ and the Hessian $\nabla \nabla f(x)$.</p>
+\end{eqnarray}<p>This gives a method to reach the optimum of a quadratic function from any point $x$ if we know the gradient $\nabla f(x)$ and the Hessian $\nabla \nabla f(x)$.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us take a look at the following quadratic function.</p>
 
@@ -174,7 +167,7 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
 <span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;axes&quot;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="s2">&quot;large&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -184,7 +177,7 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -224,26 +217,23 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
     <span class="k">return</span> <span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Newton's-method">Newton's method<a class="anchor-link" href="#Newton's-method">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The algorithm that we just discovered is Newton's method. It updates the parameters from some initial point with with an iterative update</p>
-<p>$$x_{t+1} = x_t - \nabla \nabla \left[ f(x_t) \right]^{-1} \nabla f(x_t)$$</p>
-
+$$x_{t+1} = x_t - \nabla \nabla \left[ f(x_t) \right]^{-1} \nabla f(x_t)$$
 </div>
 </div>
 </div>
@@ -268,14 +258,13 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here are some helper functions that you should ignore. ;)</p>
 
@@ -311,14 +300,13 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
     <span class="k">return</span> <span class="n">S</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">U</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We run it on the simplest quadratic function and, as we have just proven, the optimum (in this case a minimum) is reached in one step.</p>
 
@@ -335,7 +323,7 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
 <span class="n">plot_path</span><span class="p">(</span><span class="n">quadratic</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -345,7 +333,7 @@ x^* &amp;=&amp; -(A + A^T)^{-1} b\\
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1145,8 +1133,7 @@ AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It also works for more complex quadratic functions.</p>
 
@@ -1172,7 +1159,7 @@ AAAAAElFTkSuQmCC
     <span class="n">partial</span><span class="p">(</span><span class="n">quadratic_hess</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1185,7 +1172,7 @@ AAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_path</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">quadratic</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">),</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1195,7 +1182,7 @@ AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1904,8 +1891,7 @@ GIZhGGvL/w+vf9O2kKk0KAAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If you use it to minimize some other kind of function, it will really become an iterative method. Why does it work after all? The intuition behind this is that we can always compute a quadratic model of our objective function based on the evaluation for the function, gradient and Hessian at some point $a$ with a quadratic Taylor expansion:
 $$f(x) \approx f(a) + (x - a)^T \nabla f(a) + \frac{1}{2} (x - a)^T \nabla \nabla f(a) (x - a)$$
@@ -1930,7 +1916,7 @@ We can show that this exactly reproduces the original function if $f(x)$ is quad
                      <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]]])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1944,7 +1930,7 @@ We can show that this exactly reproduces the original function if $f(x)$ is quad
 <span class="n">plot_path</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1954,7 +1940,7 @@ We can show that this exactly reproduces the original function if $f(x)$ is quad
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2534,8 +2520,7 @@ M1vV32gcx3GqcXHjOI7jOM5c4TE3juM4juPMFS5uHMdxHMeZK1zcOI7jOI4zV7i4cRzHcRxnrnBx
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Another interesting function is Rosenbrock's banana function, which has a global minimum at $(1, 1)^T$.</p>
 
@@ -2558,7 +2543,7 @@ M1vV32gcx3GqcXHjOI7jOM5c4TE3juM4juPMFS5uHMdxHMeZK1zcOI7jOI4zV7i4cRzHcRxnrnBx
                      <span class="p">[</span><span class="o">-</span><span class="mi">400</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">200</span><span class="p">]])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2574,7 +2559,7 @@ M1vV32gcx3GqcXHjOI7jOM5c4TE3juM4juPMFS5uHMdxHMeZK1zcOI7jOI4zV7i4cRzHcRxnrnBx
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2584,7 +2569,7 @@ M1vV32gcx3GqcXHjOI7jOM5c4TE3juM4juPMFS5uHMdxHMeZK1zcOI7jOI4zV7i4cRzHcRxnrnBx
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3249,8 +3234,7 @@ hmEYhrEo/gOtwhHoI6i3UQAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Unfortunately, it does not always work. This function is a quadratic function but its Hessian is not invertible.</p>
 
@@ -3270,7 +3254,7 @@ hmEYhrEo/gOtwhHoI6i3UQAAAABJRU5ErkJggg==
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">198</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3289,7 +3273,7 @@ hmEYhrEo/gOtwhHoI6i3UQAAAABJRU5ErkJggg==
     <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3299,7 +3283,7 @@ hmEYhrEo/gOtwhHoI6i3UQAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -3314,20 +3298,17 @@ Singular matrix
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gradient-Descent">Gradient Descent<a class="anchor-link" href="#Gradient-Descent">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For now, let us go back to a much simpler iterative method: gradient descent. The update is computed as</p>
-<p>$$x_{t+1} = x_t - \alpha \nabla f(x_t)$$</p>
-<p>Instead of the Hessian that incorporates the curvature of the objective function, it just uses a learning rate $\alpha \in (0, 1]$ to scale the gradient direction.</p>
+$$x_{t+1} = x_t - \alpha \nabla f(x_t)$$<p>Instead of the Hessian that incorporates the curvature of the objective function, it just uses a learning rate $\alpha \in (0, 1]$ to scale the gradient direction.</p>
 <p>It has another advantage if we want to optimize many parameters: it does not require the inversion of the Hessian, which has cubic complexity. Gradient descent only has linear complexity and it does not require to store the Hessian which has quadratic size.</p>
 
 </div>
@@ -3354,14 +3335,13 @@ Singular matrix
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It works but it is not very fast.</p>
 
@@ -3379,7 +3359,7 @@ Singular matrix
 <span class="n">plot_path</span><span class="p">(</span><span class="n">not_invertible</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3389,7 +3369,7 @@ Singular matrix
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -3957,8 +3937,7 @@ QmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Sometimes you even need thousands of steps because you have to choose a small learning rate. In this example, we need about 3500 iterations to reach the optimum.</p>
 
@@ -3976,7 +3955,7 @@ QmCC
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -3986,7 +3965,7 @@ QmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -4699,8 +4678,7 @@ GIZhrAX/H+yg8kr5OMpnAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If the learning rate is just slightly larger, the gradient will increase too quickly and the algorithm with diverge.</p>
 
@@ -4718,7 +4696,7 @@ GIZhrAX/H+yg8kr5OMpnAAAAAElFTkSuQmCC
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -4728,7 +4706,7 @@ GIZhrAX/H+yg8kr5OMpnAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -5374,21 +5352,18 @@ x3EcZ9a4MOM4juM4zqxxYcZxHMdxnFnjwozjOI7jOLPGhRnHcRzHcWaNCzOO4ziO48ya/w+J/7GG
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Broyden-Fletcher-Goldfarb-Shanno">Broyden-Fletcher-Goldfarb-Shanno<a class="anchor-link" href="#Broyden-Fletcher-Goldfarb-Shanno">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can do better than that. There are ways to iteratively approximate the Hessian just from gradients. These methods are called quasi-Newton methods. One of them is <a href="https://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm">Broyden-Fletcher-Goldfarb-Shanno</a>. It also keeps the symmetry and positive definiteness of the approximated Hessian. Hence, we should not get any problems when inverting it.</p>
 <p>Starting with $B_0 = I$, we can iteratively update the approximation of the Hessian $B_t$:</p>
-<p>$$B_{t+1} = B_t + \frac{y_t y_t^T}{y_t^Ts_t} - \frac{B_ts_ts_t^TB_t}{s_t^TB_ts_t}$$</p>
-<p>where</p>
+$$B_{t+1} = B_t + \frac{y_t y_t^T}{y_t^Ts_t} - \frac{B_ts_ts_t^TB_t}{s_t^TB_ts_t}$$<p>where</p>
 <ul>
 <li>$y_t = \nabla f(x_{t+1}) - \nabla f(x_t)$ is computed based on the last change of gradients</li>
 <li>$s_t = \alpha_t p_t$ is the last step</li>
@@ -5400,16 +5375,14 @@ x3EcZ9a4MOM4juM4zqxxYcZxHMdxnFnjwozjOI7jOLPGhRnHcRzHcWaNCzOO4ziO48ya/w+J/7GG
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Update-Step">Update Step<a class="anchor-link" href="#Update-Step">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Before the estimate of the Hessian matrix is updated, the new estimate of $x$ is computed as
 $$x_{t+1} = x_t + s_t,$$
@@ -5419,8 +5392,7 @@ that is, $s_t = x_{t+1} - x_t$, which we will use later.</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Why do we determine the search direction by solving $B_t p_t = -\nabla f(x_t)$? From Newton's method we know that $$p_t = -B_t^{-1}\nabla f(x_t)$$ solves quadratic optimization problems in one step if $B_t$ is the real Hessian matrix. Multiplying both sides of the equation with $B_t$ yields formulation as a linear system of equations.</p>
 
@@ -5428,8 +5400,7 @@ that is, $s_t = x_{t+1} - x_t$, which we will use later.</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If we would not update $B_t$ and set it to $I$, this algorithm reduces to gradient descent. Let us take a look at the reasoning behind the Hessian approximation
 $$B_{t+1} = B_t + \frac{y_t y_t^T}{y_t^Ts_t} - \frac{B_ts_ts_t^TB_t}{s_t^TB_ts_t}$$</p>
@@ -5438,21 +5409,19 @@ $$B_{t+1} = B_t + \frac{y_t y_t^T}{y_t^Ts_t} - \frac{B_ts_ts_t^TB_t}{s_t^TB_ts_t
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Secant-Condition">Secant Condition<a class="anchor-link" href="#Secant-Condition">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us start with finite differences. We know that gradients can be approximated locally with finite differences, that is, in a point $x_2$, we can approximate
 $$\nabla f(x_2) \approx \frac{f(x_2) - f(x_1)}{x_2 - x_1}$$
 because $\nabla f(x_2) = \lim_{x_1 \rightarrow x_2} \frac{f(x_2) - f(x_1)}{x_2 - x_1}$.</p>
-<p><img src="http://www.informatik.uni-bremen.de/~afabisch/files/finite_differences.svg"/></p>
+<p><img src="http://h2326337.stratoserver.net/public_files/figures/finite_differences.svg"/></p>
 <p>For functions with one parameter, we can easily use this to estimate the second derivative with
 $$\nabla \nabla f(x_2) \approx \frac{\nabla f(x_2) - \nabla f(x_1)}{x_2 - x_1}$$</p>
 
@@ -5460,8 +5429,7 @@ $$\nabla \nabla f(x_2) \approx \frac{\nabla f(x_2) - \nabla f(x_1)}{x_2 - x_1}$$
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Side Note: Gradient, Jacobian, Hessian</strong></p>
 <p>Before we continue: notice that the objective function $f$ is a univariate function, hence it has a gradient $\nabla f(x)$. The extension of a gradient to multivariate functions is a Jacobian matrix. The Jacobian matrix contains gradients for each dimension of a function in its rows. Furthermore, the gradient of the function $f$ is a multivariate function on its own, hence, its derivative is a Jacobian matrix. The Jacobian matrix of $\nabla f(x)$ is the Hessian matrix $\nabla \nabla f(x)$ and the Hessian matrix is usually a symmetric matrix.</p>
@@ -5470,8 +5438,7 @@ $$\nabla \nabla f(x_2) \approx \frac{\nabla f(x_2) - \nabla f(x_1)}{x_2 - x_1}$$
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can easily extend this equations to multiple dimensions and we can come back to our original notation:
 $$\nabla \nabla f(x_t) \approx B_{t+1} = \frac{\nabla f(x_{t+1}) - \nabla f(x_t)}{x_{t+1} - x_t} = \frac{y_t}{s_t}$$</p>
@@ -5518,14 +5485,13 @@ which is called the secant condition. We can solve this for $B_{t+1}$ but we hav
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One note on the implementation: it is not the most efficient implementation. A more efficient implementation directly estimates the inverse of the Hessian. That saves us solving the linear system of equations to determine the search direction. This implementation has cubic complexity. The best implementation would have quadratic complexity.</p>
 
@@ -5533,8 +5499,7 @@ which is called the secant condition. We can solve this for $B_{t+1}$ but we hav
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>With BFGS we can handle the problematic function:</p>
 
@@ -5552,7 +5517,7 @@ which is called the secant condition. We can solve this for $B_{t+1}$ but we hav
 <span class="n">plot_path</span><span class="p">(</span><span class="n">not_invertible</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">35000</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -5562,7 +5527,7 @@ which is called the secant condition. We can solve this for $B_{t+1}$ but we hav
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -6002,8 +5967,7 @@ TsrMzMzMKsBJmZmZmVkFOCkzMzMzqwAnZWZmZmYV8P8BEIsPXps1Pc4AAAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It still has some problems though. Consider the following example with the Rosenbrock function. It often either shoots over the valley in the beginning or it moves too slowly.</p>
 
@@ -6022,7 +5986,7 @@ TsrMzMzMKsBJmZmZmVkFOCkzMzMzqwAnZWZmZmYV8P8BEIsPXps1Pc4AAAAASUVORK5CYII=
 <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -6032,7 +5996,7 @@ TsrMzMzMKsBJmZmZmVkFOCkzMzMzqwAnZWZmZmYV8P8BEIsPXps1Pc4AAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -6684,8 +6648,7 @@ mBiGYRiGMRnMMDEMwzAMYzL8fw6uTlwUrbC/AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That is the reason why BFGS is usually combined with <strong>line search</strong>.</p>
 
@@ -6693,16 +6656,14 @@ mBiGYRiGMRnMMDEMwzAMYzL8fw6uTlwUrbC/AAAAAElFTkSuQmCC
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Side-Note:-DFP-Formula">Side Note: DFP Formula<a class="anchor-link" href="#Side-Note:-DFP-Formula">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There is also a very similar method that estimates the inverse of the Hessian directly, called <a href="https://en.wikipedia.org/wiki/Davidon%E2%80%93Fletcher%E2%80%93Powell_formula">Davidon-Fletcher-Powell</a> (DFP):
 $$B_t^{-1} = B_t^{-1} + \frac{s_t s_t^T}{s_t^Ty_t} - \frac{B_t^{-1}y_ty_t^TB_t^{-1}}{y_t^TB_t^{-1}y_t},$$
@@ -6748,7 +6709,7 @@ notice that only $s_t$ and $y_t$ are interchanged. This method has been invented
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -6766,7 +6727,7 @@ notice that only $s_t$ and $y_t$ are interchanged. This method has been invented
 <span class="n">plot_path</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">quadratic</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">),</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -6776,7 +6737,7 @@ notice that only $s_t$ and $y_t$ are interchanged. This method has been invented
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -7524,7 +7485,7 @@ YSwsJnQMwzAMw1hYTOgYhmEYhrGw/P9kSGQxHQiW1QAAAABJRU5ErkJggg==
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -7534,7 +7495,7 @@ YSwsJnQMwzAMw1hYTOgYhmEYhrGw/P9kSGQxHQiW1QAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -8164,19 +8125,16 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Line-Search">Line Search<a class="anchor-link" href="#Line-Search">&#182;</a></h2><p>Line search determines the optimal step size $\alpha p$ given a direction $p$, that is, we minimize</p>
-<p>$$\arg\min_\alpha f(x + \alpha p)$$</p>
-<p>The direction is usually calculated based on the gradient and the approximation of the Hessian matrix. There are several line search methods. One of them is <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">backtracking line search</a> or Armijo line search.</p>
+$$\arg\min_\alpha f(x + \alpha p)$$<p>The direction is usually calculated based on the gradient and the approximation of the Hessian matrix. There are several line search methods. One of them is <a href="https://en.wikipedia.org/wiki/Backtracking_line_search">backtracking line search</a> or Armijo line search.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us take a look at the following function and see what the line search from scipy does with it.</p>
 
@@ -8194,14 +8152,13 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">20.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We assume that we already have an initial estimate and a search direction.</p>
 
@@ -8217,7 +8174,7 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
 <span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="mf">12.0</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8231,14 +8188,13 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
 <span class="n">alpha</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">line_search_armijo</span><span class="p">(</span><span class="n">poly1d</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">poly1d_grad</span><span class="p">(</span><span class="n">x0</span><span class="p">),</span> <span class="n">x0</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The following plot shows the initial point $x_0$ and search direction $p$ (black), $x + p$ (red), the found solution $x + \alpha p$ (green), and the function $f$.</p>
 
@@ -8261,7 +8217,7 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
          <span class="n">head_width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8271,7 +8227,7 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -8284,7 +8240,7 @@ MAzDMIxJY8KMYRiGYRiT5v8DuNU5QCyiAvYAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -8496,8 +8452,7 @@ SUVORK5CYII=
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now let us combine the BFGS approximation with this linesearch.</p>
 
@@ -8544,14 +8499,13 @@ SUVORK5CYII=
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>... and run it on a quadratic objective function.</p>
 
@@ -8570,7 +8524,7 @@ SUVORK5CYII=
 <span class="n">plot_path</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">quadratic</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">),</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -8580,7 +8534,7 @@ SUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -9328,8 +9282,7 @@ RU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The error decreases rapidly.</p>
 
@@ -9347,7 +9300,7 @@ RU5ErkJggg==
 <span class="n">semilogy</span><span class="p">(</span><span class="n">obj_path</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -9357,7 +9310,7 @@ RU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -9370,7 +9323,7 @@ RU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -9596,8 +9549,7 @@ ERFJX2rZiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>On the Rosenbrock function, the explored path even looks much smoother than with Newton's method, altough more steps are required.</p>
 
@@ -9614,7 +9566,7 @@ ERFJX2rZiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -9624,7 +9576,7 @@ ERFJX2rZiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
@@ -9635,7 +9587,7 @@ ERFJX2rZiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI2lPYiYhI
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -10377,12 +10329,10 @@ FsMwDMMwNgITLYZhGIZhbAQmWgzDMAzD2Aj+P2et539mtIdrAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Of course, we can modify Newton's method by adding linesearch to make the path smoother:</p>
-<p>$$x_{t+1} = x_t - \alpha_t \nabla \nabla \left[ f(x_t) \right]^{-1} \nabla f(x_t)$$</p>
-
+$$x_{t+1} = x_t - \alpha_t \nabla \nabla \left[ f(x_t) \right]^{-1} \nabla f(x_t)$$
 </div>
 </div>
 </div>
@@ -10417,14 +10367,13 @@ FsMwDMMwNgITLYZhGIZhbAQmWgzDMAzD2Aj+P2et539mtIdrAAAAAElFTkSuQmCC
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">path</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Using the exact Hessian is faster than BFGS for this objective function.</p>
 
@@ -10442,7 +10391,7 @@ FsMwDMMwNgITLYZhGIZhbAQmWgzDMAzD2Aj+P2et539mtIdrAAAAAElFTkSuQmCC
 <span class="n">plot_path</span><span class="p">(</span><span class="n">rosenbrock</span><span class="p">,</span> <span class="n">path_newton</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -10452,7 +10401,7 @@ FsMwDMMwNgITLYZhGIZhbAQmWgzDMAzD2Aj+P2et539mtIdrAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -11208,7 +11157,7 @@ MAxjIzDRYhiGYRjGRvD/Ax/u2qjv5jFdAAAAAElFTkSuQmCC
 <span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11218,7 +11167,7 @@ MAxjIzDRYhiGYRjGRvD/Ax/u2qjv5jFdAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -11231,7 +11180,7 @@ MAxjIzDRYhiGYRjGRvD/Ax/u2qjv5jFdAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -11541,16 +11490,14 @@ a+GmSSaZ5gAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Take Newton's method whenever it is possible. You might want to use line search for objectives that are not approximated well by quadratic functions.</p>
 <p>It might be very expensive to compute the Hessian though. Consider for example the case of neural networks. There is an easy and efficient way to compute gradients. Computing the Hessian is not so straightforward and computationally more complex. It is possible though (<a href="http://ieeexplore.ieee.org/document/6796780/">here</a> is a paper). It is also very expensive to compute the inverse of a Hessian: $\mathcal{O}(n^3)$.</p>
@@ -11561,8 +11508,7 @@ a+GmSSaZ5gAAAABJRU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Further-Reading">Further Reading<a class="anchor-link" href="#Further-Reading">&#182;</a></h2><ul>
 <li>another tutorial can be found <a href="http://aria42.com/blog/2014/12/understanding-lbfgs">here</a></li>

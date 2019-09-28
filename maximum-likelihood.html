@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <title>Alexander Fabisch</title>
+          <title>Alexander Fabisch - Maximum Likelihood</title>
         <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
-        <link rel="stylesheet" href="/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-        <link href="/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
@@ -27,38 +27,43 @@
 
 
 
+
+
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/software.html">Software</a></li>
-            <li><a href="/pages/publications.html">Publications</a></li>
-            <li><a href="/pages/teaching.html">Teaching</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="/maximum-likelihood.html" rel="bookmark"
+      <a href="http://alexanderfabisch.github.io/maximum-likelihood.html" rel="bookmark"
          title="Permalink to Maximum Likelihood">Maximum Likelihood</a></h2>
  
   </header>
   <footer class="post-info">
     <time class="published" datetime="2017-11-11T11:30:00+01:00">
-      Sat 11 November 2017
+      Sa 11 November 2017
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="/author/alexander-fabisch.html">Alexander Fabisch</a>
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
     </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Maximum likelihood is one of the fundemental concepts in statistics and artificial intelligence algorithms. What does it mean and how is it used in practice?</p>
 <p>Suppose you have some dataset $\mathcal{D}$ and a possible hypothesis $h$ of the latent function that might have generated the dataset. The probability distribution of the dataset given the hypothesis $p(\mathcal{D}|h)$ is called <strong>likelihood</strong> of the hypothesis given the dataset and we can write $\mathcal{L}(h|\mathcal{D}) = p(\mathcal{D}|h)$.</p>
@@ -74,16 +79,14 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gaussian-Distribution">Gaussian Distribution<a class="anchor-link" href="#Gaussian-Distribution">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The probability of the data given the hypothesis (determined by $\mu$, $\sigma$ in a one-dimensional normal distribution) and hence the likelihood is given by
 $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigma^2) = \prod_{x \in \mathcal{D}} \frac{1}{\sqrt{2\sigma^2\pi}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right).$$</p>
@@ -99,7 +102,7 @@ $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigm
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -109,7 +112,7 @@ $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigm
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -132,14 +135,13 @@ $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigm
                    <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can plot the likelihood for several combinations of $\mu$ and $\sigma$. We can plot the maximum likelihood of $\mu$ and $\sigma$ as well.</p>
 
@@ -170,7 +172,7 @@ $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigm
              <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">sigmas</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sigmas</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -180,7 +182,7 @@ $$\mathcal{L}(h|\mathcal{D}) = \prod_{x \in \mathcal{D}}\mathcal{N}(x|\mu, \sigm
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -339,8 +341,7 @@ gg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The formulas that we used to compute the maximum likelihood estimates are $\hat{\mu} = \frac{1}{|\mathcal{D}|}\sum_{x \in \mathcal{D}} x$ and $\hat{\sigma} = \frac{1}{|\mathcal{D}|}\sum_{x \in \mathcal{D}} (x - \mu)^2$.</p>
 
@@ -348,8 +349,7 @@ gg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These formulas can be derived by solving an optimization problem for which we can compute the analytical solution directly. That is, we calculate the derivative of the likelihood function, compute its root, and prove that it is a maximum by showing that the second derivative is greater than zero. Theoretically we can use this approach to solve any maximum likelihood problem.</p>
 
@@ -357,8 +357,7 @@ gg==
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Maximizing the likelihood is equivalent to minimizing the negative log likelihood. This is often useful because the equations become simpler or numeric values become smaller. This might be better for numerical optimization, for example, if we are working with $\exp$. In this case, for example, we can write
 $$\arg\min_{h} - \log \mathcal{L}(h|\mathcal{D}) = \arg\min_{\mu, \sigma} c \sum_{x \in \mathcal{D}} \frac{(x - \mu)^2}{2\sigma^2},$$
@@ -368,16 +367,14 @@ where $c$ is some irrelevant constant.</p>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The goal of <a href="http://alexanderfabisch.github.io/regression.html">regression</a> is to approximate an unknown latent function $f: \mathbb{R}^D \rightarrow \mathbb{R}^F$. We assume that we cannot measure pairs of inputs and outputs directly. We measure samples $(\boldsymbol{x}_n \in \mathbb{R}^D, \boldsymbol{y}_n \in \mathbb{R}^F)$, where $\boldsymbol{y}_n = f(\boldsymbol{x}_n) + \boldsymbol{\epsilon}_n$ and $\boldsymbol{\epsilon}_n \in \mathbb{R}^F$ is the measurement error. In the simplest case, we assume that the measurement error is normally distributed, that is, $\boldsymbol{\epsilon}_n \in \mathcal{N}(\boldsymbol{0}, \boldsymbol{\Sigma})$. Note that we assume the same noise level for each input which means we assume a homoscedastic noise level (the opposite would be heteroscedasticity).</p>
 <p>To find the maximum likelihood estimate for $f$, we typically assume a parametric form of $f$, for example a linear function
@@ -418,14 +415,13 @@ We can derive this so-called sum of squared errors with respect to the parameter
 <span class="n">X_samples_bias</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">X_samples</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="mi">1</span><span class="p">))))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For the given dataset, we can plot the likelihood for several combinations of $w$ and $b$.</p>
 
@@ -459,7 +455,7 @@ We can derive this so-called sum of squared errors with respect to the parameter
              <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">bs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">bs</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -469,7 +465,7 @@ We can derive this so-called sum of squared errors with respect to the parameter
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -626,8 +622,7 @@ pRwWZmZWymFhZmalHBZmZlbKYWFmZqUcFmZmVur/ATnQI5e9DFW1AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can take a look at the resulting maximum likelihood estimate and compare it with the true function which is usually unknown.</p>
 
@@ -654,7 +649,7 @@ pRwWZmZWymFhZmalHBZmZlbKYWFmZqUcFmZmVur/ATnQI5e9DFW1AAAAAElFTkSuQmCC
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -664,7 +659,7 @@ pRwWZmZWymFhZmalHBZmZlbKYWFmZqUcFmZmVur/ATnQI5e9DFW1AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -677,7 +672,7 @@ pRwWZmZWymFhZmalHBZmZlbKYWFmZqUcFmZmVur/ATnQI5e9DFW1AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -993,16 +988,14 @@ hBBCaCsKRQghhLZ+A2ikM4+DDoOkAAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Probabilistic-Principal-Component-Analysis">Probabilistic Principal Component Analysis<a class="anchor-link" href="#Probabilistic-Principal-Component-Analysis">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Principal component analsysis (PCA) is a dimensionality reduction method. Probabilistic PCA is a probabilistic derivation that results in the same solution. Let us assume we observe samples $\boldsymbol{x}_n \in \mathcal{D} \subseteq \mathbb{R}^q$. We assume the data is generated by some unknown (linear) generative function, so that
 $$\boldsymbol{x}_n = \boldsymbol{W}\boldsymbol{z}_n + \boldsymbol{\mu} + \boldsymbol{\epsilon},$$
@@ -1027,8 +1020,7 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here is a very naive implementation:</p>
 
@@ -1083,14 +1075,13 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
         <span class="k">return</span> <span class="n">Z</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">W_</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now, let's construct a very simple dataset:</p>
 
@@ -1112,14 +1103,13 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
 <span class="n">X</span> <span class="o">=</span> <span class="n">real_Z</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">real_W</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">real_mu</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">EPS</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can compare the latent data $\boldsymbol{Z}$ from which the observable data has been constructed and the observable data $\boldsymbol{X}$:</p>
 
@@ -1138,7 +1128,7 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
 <span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1148,7 +1138,7 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -1161,7 +1151,7 @@ $$-\log \mathcal{L}(h|\mathcal{D}) = -\log p(\boldsymbol{X}, \boldsymbol{Z}|\mu,
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1340,8 +1330,7 @@ kTalACAi0qb+P6UyFC2XlXB8AAAAAElFTkSuQmCC
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let us see how well $\boldsymbol{Z}$ is reconstructed. Red lines connect corresponding real and estimated samples.</p>
 
@@ -1358,7 +1347,7 @@ kTalACAi0qb+P6UyFC2XlXB8AAAAAElFTkSuQmCC
 <span class="n">Z</span> <span class="o">=</span> <span class="n">ppca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1379,7 +1368,7 @@ kTalACAi0qb+P6UyFC2XlXB8AAAAAElFTkSuQmCC
 <span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1389,7 +1378,7 @@ kTalACAi0qb+P6UyFC2XlXB8AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -1402,7 +1391,7 @@ kTalACAi0qb+P6UyFC2XlXB8AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2153,7 +2142,7 @@ IgAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">real_mu</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2163,7 +2152,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -2186,7 +2175,7 @@ IgAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ppca</span><span class="o">.</span><span class="n">mu_</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2196,7 +2185,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -2219,7 +2208,7 @@ IgAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">real_W</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2229,7 +2218,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -2253,7 +2242,7 @@ IgAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ppca</span><span class="o">.</span><span class="n">W_</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2263,7 +2252,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -2280,8 +2269,7 @@ IgAAAABJRU5ErkJggg==
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The mean is estimated quite well, but $\boldsymbol{W}$ does not fit at all. Because the real latent samples are unknown, expectation maximization (EM) will just find one plausible solution. In general, EM will only find locally optimal solutions. If we project a line from the latent space to the observable space, however, the result looks perfect:</p>
 
@@ -2302,7 +2290,7 @@ IgAAAABJRU5ErkJggg==
 <span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -2312,7 +2300,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -2325,7 +2313,7 @@ IgAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2574,16 +2562,14 @@ kzgp3QVkjDEmcSwAGGNMHWUBwBhj6igLAMYYU0dZADDGmDrKAoAxxtRRFgCMMaaO+n/M1abrrTG2
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Maximum likelihood estimates (MLE) are useful but how they are generated is often very specific for the problem at hand. In general, it is often a good idea to frame machine learning problems in a probabilistic perspective and think about how to express it as a maximum likelihood problem.</p>
 <p>For example, classification (logistic regression), clustering (Gaussian mixture models), regression (linear regression), reinforcement learning (reward-weighted regression) and many more fields rely on maximum likelihood estimates.</p>
