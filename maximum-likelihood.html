@@ -1002,7 +1002,7 @@ $$\boldsymbol{x}_n = \boldsymbol{W}\boldsymbol{z}_n + \boldsymbol{\mu} + \boldsy
 $\boldsymbol{z}_n \in \mathbb{R}^d$ is unknown, and $\boldsymbol{\epsilon} \in \mathbb{R}^q$ is again some normally distributed noise, that is,
 $$p(\boldsymbol{z}) = \mathcal{N}(\boldsymbol{z}|\boldsymbol{0}, \boldsymbol{I}),$$
 $$p(\boldsymbol{x}|\boldsymbol{z}) = \mathcal{N}(\boldsymbol{x}|\boldsymbol{W}\boldsymbol{z} + \boldsymbol{\mu}, \sigma^2\boldsymbol{I}).$$
-Usually the dimension of the observed data $q$ is smaller than $d$ because we want to reduce the dimensionality of the data and find a more meaningful representation.</p>
+Usually the dimension of the observed data $q$ is greater than $d$ because we want to reduce the dimensionality of the data and find a more meaningful representation.</p>
 <p>We have to maximize the likelihood
 $$\prod_n p(\boldsymbol{x}_n, \boldsymbol{z}_n|\boldsymbol{W}, \boldsymbol{\mu}, \sigma),$$
 however, the corresponding latent samples $\boldsymbol{z}$ are unknown. An algorithm that we can use to solve these kind of maximum likelihood problems is expectation maximization. It alternates between an expectation step in which we compute the expectation of the latent variables $\boldsymbol{z}$ given the current values of $\boldsymbol{W}$ and $\boldsymbol{\mu}$ and the maximization step in which we maximize the likelihood of the model given the data or we minimize the negative log-likelihood (very similar to linear regression) to compute $\boldsymbol{W}$ and $\boldsymbol{\mu}$ given the current values of $\boldsymbol{z}$.</p>
