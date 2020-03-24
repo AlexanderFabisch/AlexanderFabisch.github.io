@@ -144,6 +144,14 @@ Röfer, Thomas, Tim Laue, Colin Graf, Tobias Kastner, Alexander Fabisch, and Chr
 In *RoboCup 2010: Robot Soccer World Cup XIV Preproceedings* (2010), edited by Eric Chown, Akihiro Matsumoto, Paul Ploeger and Javier Ruiz–del–Solar.<br/>
 [PDF](http://www.b-human.de/downloads/bhuman10_tdp.pdf)
 
+Talks
+-----
+
+Michalec, Romain, Xavier Martinez-Gonzalez, Alexander Fabisch:<br/>
+**"It works on my machine" - working as a research software engineer in a multi-partner international research project**.<br/>
+At *RSEConUK 2019*<br/>
+[Abstract](https://rseconuk2019.sched.com/event/OdK2) [Slides](https://static.sched.com/hosted_files/rseconuk2019/6c/main.pdf)
+
 Other Publications
 ------------------
 
