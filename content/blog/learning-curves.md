@@ -92,7 +92,6 @@ With only
 we can now plot beautiful learning curves like these:
 
 <img width="480" height="360" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_001.png" />
-<img width="480" height="360" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_learning_curve_002.png" />
 
 scikit learn offers many more tools like this, for example model selection
 with grid search or random search, a pipeline that combines preprocessing
