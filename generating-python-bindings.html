@@ -71,26 +71,26 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 </ul>
 <h2>The Idea</h2>
 <p>Although not everything is easy, it still seems tedious to write glue code for very simple C++ classes like this one:</p>
-<div class="highlight"><pre><span></span><span class="nv">class</span> <span class="nv">A</span>
-{
-<span class="nv">public</span>:
-    <span class="nv">double</span> <span class="nv">plus2</span><span class="ss">(</span><span class="nv">double</span> <span class="nv">d</span><span class="ss">)</span>
-    {
-        <span class="k">return</span> <span class="nv">d</span> <span class="o">+</span> <span class="mi">2</span>.<span class="mi">0</span><span class="c1">;</span>
-    }
-}<span class="c1">;</span>
+<div class="highlight"><pre><span></span><span class="err">class A</span>
+<span class="err">{</span>
+<span class="c">public:</span>
+<span class="c">    double plus2(double d)</span>
+<span class="c">    {</span>
+<span class="c">        return d + 2.0;</span>
+<span class="c">    }</span>
+<span class="err">};</span>
 </pre></div>
 
 
 <p>The good news is: we can automatically generate Python bindings for these simple cases. If all the relevant types are either <a href="http://en.cppreference.com/w/cpp/language/types">fundamental types</a> (string, int, double, bool, ...) or defined in the library that you want to wrap. Clang can easily be used to build an abstract syntax tree from this header file. We can extract all interface definitions (classes, functions, etc.) and generate Python bindings with Cython. I implemented this idea in <a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a>. It can be used as a command line tool, as a Python library or even as a Python import hook.</p>
 <h2>How to Use It?</h2>
 <p>For the most simple use cases, you can use a command line tool. We can generate a Python extension that wraps a library defined in C++ header with:</p>
-<div class="highlight"><pre><span></span><span class="n">pywrap</span> <span class="o">&lt;</span><span class="n">headers</span><span class="o">&gt;</span> <span class="c1">--sources &lt;sources&gt; --modulename &lt;name&gt; --outdir &lt;directory&gt;</span>
+<div class="highlight"><pre><span></span><span class="err">pywrap &lt;headers&gt; --sources &lt;sources&gt; --modulename &lt;name&gt; --outdir &lt;directory&gt;</span>
 </pre></div>
 
 
 <p>The result is located in the directory <directory> and can be build with:</p>
-<div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">-</span><span class="n">i</span>
+<div class="highlight"><pre><span></span><span class="err">python setup.py build_ext -i</span>
 </pre></div>
 
 
@@ -116,82 +116,82 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <p>What can we do with it?</p>
 <h3>Comments</h3>
 <p>Clang automatically extracts documentation for classes, functions, etc. This documentation can be translated to Python docstrings automatically.</p>
-<div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * This is a brief class description.</span>
-<span class="cm"> *</span>
-<span class="cm"> * And this is a detailed description.</span>
-<span class="cm"> */</span><span class="w"></span>
-class<span class="w"> </span>MyClass<span class="w"></span>
-<span class="err">{</span><span class="w"></span>
-<span class="nl">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span>MyClass<span class="o">()</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
-<span class="w">    </span><span class="o">///</span><span class="w"> </span>Brief<span class="o">.</span><span class="w"></span>
-<span class="w">    </span>void<span class="w"> </span>method<span class="o">()</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
-<span class="err">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="err">/**</span>
+<span class="err"> * This is a brief class description.</span>
+<span class="err"> *</span>
+<span class="err"> * And this is a detailed description.</span>
+<span class="err"> */</span>
+<span class="err">class MyClass</span>
+<span class="err">{</span>
+<span class="c">public:</span>
+<span class="c">    MyClass() {}</span>
+<span class="c">    /// Brief.</span>
+<span class="c">    void method() {}</span>
+<span class="err">};</span>
 </pre></div>
 
 
 <p>In IPython you could print this information:</p>
-<div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">MyClass</span><span class="p">)</span>
-<span class="p">...</span>
-<span class="k">class</span> <span class="n">MyClass</span><span class="p">(</span><span class="n">builtins</span><span class="p">.</span><span class="k">object</span><span class="p">):</span>
- <span class="o">|</span> <span class="n">This</span> <span class="k">is</span> <span class="n">a</span> <span class="n">brief</span> <span class="n">description</span><span class="p">.</span>
- <span class="o">|</span>
- <span class="o">|</span> <span class="k">And</span> <span class="n">this</span> <span class="k">is</span> <span class="n">a</span> <span class="n">detailed</span> <span class="n">description</span><span class="p">.</span>
-<span class="p">...</span>
- <span class="o">|</span> <span class="k">method</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
- <span class="o">|</span>     <span class="n">Brief</span><span class="p">.</span>
-<span class="p">...</span>
+<div class="highlight"><pre><span></span><span class="err">help(MyClass)</span>
+<span class="err">...</span>
+<span class="err">class MyClass(builtins.object):</span>
+<span class="err"> | This is a brief description.</span>
+<span class="err"> |</span>
+<span class="err"> | And this is a detailed description.</span>
+<span class="err">...</span>
+<span class="err"> | method(self)</span>
+<span class="err"> |     Brief.</span>
+<span class="err">...</span>
 </pre></div>
 
 
 <h3>Operators</h3>
 <p>Both languages, C++ and Python support custom operators. They can automatically be translated from C++ to Python. All of the following operators can be translated to Python.</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Operators</span>
-{
-<span class="n">public:</span>
-    <span class="n">Operators</span>();
-    <span class="nb">int</span> <span class="nb">operator</span>()(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="nb">operator</span>[](<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="nb">operator</span>+(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="n">operator-</span>(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="nb">operator</span>*(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="nb">operator</span>/(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">int</span> <span class="nb">operator</span>%(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="nb">bool</span> <span class="nb">operator</span>&amp;&amp;(<span class="nb">bool</span> <span class="n">b</span>);
-    <span class="nb">bool</span> <span class="nb">operator</span>||(<span class="nb">bool</span> <span class="n">b</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>+=(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="n">Operators</span>&amp; <span class="n">operator-</span>=(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>*=(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>/=(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>%=(<span class="nb">int</span> <span class="n">a</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>&amp;=(<span class="nb">bool</span> <span class="n">b</span>);
-    <span class="n">Operators</span>&amp; <span class="nb">operator</span>|=(<span class="nb">bool</span> <span class="n">b</span>);
-};
+<div class="highlight"><pre><span></span><span class="err">class Operators</span>
+<span class="err">{</span>
+<span class="c">public:</span>
+<span class="c">    Operators();</span>
+<span class="c">    int operator()(int a);</span>
+<span class="c">    int operator[](int a);</span>
+<span class="c">    int operator+(int a);</span>
+<span class="c">    int operator-(int a);</span>
+<span class="c">    int operator*(int a);</span>
+<span class="c">    int operator/(int a);</span>
+<span class="c">    int operator%(int a);</span>
+<span class="c">    bool operator&amp;&amp;(bool b);</span>
+<span class="c">    bool operator||(bool b);</span>
+<span class="c">    Operators&amp; operator+=(int a);</span>
+<span class="c">    Operators&amp; operator-=(int a);</span>
+<span class="c">    Operators&amp; operator*=(int a);</span>
+<span class="c">    Operators&amp; operator/=(int a);</span>
+<span class="c">    Operators&amp; operator%=(int a);</span>
+<span class="c">    Operators&amp; operator&amp;=(bool b);</span>
+<span class="c">    Operators&amp; operator|=(bool b);</span>
+<span class="err">};</span>
 </pre></div>
 
 
 <h3>Custom Data Types</h3>
 <p>Custom data types that are defined in the files that will be parsed can automatically be used as function arguments and return values. For example, the class B which uses the previously defined class A from the following code can be wrapped automatically.</p>
-<div class="highlight"><pre><span></span>#<span class="k">include</span> <span class="o">&lt;</span><span class="nv">string</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
 
-<span class="nv">class</span> <span class="nv">A</span>
-{
-    <span class="nv">std</span>::<span class="nv">string</span> <span class="nv">s</span><span class="c1">;</span>
-<span class="nv">public</span>:
-    <span class="nv">A</span><span class="ss">()</span><span class="c1">;</span>
-    <span class="nv">std</span>::<span class="nv">string</span> <span class="nv">getString</span><span class="ss">()</span> <span class="nv">const</span><span class="c1">;</span>
-}<span class="c1">;</span>
+<span class="kr">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="kr">string</span> <span class="n">s</span><span class="p">;</span>
+<span class="kr">public</span><span class="o">:</span>
+    <span class="n">A</span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="kr">string</span> <span class="n">getString</span><span class="p">()</span> <span class="kr">const</span><span class="p">;</span>
+<span class="p">};</span>
 
 
-<span class="nv">class</span> <span class="nv">B</span>
-{
-    <span class="nv">const</span> <span class="nv">A</span><span class="o">&amp;</span> <span class="nv">a</span><span class="c1">;</span>
-<span class="nv">public</span>:
-    <span class="nv">B</span><span class="ss">(</span><span class="nv">const</span> <span class="nv">A</span><span class="o">&amp;</span> <span class="nv">a</span><span class="ss">)</span><span class="c1">;</span>
-    <span class="nv">std</span>::<span class="nv">string</span> <span class="nv">getString</span><span class="ss">()</span><span class="c1">;</span>
-}<span class="c1">;</span>
+<span class="kr">class</span> <span class="nc">B</span>
+<span class="p">{</span>
+    <span class="kr">const</span> <span class="n">A</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">;</span>
+<span class="kr">public</span><span class="o">:</span>
+    <span class="n">B</span><span class="p">(</span><span class="kr">const</span> <span class="n">A</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="kr">string</span> <span class="n">getString</span><span class="p">();</span>
+<span class="p">};</span>
 </pre></div>
 
 
@@ -202,30 +202,30 @@ class<span class="w"> </span>MyClass<span class="w"></span>
 {
 <span class="n">public:</span>
     <span class="n">virtual</span> ~<span class="n">Base1</span>();
-    <span class="n">virtual</span> <span class="nb">int</span> <span class="n">base1Method</span>();
+    <span class="n">virtual</span> <span class="n">int</span> <span class="n">base1Method</span>();
 };
 
 <span class="k">class</span> <span class="n">Base2</span> : <span class="n">public</span> <span class="n">Base1</span>
 {
 <span class="n">public:</span>
-    <span class="n">virtual</span> <span class="nb">int</span> <span class="n">base2Method</span>();
+    <span class="n">virtual</span> <span class="n">int</span> <span class="n">base2Method</span>();
 };
 
 <span class="k">class</span> <span class="n">A</span> : <span class="n">public</span> <span class="n">Base2</span>
 {
 <span class="n">public:</span>
-    <span class="n">virtual</span> <span class="nb">int</span> <span class="n">aMethod</span>();
+    <span class="n">virtual</span> <span class="n">int</span> <span class="n">aMethod</span>();
 };
 </pre></div>
 
 
 <h3>Templates</h3>
 <p>Templates have to be handled specially. You have to define which template instantiations should be wrapped in Python. Suppose we have a template function</p>
-<div class="highlight"><pre><span></span><span class="nv">template</span><span class="o">&lt;</span><span class="nv">typename</span> <span class="nv">T</span><span class="o">&gt;</span>
-<span class="nv">T</span> <span class="nv">addOne</span><span class="ss">(</span><span class="nv">T</span> <span class="nv">t</span><span class="ss">)</span>
-{
-    <span class="k">return</span> <span class="nv">t</span> <span class="o">+</span> <span class="nv">T</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span><span class="c1">;</span>
-}
+<div class="highlight"><pre><span></span><span class="err">template&lt;typename T&gt;</span>
+<span class="err">T addOne(T t)</span>
+<span class="err">{</span>
+<span class="err">    return t + T(1);</span>
+<span class="err">}</span>
 </pre></div>
 
 
@@ -259,20 +259,20 @@ class<span class="w"> </span>MyClass<span class="w"></span>
 
 <h3>External Types</h3>
 <p>External types, e.g., Eigen matrices and vectors, can be used but it requires some manual work unfortunately. Here is a C++ example:</p>
-<div class="highlight"><pre><span></span>#<span class="k">include</span> <span class="o">&lt;</span><span class="nv">Eigen</span><span class="o">/</span><span class="nv">Core</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Eigen/Core&gt;</span><span class="cp"></span>
 
 
-<span class="nv">Eigen</span>::<span class="nv">VectorXd</span> <span class="nv">make</span><span class="ss">(</span><span class="nv">const</span> <span class="nv">Eigen</span>::<span class="nv">VectorXd</span><span class="o">&amp;</span> <span class="nv">vector</span><span class="ss">)</span>
-{
-    <span class="k">return</span> <span class="mi">2</span>.<span class="mi">0</span> <span class="o">*</span> <span class="nv">vector</span><span class="c1">;</span>
-}
+<span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">make</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">&amp;</span> <span class="n">vector</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">vector</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <p>The configuration is too long to write it here, I'll just refer to the corresponding <a href="https://github.com/AlexanderFabisch/cythonwrapper/blob/master/test/test_custom_conversions.py">unit test</a>. We have to provide the C++ interface definition of an <code>Eigen::VectorXd</code> in Cython and we have to write a type converter from and to the corresponding Python type, in this case, a numpy array.</p>
 <p>In the end, we can easily run this code:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">eigen</span> <span class="kn">import</span> <span class="n">make</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
@@ -289,13 +289,13 @@ class<span class="w"> </span>MyClass<span class="w"></span>
 <p>Code generation is usually only feasible if the library does not make extensive use of external types in the interface. My recommendation for these cases would be to write a simple C++ interface that will be wrapped in Python. A list of other issues can be found <a href="https://github.com/AlexanderFabisch/cythonwrapper#unsupported-features-of-c">in the readme</a> but there are probably many more. For example, memory management: smart pointers are currently not supported automatically. You can do it manually though.</p>
 <h2>Implementation Details</h2>
 <p>How does it work? Suppose we have a short C++ header:</p>
-<div class="highlight"><pre><span></span><span class="nv">typedef</span> <span class="nv">double</span> <span class="nv">mytype</span><span class="c1">;</span>
+<div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">double</span> <span class="n">mytype</span><span class="p">;</span>
 
 
-<span class="nv">mytype</span> <span class="nv">fun</span><span class="ss">(</span><span class="nv">mytype</span> <span class="nv">d</span><span class="ss">)</span>
-{
-    <span class="k">return</span> <span class="nv">d</span> <span class="o">+</span> <span class="mi">1</span>.<span class="mi">0</span><span class="c1">;</span>
-}
+<span class="n">mytype</span> <span class="n">fun</span><span class="p">(</span><span class="n">mytype</span> <span class="n">d</span><span class="p">)</span>
+<span class="err">{</span>
+    <span class="k">return</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="err">}</span>
 </pre></div>
 
 
@@ -312,11 +312,11 @@ class<span class="w"> </span>MyClass<span class="w"></span>
 
 
 <p>These are the information that Clang gives us. It is translated to another internal abstract syntax tree representation:</p>
-<div class="highlight"><pre><span></span><span class="n">AST</span>
-    <span class="n">Typedef</span> <span class="p">(</span><span class="n">double</span><span class="p">)</span> <span class="n">mytype</span>
-    <span class="k">Function</span> <span class="s1">&#39;fun&#39;</span>
-        <span class="k">Parameter</span> <span class="p">(</span><span class="n">mytype</span><span class="p">)</span> <span class="n">d</span>
-        <span class="k">Returns</span> <span class="p">(</span><span class="n">mytype</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="err">AST</span>
+<span class="err">    Typedef (double) mytype</span>
+<span class="err">    Function &#39;fun&#39;</span>
+<span class="err">        Parameter (mytype) d</span>
+<span class="err">        Returns (mytype)</span>
 </pre></div>
 
 
