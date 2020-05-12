@@ -2,10 +2,10 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am a researcher at the DFKI RIC and I currently work in the projects
+I am a researcher at the DFKI RIC and I currently work in the project
 [TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html)
-and [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html)
-and previously in [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html).
+and previously I worked in [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html)
+and [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html).
 At the moment my scientific work focuses on imitation learning and
 reinforcement learning. Before joining DFKI I worked at the Robotics Research
 Group of the University of Bremen in the project
@@ -20,6 +20,11 @@ You can also find an overview of my publications at
 
 Software Development
 --------------------
+
+Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
+**Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
+In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
+[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767)
 
 Fabisch, Alexander:<br/>
 **pytransform3d: 3D Transformations for Python**.<br/>
