@@ -93,7 +93,7 @@ In: *Proceedings of the Second Machine Learning in Planning and Control of Robot
 Fabisch, Alexander, Jan Hendrik Metzen, Mario Michael Krell, Frank Kirchner:<br/>
 **Accounting for Task-Difficulty in Active Multi-Task Robot Control Learning**.<br/>
 *Künstliche Intelligenz* 29 (2015): 369-377.<br/>
-[Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2)
+[Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2) [PDF](https://www.dfki.de/fileadmin/user_upload/import/7766_Accounting_for_Task-Difficulty_in_Active_Multi-Task_Robot_Control_Learning.pdf)
 
 Fabisch, Alexander, Jan Hendrik Metzen:<br/>
 **Active Contextual Policy Search**.<br/>
