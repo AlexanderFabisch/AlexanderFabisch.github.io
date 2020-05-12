@@ -34,7 +34,7 @@ In: *Journal of Open Source Software* (2019).<br/>
 Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
 **InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
 In: *69th International Astronautical Congress (IAC)* (2018).<br/>
-[PDF](https://hal.laas.fr/hal-02092238/document)
+[Preprint](https://hal.laas.fr/hal-02092238/document)
 
 Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
 Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
@@ -44,12 +44,12 @@ Michal Smisek, Xiu Yan:<br/>
 Fusion Methods**.<br/>
 In: *International Symposium on Artificial Intelligence, Robotics and Automation
 in Space* (2018)<br/>
-[PDF](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
+[Preprint](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
 
 Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
 In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).<br/>
-[PDF](https://hal.archives-ouvertes.fr/hal-01536099/document)
+[Preprint](https://hal.archives-ouvertes.fr/hal-01536099/document)
 
 Lifelong Learning
 -----------------
@@ -65,24 +65,23 @@ Robot Skill Learning
 Fabisch, Alexander, Christoph Petzoldt, Marc Otto, Frank Kirchner:<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
 Status: submitted.<br/>
-[arXiv.org](https://arxiv.org/abs/1906.01868)
+[Preprint](https://arxiv.org/abs/1906.01868)
 
 Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirchner:<br/>
 **Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
 In: *KI 2019: Advances in Artificial Intelligence* (2019)<br/>
-Status: accepted.
-[Springer](https://link.springer.com/chapter/10.1007/978-3-030-30179-8_14) [PDF](https://www.dfki.de/fileadmin/user_upload/import/10504_20190712_Automated_Robot_Skill_Learning_from_Demonstration_for_Various_Robot_Systems.pdf) [heise.de](https://www.heise.de/newsticker/meldung/KI-2019-Roboter-muessen-immer-noch-viel-lernen-4541544.html)
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-30179-8_14) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/10504_20190712_Automated_Robot_Skill_Learning_from_Demonstration_for_Various_Robot_Systems.pdf) [heise.de](https://www.heise.de/newsticker/meldung/KI-2019-Roboter-muessen-immer-noch-viel-lernen-4541544.html)
 
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
 In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019)<br/>
-Status: accepted, DOI: 10.1145/3319619.3321935.<br/>
-[ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](http://h2326337.stratoserver.net/public_files/papers/2019_gecco_poster.pdf) [arXiv.org (long version)](https://arxiv.org/abs/1810.11491)
+DOI: 10.1145/3319619.3321935.<br/>
+[ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](http://h2326337.stratoserver.net/public_files/papers/2019_gecco_poster.pdf) [Preprint (long version)](https://arxiv.org/abs/1810.11491)
 
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
 In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2019).<br/>
-[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [arXiv.org](https://arxiv.org/abs/1904.06765) [Slides](http://h2326337.stratoserver.net/public_files/papers/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [Preprint](https://arxiv.org/abs/1904.06765) [Slides](http://h2326337.stratoserver.net/public_files/papers/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
@@ -98,7 +97,7 @@ In: *Proceedings of the Second Machine Learning in Planning and Control of Robot
 Fabisch, Alexander, Jan Hendrik Metzen, Mario Michael Krell, Frank Kirchner:<br/>
 **Accounting for Task-Difficulty in Active Multi-Task Robot Control Learning**.<br/>
 *Künstliche Intelligenz* 29 (2015): 369-377.<br/>
-[Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2) [PDF](https://www.dfki.de/fileadmin/user_upload/import/7766_Accounting_for_Task-Difficulty_in_Active_Multi-Task_Robot_Control_Learning.pdf)
+[Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7766_Accounting_for_Task-Difficulty_in_Active_Multi-Task_Robot_Control_Learning.pdf)
 
 Fabisch, Alexander, Jan Hendrik Metzen:<br/>
 **Active Contextual Policy Search**.<br/>
@@ -108,7 +107,7 @@ Fabisch, Alexander, Jan Hendrik Metzen:<br/>
 Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:<br/>
 **Towards Learning of Generic Skills for Robotic Manipulation**.<br/>
 *Künstliche Intelligenz* 28 (2014): 15-20.<br/>
-[Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [PDF](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
+[Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
 
 Neural Networks
 ---------------
@@ -116,7 +115,7 @@ Neural Networks
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
 **Learning in Compressed Space**.<br/>
 *Neural Networks* 42 (2013): 83–93.<br/>
-[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [PDF](http://h2326337.stratoserver.net/public_files/papers/2013_nn_lcs.pdf)
+[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](http://h2326337.stratoserver.net/public_files/papers/2013_nn_lcs.pdf)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
