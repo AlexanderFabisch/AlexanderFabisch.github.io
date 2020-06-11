@@ -67,14 +67,20 @@ Fabisch, Alexander, Christoph Petzoldt, Marc Otto, Frank Kirchner:<br/>
 Status: submitted.<br/>
 [Preprint](https://arxiv.org/abs/1906.01868)
 
+Fabisch, Alexander, Malte Langosz, Frank Kirchner:<br/>
+**BOLeRo: Behavior Optimization and Learning for Robots**.<br/>
+In: *International Journal of Advanced Robotic Systems* 17.3 (2020).<br/>
+DOI: 10.1177/1729881420913741.<br/>
+[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420913741)
+
 Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirchner:<br/>
 **Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
-In: *KI 2019: Advances in Artificial Intelligence* (2019)<br/>
+In: *KI 2019: Advances in Artificial Intelligence* (2019).<br/>
 [Springer](https://link.springer.com/chapter/10.1007/978-3-030-30179-8_14) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/10504_20190712_Automated_Robot_Skill_Learning_from_Demonstration_for_Various_Robot_Systems.pdf) [heise.de](https://www.heise.de/newsticker/meldung/KI-2019-Roboter-muessen-immer-noch-viel-lernen-4541544.html)
 
 Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
-In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019)<br/>
+In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019).<br/>
 DOI: 10.1145/3319619.3321935.<br/>
 [ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](http://h2326337.stratoserver.net/public_files/papers/2019_gecco_poster.pdf) [Preprint (long version)](https://arxiv.org/abs/1810.11491)
 
