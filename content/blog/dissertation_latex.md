@@ -225,6 +225,7 @@ or as a new block:
 Links:
 
 * [Package documentation: biblatex](https://ctan.org/pkg/biblatex)
+* [Biblatex Cheat Sheet](http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf)
 * [Package documentation: csquotes](https://ctan.org/pkg/csquotes)
 
 
