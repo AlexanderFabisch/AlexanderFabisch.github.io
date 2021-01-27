@@ -52,7 +52,7 @@ a [Github account](https://github.com/AlexanderFabisch).
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td><img src="../images/code_cythonwrapper.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a>
         - Automatically generates a Cython wrapper for C++ code. (Python, Cython)<br/>
         This tool is able to parse C++ headers and automatically generate Python bindings from it. It makes use of Clang for parsing and Cython for to build the extension.
