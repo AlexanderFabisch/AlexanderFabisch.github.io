@@ -3,6 +3,7 @@
 <head>
           <title>Alexander Fabisch - LaTeX for Dissertations</title>
         <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
         <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
         <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
@@ -33,7 +34,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
             <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
@@ -73,17 +74,14 @@ PDF/A-1b validity, I will also talk about this in the end.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\input</span><span class="nb">{</span>mychapter<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>will have the same effect as copying everything from <code>mychapter.tex</code> here.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\include</span><span class="nb">{</span>mychapter<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>will create a page break before it includes the file. It does not work in the
 preamble though. The benefit of <code>\include</code> is that you can put</p>
 <div class="highlight"><pre><span></span><code><span class="k">\includeonly</span><span class="nb">{</span>mychapter, mychapter2<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>in the preamble to only compile a selected subset of all chapters to make
 compilation much faster. It does not mess up the references (e.g., table of
@@ -107,7 +105,6 @@ glossary entries) and <code>\include</code> for my chapters.</p>
 <span class="nb">{</span>scrbook<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>I highly recommend to use the book class of Koma-Script for a dissertation.
 This is my configuration for the final document. One of the more obscure
 options here is '<code>headings=twolinechapter</code>', which will print "Chapter X."
@@ -117,7 +114,6 @@ as chapters to the table of contents.</p>
 <p>I recommend to use Koma-Script in combination with the following package:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>scrhack<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>This will fix some <a href="https://tex.stackexchange.com/questions/51867">common problems</a></p>
 <p>Links:</p>
@@ -142,7 +138,6 @@ the main text (back matter).</p>
 <span class="c">% abstract</span>
 </code></pre></div>
 
-
 <p>This is everything before the main text. '<code>\frontmatter</code>' will activate
 roman page numbers and deactivate chapter numbering.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\mainmatter</span>
@@ -158,7 +153,6 @@ Text
 Text
 </code></pre></div>
 
-
 <p>'<code>\mainmatter</code>' will switch to Arabic page numbers and turn on chapter
 numbering. So here we have all the main text with numerous subdivisions.
 I avoided to have less than two subdivisions per level. If you have,
@@ -168,7 +162,6 @@ in the section or make a new section instead of a subsection.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\appendix</span>
 <span class="k">\chapter</span><span class="nb">{</span>Title<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>'<code>\appendix</code>' will switch chapter numbering to letters.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\backmatter</span>
@@ -181,7 +174,6 @@ in the section or make a new section instead of a subsection.</p>
 <span class="k">\printbibliography</span><span class="na">[heading=none]</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>'<code>\backmatter</code>' will turn of chapter numbering. Putting the list of figures
 and tables to the end is unusual. These typically are part of the front
@@ -202,7 +194,6 @@ thesis.</p>
   maxbibnames=99]<span class="nb">{</span>biblatex<span class="nb">}</span>
 <span class="k">\addbibresource</span><span class="nb">{</span>literature.bib<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>The main reason for this decision is that it allows to easily create
 environments for which you can generate a specific bibliography. I used this
@@ -251,16 +242,13 @@ language." (<a href="https://tex.stackexchange.com/a/229653">source</a>)</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[english=american]</span><span class="nb">{</span>csquotes<span class="nb">}</span>
 </code></pre></div>
 
-
 <p><code>csquotes</code> is also good if you want to quote in the text:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\textcquote</span><span class="nb">{</span>CitationKey<span class="nb">}{</span>Some text here with ellipses at the end <span class="k">\textelp</span><span class="nb">{}}</span>
 </code></pre></div>
 
-
 <p>or as a new block:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\blockcquote</span><span class="na">[pages 100--101]</span><span class="nb">{</span>CitationKey<span class="nb">}{</span>Some long text.<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -276,21 +264,17 @@ automatically.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[toc]</span><span class="nb">{</span>glossaries<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>To create a glossary you have to call</p>
 <div class="highlight"><pre><span></span><code><span class="k">\makeglossaries</span>
 </code></pre></div>
-
 
 <p>in the document. Then you can define abbreviations with</p>
 <div class="highlight"><pre><span></span><code><span class="k">\newacronym</span><span class="nb">{</span>MDP<span class="nb">}{</span>MDP<span class="nb">}{</span>Markov decision process<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Now</p>
 <div class="highlight"><pre><span></span><code><span class="k">\gls</span><span class="nb">{</span>MDP<span class="nb">}</span> or <span class="k">\glspl</span><span class="nb">{</span>MDP<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>will result in "Markov Decision Process (MDP) or MDPs" ('<code>\glspl</code>' means plural).
 The abbreviation will be introduced once and then only the abbreviation will be
@@ -298,7 +282,6 @@ printed. No need to think about it. Later in the document you can print the
 glossary with</p>
 <div class="highlight"><pre><span></span><code><span class="k">\printglossaries</span>
 </code></pre></div>
-
 
 <p>The package option '<code>toc</code>' will add it to the table of contents.</p>
 <p>Note that the external command '<code>makeglossaries documentname</code>' (without file
@@ -312,7 +295,6 @@ ending) has to be executed after the first pass of your LaTeX engine.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>layout<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>This package provides the command <code>\layout</code> that will print page layout
 variables for your document. This is the result in my case (shows both sides):</p>
 <p><img src="images/diss_layout.png" width=500px /></p>
@@ -321,12 +303,10 @@ interested in, the following package is useful:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>layouts<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>For example, put</p>
 <div class="highlight"><pre><span></span><code><span class="k">\printinunitsof</span><span class="nb">{</span>mm<span class="nb">}</span><span class="k">\prntlen</span><span class="nb">{</span><span class="k">\textwidth</span><span class="nb">}</span>
 <span class="k">\printinunitsof</span><span class="nb">{</span>mm<span class="nb">}</span><span class="k">\prntlen</span><span class="nb">{</span><span class="k">\textheight</span><span class="nb">}</span>
 </code></pre></div>
-
 
 <p>in the document for millimeter. I found it useful to find out the text
 dimensions and then scale figures appropriately without rescaling them
@@ -336,14 +316,12 @@ in LaTeX.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[showframe]</span><span class="nb">{</span>geometry<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>This will draw lines around the important areas of each page.</p>
 <p><img src="images/diss_showframe.png" width=500px /></p>
 <p>The following package allows you to draw a grid on every page to precisely
 place elements.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[grid=true,gridBG=true]</span><span class="nb">{</span>eso-pic<span class="nb">}</span>
 </code></pre></div>
-
 
 <p><img src="images/diss_grid.png" width=500px /></p>
 <p>Links:</p>
@@ -361,7 +339,6 @@ by setting</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[marginparwidth=75pt]</span><span class="nb">{</span>geometry<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>after using the layout package to find out the previous <code>marginparwidth</code> and
 converting 4.23 mm to pt according to <a href="https://tex.stackexchange.com/a/8337/221360">this table</a>.
 Since there was now less space for the margin notes, LaTeX couldn't find
@@ -372,7 +349,6 @@ the margin to</p>
 <span class="nb">{</span><span class="k">\marginpar</span><span class="nb">{</span><span class="k">\raggedright\footnotesize</span> #1<span class="nb">}}</span>
 <span class="nb">{</span><span class="k">\marginpar</span><span class="nb">{</span><span class="k">\raggedleft\footnotesize</span> #1<span class="nb">}}}</span>
 </code></pre></div>
-
 
 <p>which works only with Koma-Script in this form. The text is smaller and it is
 aligned to the direction of the page's center. But the conclusion of this
@@ -390,7 +366,6 @@ thesis with a UTF-8 based engine like lualatex though.</p>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Links:</p>
 <ul>
 <li><a href="https://ctan.org/pkg/fontenc">Package documentation: fontenc</a></li>
@@ -403,7 +378,6 @@ German summary in the beginning because this is required by my university.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[ngerman,english]</span><span class="nb">{</span>babel<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Babel changes the language of a document, that is, translates "table of
 contents", "chapter", citations, and dates if the default language is not
 English. It will also apply proper hyphenation to the text. It is possible
@@ -414,7 +388,6 @@ Etwas Text in deutscher Sprache...
 <span class="k">\end</span><span class="nb">{</span>otherlanguage<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Links:</p>
 <ul>
 <li><a href="https://ctan.org/pkg/babel">Package documentation</a></li>
@@ -424,7 +397,6 @@ Etwas Text in deutscher Sprache...
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>chngpage<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>This is something that you usually should not do, but sometimes I found it
 aesthetic to extend a figure a bit on one side:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\hfuzz</span>=100pt <span class="c">% suppress warnings</span>
@@ -433,7 +405,6 @@ aesthetic to extend a figure a bit on one side:</p>
 <span class="k">\end</span><span class="nb">{</span>adjustwidth<span class="nb">}</span>
 <span class="k">\hfuzz</span>=0pt
 </code></pre></div>
-
 
 <p>Note that this is for an image on a left page. On a right page
 you have to play around with <code>\oddsidemargin</code> and <code>\leftmargin</code>.</p>
@@ -445,7 +416,6 @@ you have to play around with <code>\oddsidemargin</code> and <code>\leftmargin</
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>floatpag<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>This package provides the command '<code>\thisfloatpagestyle</code>' to remove the header
 and the page number and I used it for large figures that fill an entire page.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
@@ -454,7 +424,6 @@ and the page number and I used it for large figures that fill an entire page.</p
 <span class="k">\caption</span><span class="nb">{</span>Bla bla.<span class="k">\label</span><span class="nb">{</span>fig:bla<span class="nb">}}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -465,11 +434,9 @@ and the page number and I used it for large figures that fill an entire page.</p
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>placeins<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>This package provides the command</p>
 <div class="highlight"><pre><span></span><code><span class="k">\FloatBarrier</span>
 </code></pre></div>
-
 
 <p>that prevents floats from moving past this line.
 I found this useful to force LaTeX to make a page with multiple figures.</p>
@@ -481,7 +448,6 @@ I found this useful to force LaTeX to make a page with multiple figures.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>wrapfig<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Example (figure on the right side):</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>wrapfigure<span class="nb">}{</span>r<span class="nb">}{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
 <span class="k">\centering</span>
@@ -489,7 +455,6 @@ I found this useful to force LaTeX to make a page with multiple figures.</p>
 <span class="k">\caption</span><span class="nb">{</span>Bla bla.<span class="k">\label</span><span class="nb">{</span>fig:bla<span class="nb">}}</span>
 <span class="k">\end</span><span class="nb">{</span>wrapfigure<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -501,7 +466,6 @@ arranged manually, for example, with a tabular environment. You don't have
 to do that. Use this package.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[caption=false]</span><span class="nb">{</span>subfig<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>It provides the command '<code>\subfloat</code>':</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
@@ -515,12 +479,10 @@ to do that. Use this package.</p>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>If you have multiple subfigures with different heights it is difficult to
 arrange them vertically. There is a package for that.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[export]</span><span class="nb">{</span>adjustbox<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Now, to arrange two figures vertically at the center, you can use the option
 '<code>valign=m</code>' of '<code>\includegraphics</code>' that is provided by adjustbox and you
@@ -539,7 +501,6 @@ should add a phantom box of the size of the second figure to the first one.</p>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Links:</p>
 <ul>
 <li><a href="https://ctan.org/pkg/subfig">Package documentation: subfig</a></li>
@@ -554,7 +515,6 @@ is a good guide on how to make nice tables.</p>
 <p>In a few cases I had to make tables that are longer than one page.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>longtable<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>You can define a table head that appears on every page
 (everything before '<code>\endhead</code>').</p>
@@ -571,11 +531,9 @@ A <span class="nb">&amp;</span> B<span class="k">\\</span>
 <span class="k">\end</span><span class="nb">{</span>longtable<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>The rules are defined in the package booktabs.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -586,7 +544,6 @@ A <span class="nb">&amp;</span> B<span class="k">\\</span>
 <p>For code formatting I use the following package:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>listings<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>algorithm<span class="nb">}</span>[t]
@@ -599,7 +556,6 @@ x = np.linspace(0, 1, 101)
 <span class="k">\end</span><span class="nb">{</span>algorithm<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Links:</p>
 <ul>
 <li><a href="https://ctan.org/pkg/listings">Package documentation: listings</a></li>
@@ -609,7 +565,6 @@ x = np.linspace(0, 1, 101)
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>algorithm<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>algpseudocode<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>An algorithm in a float environment looks like this.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>algorithm<span class="nb">}</span>
@@ -631,7 +586,6 @@ x = np.linspace(0, 1, 101)
 <span class="k">\end</span><span class="nb">{</span>algorithm<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Links:</p>
 <ul>
 <li><a href="https://en.wikibooks.org/wiki/LaTeX/Algorithms">Wikibook LaTeX on pseudocode</a></li>
@@ -641,7 +595,6 @@ x = np.linspace(0, 1, 101)
 <span class="c">%\usepackage{amssymb} % conflicts with newtxmath</span>
 </code></pre></div>
 
-
 <p>A font similar to Times New Roman for math. The package also provides several
 typical mathematical symbols. Thus, it collides with <code>amssymb</code> and you can't
 use both. This is how the result looks like:</p>
@@ -649,7 +602,6 @@ use both. This is how the result looks like:</p>
 <p>To change the appearance of '<code>\mathcal</code>' I use the following package:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[mathcal]</span><span class="nb">{</span>euscript<span class="nb">}</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -661,12 +613,10 @@ use both. This is how the result looks like:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>siunitx<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Now you can write in your text:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\SI</span><span class="nb">{</span>1<span class="nb">}{</span><span class="k">\metre</span><span class="nb">}</span>
 <span class="k">\SI</span><span class="nb">{</span>2<span class="nb">}{</span><span class="k">\centi\meter</span><span class="nb">}</span>
 </code></pre></div>
-
 
 <p>and much more complex units. You also don't have to think about whether
 you had put a space between the number and the unit before. The package
@@ -680,17 +630,14 @@ automatically does this for you.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>todonotes<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>Use the option <code>[disable]</code> for final version.</p>
 <div class="highlight"><pre><span></span><code><span class="k">\todo</span><span class="nb">{</span>this will create a note on the margin<span class="nb">}</span>
 <span class="k">\todo</span><span class="na">[inline]</span><span class="nb">{</span>this will create a comment in the text<span class="nb">}</span>
 </code></pre></div>
 
-
 <p>You can also print a list of all notes with</p>
 <div class="highlight"><pre><span></span><code><span class="k">\listoftodos</span>
 </code></pre></div>
-
 
 <p>Links:</p>
 <ul>
@@ -732,14 +679,12 @@ which can be defined in scrbook like this:</p>
 <span class="k">\addtokomafont</span><span class="nb">{</span>chapterprefix<span class="nb">}{</span><span class="k">\mdseries</span><span class="nb">}</span>
 </code></pre></div>
 
-
 <p>The image at the top is included with <code>tikz</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c">% before document:</span>
 <span class="k">\usepackage</span><span class="nb">{</span>tikz<span class="nb">}</span>
 <span class="c">% include image:</span>
 <span class="k">\tikz</span><span class="na">[remember picture,overlay]</span> <span class="k">\node</span><span class="na">[opacity=0.75,inner sep=0pt]</span> at (8,6.95)<span class="nb">{</span><span class="k">\includegraphics</span><span class="na">[width=\paperwidth]</span><span class="nb">{</span>image<span class="nb">}}</span>;
 </code></pre></div>
-
 
 <p>If you want to do this, the image should of course be somewhat related to the
 content of the chapter.</p>
@@ -759,11 +704,9 @@ the preamble (which means before '<code>\begin{document}</code>'):</p>
 <span class="k">\displaywidowpenalty</span>=10000
 </code></pre></div>
 
-
 <p>Another trick that I used often is to enlarge a page by one line with</p>
 <div class="highlight"><pre><span></span><code><span class="k">\enlargethispage</span><span class="nb">{</span><span class="k">\baselineskip</span><span class="nb">}</span>
 </code></pre></div>
-
 
 <p>It looks better if both the left and right page have the same length,
 so I typically extended them both.</p>
@@ -799,7 +742,6 @@ during continuous integration with good enough certainty.</p>
 <div class="highlight"><pre><span></span><code>pdffonts document.pdf
 </code></pre></div>
 
-
 <p>and check the column <em>emb</em>.</p>
 <p>The main problem with PDF/A-1b compatibility are PDF figures. I work a lot
 with <a href="https://inkscape.org/">inkscape</a> for illustrations and
@@ -809,13 +751,11 @@ document to PDF/A-1b:</p>
 <div class="highlight"><pre><span></span><code>gs -dPDFA -dBATCH -dNOPAUSE -dNOOUTERSAVE -sColorConversionStrategy<span class="o">=</span>UseDeviceIndependentColor -sProcessColorModel<span class="o">=</span>DeviceCMYK -sDEVICE<span class="o">=</span>pdfwrite -sPDFACompatibilityPolicy<span class="o">=</span><span class="m">1</span> -sOutputFile<span class="o">=</span>output_figure.pdf input_figure.pdf
 </code></pre></div>
 
-
 <p>To make the main LaTeX document compatible I use the package pdfx, which
 already takes care of a lot of problems and should be important almost
 at the beginning:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[a-1b]</span><span class="nb">{</span>pdfx<span class="nb">}</span>
 </code></pre></div>
-
 
 <p><a href="https://ctan.org/pkg/pdfx">Package documentation: pdfx</a></p>
 <p>However, this is not enough to fix all problems in my case so that I also had
@@ -841,7 +781,6 @@ I set up a docker container based on a recent Ubuntu to match my system.</p>
 <span class="k">RUN</span> mkdir -p /opt/bin
 <span class="k">COPY</span> preflight-app-1.8.16.jar /opt/bin/preflight-app-1.8.16.jar
 </code></pre></div>
-
 
 <p>You certainly don't need all of these packages (e.g., libreoffice or pdftk).
 As mentioned previously, preflight was used to check PDF/A-1b compatibility.
@@ -905,8 +844,8 @@ The docker image is also available as '<code>af01/dissertation</code>' from dock
 </section>
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 </body>

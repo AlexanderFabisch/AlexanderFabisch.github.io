@@ -3,6 +3,7 @@
 <head>
         <title>Alexander Fabisch</title>
         <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
         <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
 
         <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
@@ -27,7 +28,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
             <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
@@ -62,10 +63,7 @@ As …</p> </div><!-- /.entry-content -->
                         <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
                     </address>
                 </footer><!-- /.post-info -->
-                <div class="entry-content"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I will take a look at how kernel ridge regression can be derived from linear regression and ridge regression in this article. I will further show how this knowledge can be used to derive a more specialized model that can be used for reinforcement learning: cost-regularized kernel regression (CrKR). CrKR …</p></div></div></div> </div><!-- /.entry-content -->
+                <div class="entry-content">  </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/bfgs.html" rel="bookmark" title="Permalink to BFGS">BFGS</a></h2> </header>
@@ -80,7 +78,7 @@ As …</p> </div><!-- /.entry-content -->
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Machine learning often involves optimization, that is solving</p>
 $$\arg\min_{x} f(x),\ f: \mathbb{R}^n \rightarrow \mathbb{R},$$<p>where $f(x)$ is an objective function, for example, <a href="http://alexanderfabisch.github.io/maximum-likelihood.html">negative log-likelihood</a>.</p>
-<p>Often you cannot find the optimum directly. That is the reason why we need numerical, iterative optimization methods. I …</p></div></div></div> </div><!-- /.entry-content -->
+<p>Often you cannot find the optimum directly. That is the reason why we need numerical, iterative optimization methods. I will take a closer look at these methods that are the fundamentals of machine learning but we need some basic tools first.</p> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/generating-python-bindings.html" rel="bookmark" title="Permalink to Generating Python Bindings">Generating Python Bindings</a></h2> </header>
@@ -104,7 +102,7 @@ There are many tools that simplify the work of writing Python bindings (<a href=
                 <div class="entry-content"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>My work often combines motion capture, reinforcement learning, and robotics. There are many different systems involved, like proprietary motion capturing software, our own <a href="https://github.com/rock-learning/bolero">machine learning library</a>, robotic simulations (e.g. <a href="https://github.com/rock-simulation/mars">MARS</a>, <a href="http://gazebosim.org/">Gazebo</a>, or <a href="http://bulletphysics.org">Bullet</a>), and robotic middleware (e.g. <a href="http://www.ros.org/">ROS</a> or <a href="https://www.rock-robotics.org">RoCK</a>). All of them come with their own complex …</p></div></div></div> </div><!-- /.entry-content -->
+<p>My work often combines motion capture, reinforcement learning, and robotics. There are many different systems involved, like proprietary motion capturing software, our own <a href="https://github.com/rock-learning/bolero">machine learning library</a>, robotic simulations (e.g. <a href="https://github.com/rock-simulation/mars">MARS</a>, <a href="http://gazebosim.org/">Gazebo</a>, or <a href="http://bulletphysics.org">Bullet</a>), and robotic middleware (e.g. <a href="http://www.ros.org/">ROS</a> or <a href="https://www.rock-robotics.org">RoCK</a>). All of them come with their own complex visualization tools, tools for handling transformations, and usually with their own conventions for transformations.</p> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/maximum-likelihood.html" rel="bookmark" title="Permalink to Maximum Likelihood">Maximum Likelihood</a></h2> </header>
@@ -118,7 +116,7 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Maximum likelihood is one of the fundemental concepts in statistics and artificial intelligence algorithms. What does it mean and how is it used in practice?</p>
-<p>Suppose you have some dataset $\mathcal{D}$ and a possible hypothesis $h$ of the latent function that might have generated the dataset. The probability distribution …</p></div></div></div> </div><!-- /.entry-content -->
+<p>Suppose you have some dataset $\mathcal{D}$ and a possible hypothesis $h$ of the latent function that might have generated the dataset. The probability distribution of the dataset given the hypothesis $p(\mathcal{D}|h)$ is called <strong>likelihood</strong> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/learning-curves-2.html" rel="bookmark" title="Permalink to Learning Curves #2">Learning Curves #2</a></h2> </header>
@@ -144,7 +142,7 @@ is unusual to write it down explicitely. The only …</p> </div><!-- /.entry-con
                 <div class="entry-content"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>pybullet is a simple Python interface to the physics engine <a href="http://bulletphysics.org/wordpress/">Bullet</a>. It is easy to install (via <code>pip install pybullet</code>) and use and it is yet a powerful tool. This article will give a brief glimpse at what you can do with it. A more detailed guide can be found …</p></div></div></div> </div><!-- /.entry-content -->
+<p>pybullet is a simple Python interface to the physics engine <a href="http://bulletphysics.org/wordpress/">Bullet</a>. It is easy to install (via <code>pip install pybullet</code>) and use and it is yet a powerful tool. This article will give a brief glimpse at what you can do with it. A more detailed guide can be found in the <a href="https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/">pybullet quickstart guide</a> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/slither.html" rel="bookmark" title="Permalink to Slither">Slither</a></h2> </header>
@@ -185,7 +183,23 @@ tools …</p> </div><!-- /.entry-content -->
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A linear Support Vector Machine implements the linear model
 $$y = \text{sign}\left(\boldsymbol{w}^T\boldsymbol{x} + b\right),$$
-where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is an input vector, and $\boldsymbol{w} \in \mathbb{R}^D$, $b \in \mathbb …</p></div></div></div> </div><!-- /.entry-content -->
+where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is an input vector, and $\boldsymbol{w} \in \mathbb{R}^D$, $b \in \mathbb{R}$ are the model parameters.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objective-Function">Objective Function<a class="anchor-link" href="#Objective-Function">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The original objective function for a Support Vector Machine is</p>
+$$\min_{\boldsymbol{w}} ||\boldsymbol{w}||^2 \text{ subject to } y_i \left( \boldsymbol{w}^T \boldsymbol{x}_i + b \right) \geq 1 \text{ for } i=1,\ldots,n.$$<p>To allow missclassification to some degree, we can formulate a relaxed version. The objective function of <em>soft</em> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/regression.html" rel="bookmark" title="Permalink to Regression">Regression</a></h2> </header>
@@ -209,7 +223,30 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
 <p><strong>Model:</strong></p>
 <ul>
 <li>We assume that there is some <strong>latent function</strong> $f: \mathbb{R}^D \rightarrow \mathbb{R}^F$.</li>
-<li>We observe <strong>samples</strong> $(\boldsymbol{x}_n, \boldsymbol{y}_n)$ with $f(\boldsymbol{x}_n) + \boldsymbol{\epsilon}_n = \boldsymbol …</li></ul></div></div></div> </div><!-- /.entry-content -->
+<li>We observe <strong>samples</strong> $(\boldsymbol{x}_n, \boldsymbol{y}_n)$ with $f(\boldsymbol{x}_n) + \boldsymbol{\epsilon}_n = \boldsymbol{y}_n$</li>
+<li>with i.i.d. noise, for example $\boldsymbol{\epsilon}_n \sim \mathcal{N}(0, \sigma^2 \boldsymbol{I}_F)$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Algorithms</strong></p>
+<ul>
+<li>Linear Regression</li>
+<li>Polynomial (Ridge) Regression</li>
+<li>Kernel (Ridge) Regression</li>
+<li>Gaussian Process Regression</li>
+<li>Support Vector Regression</li> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/t-sne-in-scikit-learn.html" rel="bookmark" title="Permalink to t-SNE in scikit learn">t-SNE in scikit learn</a></h2> </header>
@@ -219,11 +256,15 @@ where $y \in \{-1, 1\}$ is a class label, $\boldsymbol{x} \in \mathbb{R}^D$ is a
                         <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
                     </address>
                 </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>The algorithm t-SNE has been merged in the master of scikit learn
+                <div class="entry-content"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The algorithm t-SNE has been merged in the master of scikit learn
 <a href="https://github.com/scikit-learn/scikit-learn/pull/2822">recently</a>. It is
 a nice tool to visualize and understand high-dimensional data. In this post I
 will explain the basic idea of the algorithm, show how the implementation
-from scikit learn can be used and show some examples …</p> </div><!-- /.entry-content -->
+from scikit learn can be used and show some examples. The IPython notebook
+that is embedded here, can be found <a href="http://nbviewer.ipython.org/urls/gist.githubusercontent.com/AlexanderFabisch/1a0c648de22eff4a2a3e/raw/59d5bc5ed8f8bfd9ff1f7faa749d1b095aa97d5a/t-SNE.ipynb">here</a> </div><!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="http://alexanderfabisch.github.io/learning-curves-in-scikit-learn.html" rel="bookmark" title="Permalink to Learning Curves in scikit learn">Learning Curves in scikit learn</a></h2> </header>
@@ -257,8 +298,8 @@ libraries available. Some of them come from the …</p> </div><!-- /.entry-conte
 </section><!-- /#content -->
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 </body>

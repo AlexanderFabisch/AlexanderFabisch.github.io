@@ -3,6 +3,7 @@
 <head>
           <title>Alexander Fabisch - Learning Curves in scikit learn</title>
         <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
         <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
         <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
@@ -33,7 +34,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
             <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
@@ -82,7 +83,6 @@ be very easy to implement. We could do something like:</p>
 <span class="n">plot</span><span class="p">(</span><span class="k">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">n_samples</span><span class="p">),</span><span class="w"> </span><span class="n">test_scores</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>However, there are some flaws in the code that make the implementation
 actually much worse than the version that is implemented in scikit learn:</p>
 <ul>
@@ -119,7 +119,6 @@ without all these flaws.</p>
 <span class="err">                   n_jobs=1, pre_dispatch=&quot;all&quot;, verbose=0)</span>
 </code></pre></div>
 
-
 <p>It takes an <code>estimator</code> and the whole training set <code>(X, y)</code> where <code>y</code>
 could be <code>None</code>. We already have a good default for <code>train_sizes</code>:
 an array with <code>dtype == float</code> is interpreted as fractions of the
@@ -155,8 +154,8 @@ great explanatory documentation.</p>
 </section>
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 </body>

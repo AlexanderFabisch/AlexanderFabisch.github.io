@@ -3,6 +3,7 @@
 <head>
           <title>Alexander Fabisch - Generating Python Bindings</title>
         <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
         <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
         <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
@@ -33,7 +34,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch <strong></strong></a></h1>
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
             <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
@@ -81,23 +82,19 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">};</span>
 </code></pre></div>
 
-
 <p>The good news is: we can automatically generate Python bindings for these simple cases. If all the relevant types are either <a href="http://en.cppreference.com/w/cpp/language/types">fundamental types</a> (string, int, double, bool, ...) or defined in the library that you want to wrap. Clang can easily be used to build an abstract syntax tree from this header file. We can extract all interface definitions (classes, functions, etc.) and generate Python bindings with Cython. I implemented this idea in <a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a>. It can be used as a command line tool, as a Python library or even as a Python import hook.</p>
 <h2>How to Use It?</h2>
 <p>For the most simple use cases, you can use a command line tool. We can generate a Python extension that wraps a library defined in C++ header with:</p>
 <div class="highlight"><pre><span></span><code><span class="err">pywrap &lt;headers&gt; --sources &lt;sources&gt; --modulename &lt;name&gt; --outdir &lt;directory&gt;</span>
 </code></pre></div>
 
-
 <p>The result is located in the directory <directory> and can be build with:</p>
 <div class="highlight"><pre><span></span><code><span class="err">python setup.py build_ext -i</span>
 </code></pre></div>
 
-
 <p>If this is a header only library we can now simply do the following in Python:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
-
 
 <p>If we have to link a library, we will have to add that to the setup.py that has been generated.</p>
 <p>If you have only a few lines of C++ code in a header file, there is even a much simpler solution that you can directly integrate in the Python code that uses the C++ code:</p>
@@ -107,7 +104,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="n">b</span> <span class="o">=</span> <span class="mf">3.213</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">plus2</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>If some configuration is required because the code is more complex, you can write a small script which uses the cythonwrapper library.</p>
 <h2>Installation</h2>
@@ -130,7 +126,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">};</span>
 </code></pre></div>
 
-
 <p>In IPython you could print this information:</p>
 <div class="highlight"><pre><span></span><code><span class="err">help(MyClass)</span>
 <span class="err">...</span>
@@ -143,7 +138,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err"> |     Brief.</span>
 <span class="err">...</span>
 </code></pre></div>
-
 
 <h3>Operators</h3>
 <p>Both languages, C++ and Python support custom operators. They can automatically be translated from C++ to Python. All of the following operators can be translated to Python.</p>
@@ -170,7 +164,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">};</span>
 </code></pre></div>
 
-
 <h3>Custom Data Types</h3>
 <p>Custom data types that are defined in the files that will be parsed can automatically be used as function arguments and return values. For example, the class B which uses the previously defined class A from the following code can be wrapped automatically.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
@@ -194,30 +187,28 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="p">};</span>
 </code></pre></div>
 
-
 <p>Instead of a reference, you could also use a pointer. Note that since you are actually using C++, you have to make sure that you do not delete the object of class A that has been given to another object of class B if the object of class B still needs its reference to the object of type A.</p>
 <h3>Inheritance</h3>
 <p>Inheritance can be handled automatically: all functions from its base classes are available in a class. For example, in the following hierarchy, class A also has the functions base1Method() and base2Method().</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">Base1</span>
-{
-<span class="n">public:</span>
-    <span class="n">virtual</span> ~<span class="n">Base1</span>();
-    <span class="n">virtual</span> <span class="n">int</span> <span class="n">base1Method</span>();
-};
+<div class="highlight"><pre><span></span><code><span class="nt">class</span> <span class="nt">Base1</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+    <span class="n">virtual</span> <span class="o">~</span><span class="nf">Base1</span><span class="p">();</span>
+    <span class="err">virtual</span> <span class="err">int</span> <span class="err">base1Method()</span><span class="p">;</span>
+<span class="p">}</span><span class="o">;</span>
 
-<span class="k">class</span> <span class="n">Base2</span> : <span class="n">public</span> <span class="n">Base1</span>
-{
-<span class="n">public:</span>
-    <span class="n">virtual</span> <span class="n">int</span> <span class="n">base2Method</span>();
-};
+<span class="nt">class</span> <span class="nt">Base2</span> <span class="o">:</span> <span class="nt">public</span> <span class="nt">Base1</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+    <span class="n">virtual</span> <span class="n">int</span> <span class="nf">base2Method</span><span class="p">();</span>
+<span class="p">}</span><span class="o">;</span>
 
-<span class="k">class</span> <span class="n">A</span> : <span class="n">public</span> <span class="n">Base2</span>
-{
-<span class="n">public:</span>
-    <span class="n">virtual</span> <span class="n">int</span> <span class="n">aMethod</span>();
-};
+<span class="nt">class</span> <span class="nt">A</span> <span class="o">:</span> <span class="nt">public</span> <span class="nt">Base2</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+    <span class="n">virtual</span> <span class="n">int</span> <span class="nf">aMethod</span><span class="p">();</span>
+<span class="p">}</span><span class="o">;</span>
 </code></pre></div>
-
 
 <h3>Templates</h3>
 <p>Templates have to be handled specially. You have to define which template instantiations should be wrapped in Python. Suppose we have a template function</p>
@@ -227,7 +218,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">    return t + T(1);</span>
 <span class="err">}</span>
 </code></pre></div>
-
 
 <p>Here it makes sense to use the library directly to be able to configure the template specializations that will be available in Python:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pywrap.defaultconfig</span> <span class="kn">import</span> <span class="n">Config</span>
@@ -245,7 +235,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="n">write_files</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>This will make the functions <code>add_one_i</code> and <code>add_one_d</code> available in Python.</p>
 <div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">template</span>
 
@@ -256,18 +245,16 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">3</span>
 </code></pre></div>
 
-
 <h3>External Types</h3>
 <p>External types, e.g., Eigen matrices and vectors, can be used but it requires some manual work unfortunately. Here is a C++ example:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;Eigen/Core&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="c1">#include &lt;Eigen/Core&gt;</span>
 
 
-<span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">make</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">&amp;</span> <span class="n">vector</span><span class="p">)</span>
+<span class="n">Eigen</span><span class="p">::</span><span class="n">VectorXd</span> <span class="n">make</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">VectorXd</span><span class="o">&amp;</span> <span class="n">vector</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">vector</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p>The configuration is too long to write it here, I'll just refer to the corresponding <a href="https://github.com/AlexanderFabisch/cythonwrapper/blob/master/test/test_custom_conversions.py">unit test</a>. We have to provide the C++ interface definition of an <code>Eigen::VectorXd</code> in Cython and we have to write a type converter from and to the corresponding Python type, in this case, a numpy array.</p>
 <p>In the end, we can easily run this code:</p>
@@ -276,7 +263,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
-
 
 <h3>Other Featurs</h3>
 <p>Some features have not been mentioned yet:</p>
@@ -298,7 +284,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">}</span>
 </code></pre></div>
 
-
 <p>I use the <a href="https://github.com/llvm-mirror/clang/blob/master/bindings/python/clang/cindex.py">Python bindings of libclang</a> to parse the header. If you increase verbosity, you will get the following output:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Node</span><span class="o">:</span> <span class="n">CursorKind</span><span class="o">.</span><span class="na">TRANSLATION_UNIT</span><span class="o">,</span> <span class="s1">&#39;typedef.hpp.hpp&#39;</span>
   <span class="n">Node</span><span class="o">:</span> <span class="n">CursorKind</span><span class="o">.</span><span class="na">TYPEDEF_DECL</span><span class="o">,</span> <span class="s1">&#39;mytype&#39;</span> <span class="o">(</span><span class="n">type</span><span class="o">:</span> <span class="s1">&#39;mytype&#39;</span><span class="o">)</span>
@@ -310,7 +295,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
       <span class="n">Ignored</span> <span class="n">node</span><span class="o">:</span> <span class="n">CursorKind</span><span class="o">.</span><span class="na">TYPE_REF</span><span class="o">,</span> <span class="n">mytype</span>
 </code></pre></div>
 
-
 <p>These are the information that Clang gives us. It is translated to another internal abstract syntax tree representation:</p>
 <div class="highlight"><pre><span></span><code><span class="err">AST</span>
 <span class="err">    Typedef (double) mytype</span>
@@ -318,7 +302,6 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 <span class="err">        Parameter (mytype) d</span>
 <span class="err">        Returns (mytype)</span>
 </code></pre></div>
-
 
 <p>From this representation we can directly generate Cython code. That includes these files:</p>
 <ul>
@@ -333,8 +316,8 @@ There are many tools that simplify the work of writing Python bindings (<a href=
 </section>
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 </body>
