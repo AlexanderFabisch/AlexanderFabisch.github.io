@@ -8,7 +8,7 @@ a [Github account](https://github.com/AlexanderFabisch).
 <table style="border-spacing: 15px; border-collapse: separate;">
   <tbody>
     <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/doc/source/_static/slither.png" width=800px /></td>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/doc/source/_static/slither.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/slither">slither</a>
         - A private replacement for online training logs. (Python)<br/>
         Commercial services that allow you to record your sport activities store your data on some server which you cannot control. You do not know what they use the data for and you cannot write your own tools to analyze your own data. slither tries to change that by replacing online services. It allows you to store your training sessions (import from TCX, GPX, FIT format) and analyze them on your computer.
@@ -18,7 +18,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/pytransform3d/master/doc/source/_static/transformation_modeling.png" width=800px /></td>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/pytransform3d/master/doc/source/_static/transformation_modeling.png" width=200px /></td>
       <td style="vertical-align:top;">
         <a href="https://github.com/rock-learning/pytransform3d">pytransform3d</a>
         - A tool for handling transformations (conversions, plotting, editing, ...) (Python)<br/>
@@ -29,7 +29,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=800px /></td>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/gmr">gmr</a>
         - An implementation of Gaussian mixture models for clustering and regression. (Python)<br/>
         There is an implementation of Gaussian Mixture Models for clustering in scikit-learn as well. Regression could not be easily integrated in the interface of sklearn. That is the reason why I put the code in a separate repository.
@@ -39,7 +39,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/bolero/master/doc/source/_static/logo.png" width=800px /></td>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/bolero/master/doc/source/_static/logo.png" width=200px /></td>
       <td style="vertical-align:top;">
         <a href="https://github.com/rock-learning/bolero">BOLeRo</a> - Behavior Optimization and Learning for Robots. (C++, Python)<br/>
         BOLeRo provides tools to learn behaviors for robots. It includes behavior representations as well as reinforcement learning, black-box optimization, evolutionary algorithms, and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
@@ -49,7 +49,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="http://h2326337.stratoserver.net/public_files/figures/openann-logo.png" width=800px /></td>
+      <td rowspan="2"><img src="http://h2326337.stratoserver.net/public_files/figures/openann-logo.png" width=200px /></td>
       <td style="vertical-align:top;">
         <a href="https://github.com/OpenANN/OpenANN">OpenANN</a>
         - A library for artificial neural networks. (C++, Python)<br/>
@@ -59,7 +59,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Concept_of_directional_optimization_in_CMA-ES_algorithm.png" width=800px /></td>
+      <td rowspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Concept_of_directional_optimization_in_CMA-ES_algorithm.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/CMA-ESpp">CMA-ESpp</a>
         - Implementation of the derivative-free optimization algorithm CMA-ES. (C++)<br/>
         The code is based on Hansen's ANSI C implementation of CMA-ES.
@@ -69,7 +69,7 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="../images/code_cythonwrapper.png" width=800px /></td>
+      <td rowspan="2"><img src="../images/code_cythonwrapper.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a>
         - Automatically generates a Cython wrapper for C++ code. (Python, Cython)<br/>
         This tool is able to parse C++ headers and automatically generate Python bindings from it. It makes use of Clang for parsing and Cython for to build the extension.
