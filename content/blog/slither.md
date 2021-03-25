@@ -34,6 +34,6 @@ easy with [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/).
 
 The result can be seen here:
 
-<img width="480" height="360" src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/slither.png" />
+<img width="480" height="360" src="https://raw.githubusercontent.com/AlexanderFabisch/slither/master/doc/source/_static/slither.png" />
 
 The code is available on [github](https://github.com/AlexanderFabisch/slither).
