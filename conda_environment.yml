@@ -1,0 +1,14 @@
+# conda env create -f conda_environment.yml
+name: blog
+channels:
+    - conda-forge
+dependencies:
+    - python=3.8
+    - numpy
+    - matplotlib
+    - pybullet
+    - pip
+    -   pip:
+            - pexpect
+            - nbconvert==5.6.0
+            - pelican-jupyter
