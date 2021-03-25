@@ -27,7 +27,7 @@ AUTHOR_FEED_RSS = None
 
 MARKUP = ("md", "ipynb")
 
-THEME="pelican-themes/basic"
+THEME="pelican-themes/gum"  # basic
 PLUGIN_PATHS = ['pelican-plugins']
 STATIC_PATHS = ['images']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
