@@ -11,4 +11,5 @@ dependencies:
     -   pip:
             - pexpect
             - nbconvert==5.6.0
+            - ghp-import
             - pelican-jupyter
