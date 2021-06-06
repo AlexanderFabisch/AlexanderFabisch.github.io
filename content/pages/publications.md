@@ -27,6 +27,11 @@ You can also find an overview of my publications at
 Software Development
 --------------------
 
+Fabisch, Alexander:<br/>
+**gmr: Gaussian Mixture Regression**.<br/>
+In: *Journal of Open Source Software* (2021).<br/>
+[JOSS](https://joss.theoj.org/papers/10.21105/joss.03054)
+
 Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
 **Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
 In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
