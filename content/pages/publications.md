@@ -73,9 +73,14 @@ In: *Proceedings of IROS* (2017).<br/>
 Robot Skill Learning
 --------------------
 
+Fabisch, Alexander, Frank Kirchner:<br/>
+**Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
+In: *4th Robot Learning Workshop: Self-Supervised and Lifelong Learning at Neural Information Processing Systems (NeurIPS)* (2021).<br/>
+[PDF](http://www.robot-learning.ml/2021/files/A1.pdf) [Presentation](https://recorder-v3.slideslive.com/?share=52645&s=8831cbee-ab2e-4ad5-b5aa-bedac0fa34ff) [Code](https://github.com/AlexanderFabisch/vtae)
+
 Fabisch, Alexander, Christoph Petzoldt, Marc Otto, Frank Kirchner:<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
-Status: submitted.<br/>
+Status: preprint.<br/>
 [Preprint](https://arxiv.org/abs/1906.01868)
 
 Fabisch, Alexander, Malte Langosz, Frank Kirchner:<br/>
