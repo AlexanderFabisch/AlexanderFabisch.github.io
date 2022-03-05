@@ -2,11 +2,11 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am a researcher at the DFKI RIC and I currently work in the projects
-[TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html)
-and [APRIL](https://robotik.dfki-bremen.de/en/research/projects/april/).
+I am a researcher at the DFKI RIC and I currently work in the project
+[APRIL](https://robotik.dfki-bremen.de/en/research/projects/april/).
 Previously I worked in
-[COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html)
+[TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html),
+[COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html),
 and [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html).
 At the moment my scientific work focuses on imitation learning and
 reinforcement learning. Before joining DFKI I worked at the Robotics Research
