@@ -24,52 +24,6 @@ learning behaviors for robots.
 You can also find an overview of my publications at
 [Google scholar](http://scholar.google.de/citations?user=HhlbbxMAAAAJ).
 
-Software Development
---------------------
-
-Fabisch, Alexander:<br/>
-**gmr: Gaussian Mixture Regression**.<br/>
-In: *Journal of Open Source Software* (2021).<br/>
-[JOSS](https://joss.theoj.org/papers/10.21105/joss.03054)
-
-Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
-**Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
-In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
-[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767)
-
-Fabisch, Alexander:<br/>
-**pytransform3d: 3D Transformations for Python**.<br/>
-In: *Journal of Open Source Software* (2019).<br/>
-[JOSS](http://joss.theoj.org/papers/10.21105/joss.01159)
-
-Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
-**InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
-In: *69th International Astronautical Congress (IAC)* (2018).<br/>
-[Preprint](https://hal.laas.fr/hal-02092238/document)
-
-Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
-Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
-Andrea de Maio, Quentin Labourey, Fabrice Souvannavong, Vincent Bissonnette,
-Michal Smisek, Xiu Yan:<br/>
-**A Common Data Fusion Framework for Space Robotics: Architecture and Data
-Fusion Methods**.<br/>
-In: *International Symposium on Artificial Intelligence, Robotics and Automation
-in Space* (2018)<br/>
-[Preprint](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
-
-Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
-**InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
-In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).<br/>
-[Preprint](https://hal.archives-ouvertes.fr/hal-01536099/document)
-
-Lifelong Learning
------------------
-
-Wehbe, Bilal, Alexander Fabisch, Mario Michael Krell:<br/>
-**Online Model Identification for Underwater Vehicles through Incremental Support Vector Regression**.<br/>
-In: *Proceedings of IROS* (2017).<br/>
-[IEEE](https://ieeexplore.ieee.org/document/8206278/)
-
 Robot Skill Learning
 --------------------
 
@@ -131,6 +85,44 @@ Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, El
 *Künstliche Intelligenz* 28 (2014): 15-20.<br/>
 [Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
 
+Software Development
+--------------------
+
+Fabisch, Alexander:<br/>
+**gmr: Gaussian Mixture Regression**.<br/>
+In: *Journal of Open Source Software* (2021).<br/>
+[JOSS](https://joss.theoj.org/papers/10.21105/joss.03054)
+
+Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
+**Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
+In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
+[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767)
+
+Fabisch, Alexander:<br/>
+**pytransform3d: 3D Transformations for Python**.<br/>
+In: *Journal of Open Source Software* (2019).<br/>
+[JOSS](http://joss.theoj.org/papers/10.21105/joss.01159)
+
+Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
+**InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
+In: *69th International Astronautical Congress (IAC)* (2018).<br/>
+[Preprint](https://hal.laas.fr/hal-02092238/document)
+
+Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
+Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
+Andrea de Maio, Quentin Labourey, Fabrice Souvannavong, Vincent Bissonnette,
+Michal Smisek, Xiu Yan:<br/>
+**A Common Data Fusion Framework for Space Robotics: Architecture and Data
+Fusion Methods**.<br/>
+In: *International Symposium on Artificial Intelligence, Robotics and Automation
+in Space* (2018)<br/>
+[Preprint](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
+
+Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
+**InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
+In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).<br/>
+[Preprint](https://hal.archives-ouvertes.fr/hal-01536099/document)
+
 Neural Networks
 ---------------
 
@@ -143,6 +135,14 @@ Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
 In *Proceedings of the 22nd International Conference on Artificial Neural Networks and Machine Learning* (2012): 108–115.<br/>
 [Springer](http://link.springer.com/content/pdf/10.1007%2F978-3-642-33266-1_14)
+
+Lifelong Learning
+-----------------
+
+Wehbe, Bilal, Alexander Fabisch, Mario Michael Krell:<br/>
+**Online Model Identification for Underwater Vehicles through Incremental Support Vector Regression**.<br/>
+In: *Proceedings of IROS* (2017).<br/>
+[IEEE](https://ieeexplore.ieee.org/document/8206278/)
 
 RoboCup SPL
 -----------
