@@ -49,6 +49,15 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/distance3d/master/doc/source/_static/robot_collision_detection.png" width=200px /></td>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/distance3d">distance3d</a>
+        - Distance computation and collision detection in 3D. (Python)
+      </td>
+    </tr>
+    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/distance3d?style=social"/><a href="https://pypi.org/project/distance3d/"><img src="https://img.shields.io/pypi/dm/distance3d"/></a><td/></tr>
+    <tr><td></td><td><td/></tr>
+
+    <tr>
       <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/bolero/master/doc/source/_static/logo.png" width=200px /></td>
       <td style="vertical-align:top;">
         <a href="https://github.com/rock-learning/bolero">BOLeRo</a> - Behavior Optimization and Learning for Robots. (C++, Python)<br/>
