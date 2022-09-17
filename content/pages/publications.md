@@ -27,9 +27,9 @@ You can also find an overview of my publications at
 Robot Skill Learning
 --------------------
 
-Fabisch, Alexander, Melvin Laux, Dennis Marschner, Johannes Brust:<br/>
+Fabisch, Alexander, Manuela Uliano, Dennis Marschner, Melvin Laux, Johannes Brust, Marco Controzzi:<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
-Status: submitted to *IROS 2022*.<br/>
+Status: submitted to *Humanoids 2022*.<br/>
 [Preprint](https://arxiv.org/abs/2203.02778)
 
 Fabisch, Alexander, Frank Kirchner:<br/>
