@@ -18,14 +18,14 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/rock-learning/pytransform3d/master/doc/source/_static/transformation_modeling.png" width=200px /></td>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/dfki-ric/pytransform3d/master/doc/source/_static/transformation_modeling.png" width=200px /></td>
       <td style="vertical-align:top;">
-        <a href="https://github.com/rock-learning/pytransform3d">pytransform3d</a>
+        <a href="https://github.com/dfki-ric/pytransform3d">pytransform3d</a>
         - A tool for handling transformations (conversions, plotting, editing, ...) (Python)<br/>
         A Python library for transformations in three dimensions. It makes conversions between rotation and transformation conventions as easy as possible. The library focuses on readability and debugging, not on computational efficiency. If you want to have an efficient implementation of some function from the library you can easily extract the relevant code and implement it more efficiently in a language of your choice.
       </td>
     </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/rock-learning/pytransform3d?style=social"/><a href="https://pypi.org/project/pytransform3d/"><img src="https://img.shields.io/pypi/dm/pytransform3d"/></a><td/></tr>
+    <tr><td><img src="https://img.shields.io/github/stars/dfki-ric/pytransform3d?style=social"/><a href="https://pypi.org/project/pytransform3d/"><img src="https://img.shields.io/pypi/dm/pytransform3d"/></a><td/></tr>
     <tr><td></td><td><td/></tr>
 
     <tr>
@@ -39,6 +39,16 @@ a [Github account](https://github.com/AlexanderFabisch).
     <tr><td></td><td><td/></tr>
 
     <tr>
+      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/distance3d/master/doc/source/_static/hydroelastic_contact_surface.png" width=200px /></td>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/distance3d">distance3d</a>
+        - Distance computation and collision detection in 3D. (Python)<br/>
+        Various collision detection and distance calculation methods as well as contact normal and force computation.
+      </td>
+    </tr>
+    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/distance3d?style=social"/><a href="https://pypi.org/project/distance3d/"><img src="https://img.shields.io/pypi/dm/distance3d"/></a><td/></tr>
+    <tr><td></td><td><td/></tr>
+
+    <tr>
       <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=200px /></td>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/gmr">gmr</a>
         - An implementation of Gaussian mixture models for clustering and regression. (Python)<br/>
@@ -46,15 +56,6 @@ a [Github account](https://github.com/AlexanderFabisch).
       </td>
     </tr>
     <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/gmr?style=social"/><a href="https://pypi.org/project/gmr/"><img src="https://img.shields.io/pypi/dm/gmr"/></a><td/></tr>
-    <tr><td></td><td><td/></tr>
-
-    <tr>
-      <td rowspan="2"><img src="https://raw.githubusercontent.com/AlexanderFabisch/distance3d/master/doc/source/_static/robot_collision_detection.png" width=200px /></td>
-      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/distance3d">distance3d</a>
-        - Distance computation and collision detection in 3D. (Python)
-      </td>
-    </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/distance3d?style=social"/><a href="https://pypi.org/project/distance3d/"><img src="https://img.shields.io/pypi/dm/distance3d"/></a><td/></tr>
     <tr><td></td><td><td/></tr>
 
     <tr>

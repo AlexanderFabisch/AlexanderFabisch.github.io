@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-try:
-    # https://github.com/danielfrg/pelican-jupyter
-    from pelican_jupyter import markup as nb_markup
-except ImportError:
-    print("run: pip install pelican-jupyter")
-    exit(1)
+# https://github.com/danielfrg/pelican-jupyter
+from pelican_jupyter import liquid as nb_liquid
 
 AUTHOR = 'Alexander Fabisch'
 SITENAME = 'Alexander Fabisch'
@@ -32,7 +28,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 STATIC_PATHS = ['images']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code', nb_markup]
+           'liquid_tags.include_code', nb_liquid]
 IPYNB_MARKUP_USE_FIRST_CELL = False
 with open('_nb_header.html', "r") as f:
     EXTRA_HEADER = f.read()
