@@ -30,7 +30,7 @@ Robot Skill Learning
 Fabisch, Alexander, Manuela Uliano, Dennis Marschner, Melvin Laux, Johannes Brust, Marco Controzzi:<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
 Status: submitted to *Humanoids 2022*.<br/>
-[Preprint](https://arxiv.org/abs/2203.02778)
+[Preprint](https://arxiv.org/abs/2203.02778) [Code](https://github.com/dfki-ric/hand_embodiment)
 
 Fabisch, Alexander, Frank Kirchner:<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
@@ -46,7 +46,7 @@ Fabisch, Alexander, Malte Langosz, Frank Kirchner:<br/>
 **BOLeRo: Behavior Optimization and Learning for Robots**.<br/>
 In: *International Journal of Advanced Robotic Systems* 17.3 (2020).<br/>
 DOI: 10.1177/1729881420913741.<br/>
-[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420913741)
+[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420913741) [Code](https://github.com/rock-learning/bolero)
 
 Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirchner:<br/>
 **Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
@@ -73,7 +73,7 @@ In: *Frontiers in Robotics and AI* (2018).<br/>
 Metzen, Jan Hendrik, Alexander Fabisch, Jonas Hansen:<br/>
 **Bayesian Optimization for Contextual Policy Search**.<br/>
 In: *Proceedings of the Second Machine Learning in Planning and Control of Robot Motion Workshop (IROS)* (2015).<br/>
-[PDF](http://www.cs.unm.edu/~afaust/MLPC15_proceedings/MLPC15_paper_Metzen.pdf)
+[PDF](http://www.cs.unm.edu/~afaust/MLPC15_proceedings/MLPC15_paper_Metzen.pdf) [Code](https://github.com/rock-learning/bayesian_optimization)
 
 Fabisch, Alexander, Jan Hendrik Metzen, Mario Michael Krell, Frank Kirchner:<br/>
 **Accounting for Task-Difficulty in Active Multi-Task Robot Control Learning**.<br/>
@@ -96,17 +96,17 @@ Software Development
 Fabisch, Alexander:<br/>
 **gmr: Gaussian Mixture Regression**.<br/>
 In: *Journal of Open Source Software* (2021).<br/>
-[JOSS](https://joss.theoj.org/papers/10.21105/joss.03054)
+[JOSS](https://joss.theoj.org/papers/10.21105/joss.03054) [Code](https://github.com/AlexanderFabisch/gmr)
 
 Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
 **Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
 In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
-[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767)
+[IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767) [Code](https://gitlab.com/h2020src/og3/cdff_dev)
 
 Fabisch, Alexander:<br/>
 **pytransform3d: 3D Transformations for Python**.<br/>
 In: *Journal of Open Source Software* (2019).<br/>
-[JOSS](http://joss.theoj.org/papers/10.21105/joss.01159)
+[JOSS](http://joss.theoj.org/papers/10.21105/joss.01159) [Code](https://github.com/dfki-ric/pytransform3d)
 
 Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
 **InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
@@ -134,7 +134,7 @@ Neural Networks
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
 **Learning in Compressed Space**.<br/>
 *Neural Networks* 42 (2013): 83–93.<br/>
-[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](../downloads/2013_nn_lcs.pdf)
+[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](../downloads/2013_nn_lcs.pdf) [Code](https://github.com/OpenANN/OpenANN)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
