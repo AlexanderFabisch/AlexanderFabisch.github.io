@@ -6537,7 +6537,7 @@ $$B_{t+1} = B_t + \frac{y_t y_t^T}{y_t^Ts_t} - \frac{B_ts_ts_t^TB_t}{s_t^TB_ts_t
 <p>Let us start with finite differences. We know that gradients can be approximated locally with finite differences, that is, in a point $x_2$, we can approximate
 $$\nabla f(x_2) \approx \frac{f(x_2) - f(x_1)}{x_2 - x_1}$$
 because $\nabla f(x_2) = \lim_{x_1 \rightarrow x_2} \frac{f(x_2) - f(x_1)}{x_2 - x_1}$.</p>
-<p><img src="http://h2326337.stratoserver.net/public_files/figures/finite_differences.svg"/></p>
+<p><img src="images/finite_differences.svg"/></p>
 <p>For functions with one parameter, we can easily use this to estimate the second derivative with
 $$\nabla \nabla f(x_2) \approx \frac{\nabla f(x_2) - \nabla f(x_1)}{x_2 - x_1}$$</p>
 
