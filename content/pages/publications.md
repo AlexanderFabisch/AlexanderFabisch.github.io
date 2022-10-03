@@ -16,7 +16,7 @@ As a student I participated in the RoboCup SPL team
 [B-Human](http://www.b-human.de/).
 
 I wrote my
-[diploma thesis (German)](http://h2326337.stratoserver.net/public_files/papers/diplomarbeit.pdf)
+[diploma thesis (German)](../downloads/diplomarbeit.pdf)
 in the field of artificial neural networks and my
 [dissertation](https://media.suub.uni-bremen.de/handle/elib/4585) about
 learning behaviors for robots.
@@ -57,12 +57,12 @@ Fabisch, Alexander:<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
 In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019).<br/>
 DOI: 10.1145/3319619.3321935.<br/>
-[ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](http://h2326337.stratoserver.net/public_files/papers/2019_gecco_poster.pdf) [Preprint (long version)](https://arxiv.org/abs/1810.11491)
+[ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](../downloads/2019_gecco_poster.pdf) [Preprint (long version)](https://arxiv.org/abs/1810.11491)
 
 Fabisch, Alexander:<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
 In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2019).<br/>
-[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [Preprint](https://arxiv.org/abs/1904.06765) [Slides](http://h2326337.stratoserver.net/public_files/papers/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
+[Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [Preprint](https://arxiv.org/abs/1904.06765) [Slides](../downloads/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
 
 Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
 Frank Kirchner, Elsa Andrea Kirchner:<br/>
@@ -134,7 +134,7 @@ Neural Networks
 Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
 **Learning in Compressed Space**.<br/>
 *Neural Networks* 42 (2013): 83–93.<br/>
-[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](http://h2326337.stratoserver.net/public_files/papers/2013_nn_lcs.pdf)
+[ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](../downloads/2013_nn_lcs.pdf)
 
 Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
@@ -154,12 +154,12 @@ RoboCup SPL
 
 Röfer, Thomas, Tim Laue, Judith Müller, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Arne Humann, Daniel Honsel, Philipp Kastner, Tobias Kastner, Carsten Könemann, Benjamin Markowsky, Ole Jan Lars Riemann, and Felix Wenk:<br/>
 **B-Human Team Report and Code Release 2011**.<br/>
-[PDF](http://www.b-human.de/downloads/bhuman11_coderelease.pdf)
+[PDF](http://www.b-human.de/../downloads/bhuman11_coderelease.pdf)
 
 Röfer, Thomas, Tim Laue, Judith Müller, Alexander Fabisch, Katharina Gillmann, Colin Graf, Alexander Härtl, Arne Humann, and Felix Wenk:<br/>
 **B-Human Team Description for RoboCup 2011**.<br/>
 In *RoboCup 2011: Robot Soccer World Cup XV Preproceedings* (2011), edited by Thomas Röfer, Norbert Michael Mayer, Jesus Savage and Uluc Saranli.<br/>
-[PDF](http://www.b-human.de/downloads/bhuman11_tdp.pdf)
+[PDF](http://www.b-human.de/../downloads/bhuman11_tdp.pdf)
 
 Fabisch, Alexander, Tim Laue, and Thomas Röfer:<br/>
 **Robot Recognition and Modeling In the RoboCup Standard Platform League**.<br/>
@@ -168,12 +168,12 @@ In *Proceedings of the Fifth Workshop On Humanoid Soccer Robots (Humanoids)* (20
 
 Röfer, Thomas, Tim Laue, Judith Müller, Armin Burchardt, Erik Damrose, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Daniel Honsel, Philipp Kastner, Tobias Kastner, Benjamin Markowsky, Michael Mester, Jonas Peter, Ole Jan Lars Riemann, Martin Ring, Wiebke Sauerland, André Schreck, Ingo Sieverdingbeck, Felix Wenk, and Jan-Hendrik Worch:<br/>
 **B-Human Team Report and Code Release 2010**<br/>
-[PDF](http://www.b-human.de/downloads/bhuman10_coderelease.pdf)
+[PDF](http://www.b-human.de/../downloads/bhuman10_coderelease.pdf)
 
 Röfer, Thomas, Tim Laue, Colin Graf, Tobias Kastner, Alexander Fabisch, and Christian Thedieck:<br/>
 **B-Human Team Description For RoboCup 2010**.<br/>
 In *RoboCup 2010: Robot Soccer World Cup XIV Preproceedings* (2010), edited by Eric Chown, Akihiro Matsumoto, Paul Ploeger and Javier Ruiz–del–Solar.<br/>
-[PDF](http://www.b-human.de/downloads/bhuman10_tdp.pdf)
+[PDF](http://www.b-human.de/../downloads/bhuman10_tdp.pdf)
 
 Talks
 -----

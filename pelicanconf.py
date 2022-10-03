@@ -25,7 +25,7 @@ MARKUP = ("md", "ipynb")
 
 THEME="pelican-themes/basic"
 PLUGIN_PATHS = ['pelican-plugins']
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'downloads']
 PLUGINS = [nb_markup]
 IPYNB_MARKUP_USE_FIRST_CELL = False
 with open('_nb_header.html', "r") as f:
