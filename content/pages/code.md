@@ -35,7 +35,7 @@ a [Github account](https://github.com/AlexanderFabisch).
         Movement primitives are a common group of policy representations in robotics. There are many different types and variations. This repository focuses mainly on imitation learning, generalization, and adaptation of movement primitives. It provides implementations in Python and Cython.
       </td>
     </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/dfki-ric/movement_primitives?style=social"/><td/></tr>
+    <tr><td><img src="https://img.shields.io/github/stars/dfki-ric/movement_primitives?style=social"/><a href="https://pypi.org/project/movement_primitives/"><img src="https://img.shields.io/pypi/dm/movement_primitives"/></a><td/></tr>
     <tr><td></td><td><td/></tr>
 
     <tr>
