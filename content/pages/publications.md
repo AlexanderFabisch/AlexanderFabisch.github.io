@@ -30,7 +30,7 @@ Robot Skill Learning
 Fabisch, Alexander, Manuela Uliano, Dennis Marschner, Melvin Laux, Johannes Brust, Marco Controzzi:<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
 In: *IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS)* (2022).<br/>
-[Preprint](https://arxiv.org/abs/2203.02778) [Slides](../downloads/2022_humanoids_slides.pptx) [Code](https://github.com/dfki-ric/hand_embodiment) [Dataset](https://doi.org/10.5281/zenodo.7130208)
+[IEEE](https://ieeexplore.ieee.org/document/10000165) [Preprint](https://arxiv.org/abs/2203.02778) [Slides](../downloads/2022_humanoids_slides.pptx) [Code](https://github.com/dfki-ric/hand_embodiment) [Dataset](https://doi.org/10.5281/zenodo.7130208)
 
 Fabisch, Alexander, Frank Kirchner:<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
