@@ -797,7 +797,7 @@ setting up preflight 2.X. Although preflight complains about some issues that
 veraPDF does not see, these can be ignored so that I could test for PDF/A-1b
 during continuous integration with good enough certainty.</p>
 <p>If you only want to check whether all fonts are embedded, you can use</p>
-<div class="highlight"><pre><span></span>pdffonts document.pdf
+<div class="highlight"><pre><span></span>pdffonts<span class="w"> </span>document.pdf
 </pre></div>
 
 
@@ -807,7 +807,7 @@ with <a href="https://inkscape.org/">inkscape</a> for illustrations and
 <a href="https://matplotlib.org/">matplotlib</a> for plots. My solution for this problem
 is to use ghostscript to convert every PDF that is included in the main
 document to PDF/A-1b:</p>
-<div class="highlight"><pre><span></span>gs -dPDFA -dBATCH -dNOPAUSE -dNOOUTERSAVE -sColorConversionStrategy<span class="o">=</span>UseDeviceIndependentColor -sProcessColorModel<span class="o">=</span>DeviceCMYK -sDEVICE<span class="o">=</span>pdfwrite -sPDFACompatibilityPolicy<span class="o">=</span><span class="m">1</span> -sOutputFile<span class="o">=</span>output_figure.pdf input_figure.pdf
+<div class="highlight"><pre><span></span>gs<span class="w"> </span>-dPDFA<span class="w"> </span>-dBATCH<span class="w"> </span>-dNOPAUSE<span class="w"> </span>-dNOOUTERSAVE<span class="w"> </span>-sColorConversionStrategy<span class="o">=</span>UseDeviceIndependentColor<span class="w"> </span>-sProcessColorModel<span class="o">=</span>DeviceCMYK<span class="w"> </span>-sDEVICE<span class="o">=</span>pdfwrite<span class="w"> </span>-sPDFACompatibilityPolicy<span class="o">=</span><span class="m">1</span><span class="w"> </span>-sOutputFile<span class="o">=</span>output_figure.pdf<span class="w"> </span>input_figure.pdf
 </pre></div>
 
 
@@ -825,22 +825,22 @@ to let ghostscript convert the whole document.</p>
 <p>I used git for version control and continuous integration to automatically
 build and validate the latest version of my thesis.
 I set up a docker container based on a recent Ubuntu to match my system.</p>
-<div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">ubuntu:20.04</span>
+<div class="highlight"><pre><span></span><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:20.04</span>
 
-<span class="k">ENV</span> <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
-<span class="k">RUN</span> apt-get update -qq <span class="o">&amp;&amp;</span> apt-get install -y <span class="se">\</span>
-    texlive-full <span class="se">\</span>
-    libreoffice <span class="se">\</span>
-    pandoc <span class="se">\</span>
-    git <span class="se">\</span>
-    wget <span class="se">\</span>
-    sudo <span class="se">\</span>
-    openjdk-13-jdk <span class="se">\</span>
-    poppler-utils <span class="se">\</span>
-    ghostscript <span class="se">\</span>
-    pdftk
-<span class="k">RUN</span> mkdir -p /opt/bin
-<span class="k">COPY</span> preflight-app-1.8.16.jar /opt/bin/preflight-app-1.8.16.jar
+<span class="k">ENV</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>-qq<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>texlive-full<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libreoffice<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pandoc<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>git<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>wget<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>sudo<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>openjdk-13-jdk<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>poppler-utils<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>ghostscript<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pdftk
+<span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/bin
+<span class="k">COPY</span><span class="w"> </span>preflight-app-1.8.16.jar<span class="w"> </span>/opt/bin/preflight-app-1.8.16.jar
 </pre></div>
 
 
@@ -849,58 +849,58 @@ As mentioned previously, preflight was used to check PDF/A-1b compatibility.
 The docker image is also available as '<code>af01/dissertation</code>' from dockerhub.</p>
 <p>I used GitLab CI. My setup looks similar to this (some checks are omitted):</p>
 <div class="highlight"><pre><span></span><span class="nt">stages</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">generate</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postprocessing</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">evaluate</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postprocessing</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">evaluate</span>
 
 <span class="nt">genpdf</span><span class="p">:</span>
-  <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
-  <span class="nt">script</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">biber dissertation</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">makeglossaries dissertation</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cat dissertation.log</span>
-  <span class="nt">artifacts</span><span class="p">:</span>
-    <span class="nt">paths</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation.pdf</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation.xmpdata</span>
-    <span class="nt">expire_in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2 weeks</span>
-    <span class="nt">when</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-  <span class="nt">tags</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">biber dissertation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">makeglossaries dissertation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdflatex -interaction=nonstopmode dissertation.tex</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat dissertation.log</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation.pdf</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation.xmpdata</span>
+<span class="w">    </span><span class="nt">expire_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2 weeks</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span>
 
 <span class="nt">postprocesspdfa</span><span class="p">:</span>
-  <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postprocessing</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
-  <span class="nt">script</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">scripts/convert_pdfa.sh dissertation dissertation_pdfa</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cp dissertation.xmpdata dissertation_pdfa.xmpdata</span>
-  <span class="nt">artifacts</span><span class="p">:</span>
-    <span class="nt">paths</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation_pdfa.pdf</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation_pdfa.xmpdata</span>
-    <span class="nt">expire_in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4 days</span>
-    <span class="nt">when</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-  <span class="nt">tags</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postprocessing</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scripts/convert_pdfa.sh dissertation dissertation_pdfa</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp dissertation.xmpdata dissertation_pdfa.xmpdata</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation_pdfa.pdf</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/dissertation_pdfa.xmpdata</span>
+<span class="w">    </span><span class="nt">expire_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4 days</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span>
 
 <span class="nt">checkpdfa</span><span class="p">:</span>
-  <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">evaluate</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
-  <span class="nt">script</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">java -jar /opt/bin/preflight-app-1.8.16.jar dissertation_pdfa.pdf &gt; pdfareport.txt || echo &quot;Preflight report is not empty&quot;</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cat pdfareport.txt</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">scripts/check_pdfareport.sh pdfareport.txt</span>
-  <span class="nt">artifacts</span><span class="p">:</span>
-    <span class="nt">paths</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/pdfareport.txt</span>
-    <span class="nt">expire_in</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1 week</span>
-    <span class="nt">when</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-  <span class="nt">tags</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">evaluate</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">af01/dissertation</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">java -jar /opt/bin/preflight-app-1.8.16.jar dissertation_pdfa.pdf &gt; pdfareport.txt || echo &quot;Preflight report is not empty&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat pdfareport.txt</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scripts/check_pdfareport.sh pdfareport.txt</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_PROJECT_DIR/pdfareport.txt</span>
+<span class="w">    </span><span class="nt">expire_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 week</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker</span>
 </pre></div>
   </div><!-- /.entry-content -->
 </section>
