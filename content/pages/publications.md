@@ -27,6 +27,12 @@ You can also find an overview of my publications at
 Robot Skill Learning
 --------------------
 
+Laux, Melvin, Chandandeep Singh, Alexander Fabisch:<br/>
+**Grasping 3D Deformable Objects via Reinforcement Learning: A Benchmark and Evaluation**<br/>
+In: *3rd Workshop on Representing and Manipulating Deformable Objects @ ICRA2023* (2023).<br/>
+DOI: 10.1109/Humanoids53995.2022.10000165<br/>
+[PDF](https://deformable-workshop.github.io/icra2023/spotlight/03-Laux-spotlight.pdf) [Video](https://www.youtube.com/watch?v=uREUpPOUn9g) [Code](https://github.com/dfki-ric/deformable_gym)
+
 Fabisch, Alexander, Manuela Uliano, Dennis Marschner, Melvin Laux, Johannes Brust, Marco Controzzi:<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
 In: *IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS)* (2022).<br/>
@@ -177,6 +183,11 @@ In *RoboCup 2010: Robot Soccer World Cup XIV Preproceedings* (2010), edited by E
 
 Talks
 -----
+
+Fabisch, Alexander:<br/>
+**Transformations in Three Dimensions.**<br/>
+At *EuroSciPy 2023*<br/>
+[Abstract](https://pretalx.com/euroscipy-2023/talk/TVJEAD/)
 
 Michalec, Romain, Xavier Martinez-Gonzalez, Alexander Fabisch:<br/>
 **"It works on my machine" - working as a research software engineer in a multi-partner international research project**.<br/>
