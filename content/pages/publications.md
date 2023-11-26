@@ -177,12 +177,12 @@ In E. Pagello, C. Zhou, S. Behnke, E. Menegatti, T. Röfer and P. Stone (Eds.), 
 
 Röfer, T., Laue, T., Müller, J., Burchardt, A., Damrose, E., Fabisch, A., Feldpausch, F., Gillmann, K., Graf, C., de Haas, T. J., Härtl, A., Honsel, D., Kastner, P., Kastner, T., Markowsky, B., Mester, M., Peter, J., Riemann, O. J. L., Ring, M., Sauerland, W., Schreck, A., Sieverdingbeck, I., Wenk, F., Worch, J.-H. (2010).<br/>
 **B-Human Team Report and Code Release 2010**<br/>
-[PDF](http://www.b-human.de/../downloads/bhuman10_coderelease.pdf)
+[PDF](https://b-human.de/downloads/publications/2010/bhuman10_coderelease.pdf)
 
 Röfer, T., Laue, T., Graf, C., Kastner, T., Fabisch, A., Thedieck, C. (2010).<br/>
 **B-Human Team Description For RoboCup 2010**.<br/>
 In E. Chown, A. Matsumoto, P. Ploeger, Ruiz–del–Solar, J. (Eds.), RoboCup 2010: Robot Soccer World Cup XIV Preproceedings.<br/>
-[PDF](http://www.b-human.de/../downloads/bhuman10_tdp.pdf)
+[PDF](https://b-human.de/downloads/publications/2010/bhuman10_tdp.pdf)
 
 Talks
 -----
