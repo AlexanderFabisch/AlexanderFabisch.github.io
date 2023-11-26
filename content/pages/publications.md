@@ -27,169 +27,172 @@ You can also find an overview of my publications at
 Robot Skill Learning
 --------------------
 
-Laux, Melvin, Chandandeep Singh, Alexander Fabisch:<br/>
-**Grasping 3D Deformable Objects via Reinforcement Learning: A Benchmark and Evaluation**<br/>
-In: *3rd Workshop on Representing and Manipulating Deformable Objects @ ICRA2023* (2023).<br/>
-DOI: 10.1109/Humanoids53995.2022.10000165<br/>
+Laux, M., Singh, C., Fabisch, A. (2023).<br/>
+**Grasping 3D Deformable Objects via Reinforcement Learning: A Benchmark and Evaluation**.<br/>
+In D. Seita, M. Lippi, M. C. Welle & F. Zhang (Eds.), 3rd Workshop on Representing and Manipulating Deformable Objects @ ICRA2023.<br/>
 [PDF](https://deformable-workshop.github.io/icra2023/spotlight/03-Laux-spotlight.pdf) [Video](https://www.youtube.com/watch?v=uREUpPOUn9g) [Code](https://github.com/dfki-ric/deformable_gym)
 
-Fabisch, Alexander, Manuela Uliano, Dennis Marschner, Melvin Laux, Johannes Brust, Marco Controzzi:<br/>
+Fabisch, A., Uliano, M., Marschner, D., Laux, M., Brust, J., Controzzi, M. (2022).<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
-In: *IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS)* (2022).<br/>
+In K. Mombaur, D. Lee & J. Park (Eds.), IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS).<br/>
+DOI: 10.1109/Humanoids53995.2022.10000165<br/>
 [IEEE](https://ieeexplore.ieee.org/document/10000165) [Preprint](https://arxiv.org/abs/2203.02778) [Slides](../downloads/2022_humanoids_slides.pptx) [Code](https://github.com/dfki-ric/hand_embodiment) [Dataset](https://doi.org/10.5281/zenodo.7130208)
 
-Fabisch, Alexander, Frank Kirchner:<br/>
+Fabisch, A., Kirchner, F. (2021).<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
-In: *4th Robot Learning Workshop: Self-Supervised and Lifelong Learning at Neural Information Processing Systems (NeurIPS)* (2021).<br/>
+In A. Bewley, I. Gilitschenski, M. Itkina, H. Kasaei, J. Kober, N. Lambert, J. Perez, R. Senanayake, V. Vanhoucke, M. Wulfmeier (Eds.), 4th Robot Learning Workshop: Self-Supervised and Lifelong Learning at Neural Information Processing Systems (NeurIPS).<br/>
 [PDF](http://www.robot-learning.ml/2021/files/A1.pdf) [Code](https://github.com/AlexanderFabisch/vtae)
 
-Fabisch, Alexander, Christoph Petzoldt, Marc Otto, Frank Kirchner:<br/>
+Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2019).<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
 Status: preprint.<br/>
 [Preprint](https://arxiv.org/abs/1906.01868)
 
-Fabisch, Alexander, Malte Langosz, Frank Kirchner:<br/>
+Fabisch, A., Langosz, M., Kirchner, F. (2020).<br/>
 **BOLeRo: Behavior Optimization and Learning for Robots**.<br/>
-In: *International Journal of Advanced Robotic Systems* 17.3 (2020).<br/>
+International Journal of Advanced Robotic Systems, 17 (3).<br/>
 DOI: 10.1177/1729881420913741.<br/>
 [IJARS](https://journals.sagepub.com/doi/10.1177/1729881420913741) [Code](https://github.com/rock-learning/bolero)
 
-Gutzeit, Lisa, Alexander Fabisch, Christoph Petzoldt, Hendrik Wiese, Frank Kirchner:<br/>
+Gutzeit, L., Fabisch, A., Petzoldt, C., Wiese, H., Kirchner, F. (2019).<br/>
 **Automated Robot Skill Learning from Demonstration for Various Robot Systems**.<br/>
-In: *KI 2019: Advances in Artificial Intelligence* (2019).<br/>
+In C. Benzmüller & H. Stuckenschmidth (Eds.), KI 2019: Advances in Artificial Intelligence (pp. 168-181). Springer.<br/>
 [Springer](https://link.springer.com/chapter/10.1007/978-3-030-30179-8_14) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/10504_20190712_Automated_Robot_Skill_Learning_from_Demonstration_for_Various_Robot_Systems.pdf) [heise.de](https://www.heise.de/newsticker/meldung/KI-2019-Roboter-muessen-immer-noch-viel-lernen-4541544.html)
 
-Fabisch, Alexander:<br/>
+Fabisch, A. (2019).<br/>
 **Empirical Evaluation of Contextual Policy Search with a Comparison-based Surrogate Model and Active Covariance Matrix Adaptation**.<br/>
-In: *Proceedings of the Genetic and Evolutionary Computation Conference Companion* (2019).<br/>
+In M. Lopez-Ibanez, A. Auger, T. Stützle (Eds.), Proceedings of the Genetic and Evolutionary Computation Conference Companion, (pp. 251-252). Association for Computing Machinery.
 DOI: 10.1145/3319619.3321935.<br/>
 [ACM](https://dl.acm.org/citation.cfm?doid=3319619.3321935) [Poster](../downloads/2019_gecco_poster.pdf) [Preprint (long version)](https://arxiv.org/abs/1810.11491)
 
-Fabisch, Alexander:<br/>
+Fabisch, A. (2019).<br/>
 **A Comparison of Policy Search in Joint Space and Cartesian Space for Refinement of Skills**.<br/>
-In: *Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019)* (2019).<br/>
+In K. Berns, D. Görges (Eds.), Advances in Intelligent Systems and Computing (Proceedings of RAAD 2019).<br/>
 [Springer](https://link.springer.com/chapter/10.1007/978-3-030-19648-6_35) [Preprint](https://arxiv.org/abs/1904.06765) [Slides](../downloads/raad2019.pdf) [Code](https://github.com/rock-learning/approxik/)
 
-Gutzeit, Lisa, Alexander Fabisch, Marc Otto, Jan Hendrik Metzen, Jonas Hansen,
-Frank Kirchner, Elsa Andrea Kirchner:<br/>
+Gutzeit, L., Fabisch, A., Otto, M., Metzen, J. H., Hansen, J., Kirchner, F., Kirchner, E. A. (2018).<br/>
 **The BesMan Learning Platform for Automated Robot Skill Learning**.<br/>
-In: *Frontiers in Robotics and AI* (2018).<br/>
+Frontiers in Robotics and AI, 5 (43).<br/>
+DOI: 10.3389/frobt.2018.00043<br/>
 [Frontiers](https://www.frontiersin.org/articles/10.3389/frobt.2018.00043/full)
 
-Metzen, Jan Hendrik, Alexander Fabisch, Jonas Hansen:<br/>
+Metzen, J. H., Fabisch, A., Hansen, J. (2015).<br/>
 **Bayesian Optimization for Contextual Policy Search**.<br/>
-In: *Proceedings of the Second Machine Learning in Planning and Control of Robot Motion Workshop (IROS)* (2015).<br/>
+In A. Faust (Ed.), Proceedings of the Second Machine Learning in Planning and Control of Robot Motion Workshop (IROS).<br/>
 [PDF](http://www.cs.unm.edu/~afaust/MLPC15_proceedings/MLPC15_paper_Metzen.pdf) [Code](https://github.com/rock-learning/bayesian_optimization)
 
-Fabisch, Alexander, Jan Hendrik Metzen, Mario Michael Krell, Frank Kirchner:<br/>
+Fabisch, A., Metzen, J. H., Krell, M. M., Kirchner, F. (2015).<br/>
 **Accounting for Task-Difficulty in Active Multi-Task Robot Control Learning**.<br/>
-*Künstliche Intelligenz* 29 (2015): 369-377.<br/>
+Künstliche Intelligenz, 29, 369-377.<br/>
+DOI: 10.1007/s13218-015-0363-2<br/>
 [Springer](http://link.springer.com/article/10.1007%2Fs13218-015-0363-2) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7766_Accounting_for_Task-Difficulty_in_Active_Multi-Task_Robot_Control_Learning.pdf)
 
-Fabisch, Alexander, Jan Hendrik Metzen:<br/>
+Fabisch, A., Metzen, J. H.. (2014).<br/>
 **Active Contextual Policy Search**.<br/>
-*Journal of Machine Learning Research* 15 (2014): 3371-3399.<br/>
+Journal of Machine Learning Research, 15, 3371-3399.<br/>
 [JMLR](http://jmlr.org/papers/v15/fabisch14a.html)
 
-Metzen, Jan Hendrik, Alexander Fabisch, Lisa Senger, José de Gea Fernández, Elsa Andrea Kirchner:<br/>
+Metzen, J. H., Fabisch, A., Senger, L., de Gea Fernández, J., Kirchner, E. A. (2014).<br/>
 **Towards Learning of Generic Skills for Robotic Manipulation**.<br/>
-*Künstliche Intelligenz* 28 (2014): 15-20.<br/>
+Künstliche Intelligenz, 28, 15-20.<br/>
+DOI: 10.1007/s13218-013-0280-1<br/>
 [Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
 
 Software Development
 --------------------
 
-Fabisch, Alexander:<br/>
+Fabisch, A. (2021).<br/>
 **gmr: Gaussian Mixture Regression**.<br/>
-In: *Journal of Open Source Software* (2021).<br/>
+Journal of Open Source Software, 6 (62), 3054.<br/>
+DOI: 10.21105/joss.03054<br/>
 [JOSS](https://joss.theoj.org/papers/10.21105/joss.03054) [Code](https://github.com/AlexanderFabisch/gmr)
 
-Dominguez, Raul, Mark Post, Alexander Fabisch, Romain Michalec, Vincent Bissonnette, Shashank Govindaraj:<br/>
+Dominguez, R., Post, M., Fabisch, A., Michalec, R., Bissonnette, V., Govindaraj, S. (2020).<br/>
 **Common Data Fusion Framework: An open-source Common Data Fusion Framework for space robotics.**<br/>
-In: *International Journal of Advanced Robotic Systems* 17.2 (2020).<br/>
+International Journal of Advanced Robotic Systems, 17 (2).<br/>
+DOI: 10.1177/1729881420911767<br/>
 [IJARS](https://journals.sagepub.com/doi/10.1177/1729881420911767) [Code](https://gitlab.com/h2020src/og3/cdff_dev)
 
-Fabisch, Alexander:<br/>
+Fabisch, A. (2019).<br/>
 **pytransform3d: 3D Transformations for Python**.<br/>
-In: *Journal of Open Source Software* (2019).<br/>
+Journal of Open Source Software, 4 (33), 1159.<br/>
+DOI: 10.21105/joss.01159<br/>
 [JOSS](http://joss.theoj.org/papers/10.21105/joss.01159) [Code](https://github.com/dfki-ric/pytransform3d)
 
-Post, Marc, Romain Michalec, Alessandro Bianco, Xiu Yan, Andrea De Maio, Quentin Labourey, Simon Lacroix, Jérémi Gancet, Shashank Govindaraj, Xavier Martinez-Gonzalez, Iyas Dalati, Raúl Domínguez, Bilal Wehbe, Alexander Fabisch, Enno Rohrig, Fabrice Souvannavong, Vincent Bissonnette, Michal Smisek, Nassir W. Oumer, Lukas Meyer, Zoltan-Csaba Marton:<br/>
+Post, M., Michalec, R., Bianco, A., Yan, X., De Maio, A., Labourey, Q., Lacroix, S., Gancet, J., Govindaraj, S., Martinez-Gonzalez, X., Dalati, I., Domínguez, R., Wehbe, B., Fabisch, A., Rohrig, E., Souvannavong, F., Bissonnette, F., Smisek, M., Oumer, N. W., Meyer, L., Marton, Z.-C.. (2018).<br/>
 **InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
-In: *69th International Astronautical Congress (IAC)* (2018).<br/>
+In 69th International Astronautical Congress (IAC). Curran Associates, Inc.<br/>
 [Preprint](https://hal.laas.fr/hal-02092238/document)
 
-Dominguez, Raul, Shashank Govindaraj, Jeremi Gancet, Mark Post, Romain Michalec,
-Nassier Oumer, Bilal Wehbe, Alessandro Bianco, Alexander Fabisch, Simon Lacroix,
-Andrea de Maio, Quentin Labourey, Fabrice Souvannavong, Vincent Bissonnette,
-Michal Smisek, Xiu Yan:<br/>
-**A Common Data Fusion Framework for Space Robotics: Architecture and Data
-Fusion Methods**.<br/>
-In: *International Symposium on Artificial Intelligence, Robotics and Automation
-in Space* (2018)<br/>
+Dominguez, R., Govindaraj, S., Gancet, J., Post, M., Michalec, R., Oumer, N., Wehbe, B., Bianco, A., Fabisch, A., Lacroix, S., de Maio, A., Labourey, Q., Souvannavong, F., Bissonnette, V., Smisek, M., Yan, X. (2018).<br/>
+**A Common Data Fusion Framework for Space Robotics: Architecture and Data Fusion Methods**.<br/>
+In *International Symposium on Artificial Intelligence, Robotics and Automation in Space* (2018)<br/>
 [Preprint](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
 
-Govindaraj, Shashank, Jérémi Gancet, Mark Post, Raúl Dominguez, Fabrice Souvannavong, Simon Lacroix, Michal Smisek, Javier Hildalgo-Carrio, Bilal Wehbe, Alexander Fabisch, Andrea De Maio, Nassir Oumer, Vincent Bissonnette, Zoltan-Csaba Marton, Sandeep Kottath, Christian Nissler, Xiu Yan, Rudolph Trieble, Francesco Nuzzolo:<br/>
+Govindaraj, S., Gancet, J., Post, M., Dominguez, R., Souvannavong, F., Lacroix, S., Smisek, M., Hildalgo-Carrio, J., Wehbe, B., Fabisch, A., De Maio, A., Oumer, N., Bissonnette, V., Marton, Z.-C., Kottath, S., Nissler, C., Yan, X., Trieble, R., Nuzzolo, F. (2017).<br/>
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
-In: *14th Symposium on Advanced Space Technologies in Robotics and Automation* (2017).<br/>
+In 14th Symposium on Advanced Space Technologies in Robotics and Automation.<br/>
 [Preprint](https://hal.archives-ouvertes.fr/hal-01536099/document)
 
 Neural Networks
 ---------------
 
-Fabisch, Alexander, Yohannes Kassahun, Hendrik Wöhrle, and Frank Kirchner:<br/>
+Fabisch, A., Kassahun, Y., Wöhrle, H., Kirchner, F. (2013).<br/>
 **Learning in Compressed Space**.<br/>
-*Neural Networks* 42 (2013): 83–93.<br/>
+Neural Networks, 42, 83–93.<br/>
+DOI: 10.1016/j.neunet.2013.01.020<br/>
 [ScienceDirect](http://www.sciencedirect.com/science/article/pii/S089360801300035X) [Preprint](../downloads/2013_nn_lcs.pdf) [Code](https://github.com/OpenANN/OpenANN)
 
-Kassahun, Yohannes, Hendrik Wöhrle, Alexander Fabisch, and Marc Tabie:<br/>
+Kassahun, Y., Wöhrle, H., Fabisch, A., Tabie, M. (2012).<br/>
 **Learning Parameters of Linear Models in Compressed Parameter Space**.<br/>
-In *Proceedings of the 22nd International Conference on Artificial Neural Networks and Machine Learning* (2012): 108–115.<br/>
+In A. E. P. Villa, W. Duch, P. Erdi, F. Masulli & G. Palm (Eds.), Proceedings of the 22nd International Conference on Artificial Neural Networks and Machine Learning (pp. 108–115). Springer.<br/>
+DOI: 10.1007/978-3-642-33266-1_14<br/>
 [Springer](http://link.springer.com/content/pdf/10.1007%2F978-3-642-33266-1_14)
 
 Lifelong Learning
 -----------------
 
-Wehbe, Bilal, Alexander Fabisch, Mario Michael Krell:<br/>
+Wehbe, B., Fabisch, A., Krell, M. M. (2017).<br/>
 **Online Model Identification for Underwater Vehicles through Incremental Support Vector Regression**.<br/>
-In: *Proceedings of IROS* (2017).<br/>
+In H. Zhang & R. Vaughan (Eds.), IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (pp. 4173-4180). IEEE.<br/>
+DOI: 10.1109/IROS.2017.8206278<br/>
 [IEEE](https://ieeexplore.ieee.org/document/8206278/)
 
 RoboCup SPL
 -----------
 
-Röfer, Thomas, Tim Laue, Judith Müller, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Arne Humann, Daniel Honsel, Philipp Kastner, Tobias Kastner, Carsten Könemann, Benjamin Markowsky, Ole Jan Lars Riemann, and Felix Wenk:<br/>
+Röfer, T., Laue, T., Müller, J., Fabisch, A., Feldpausch, F., Gillmann, K., Graf, C., de Haas, T. J., Härtl, A., Humann, A., Honsel, D., Kastner, P., Kastner, T., Könemann, C., Markowsky, B., Riemann, O. J. L., Wenk, F. (2011).<br/>
 **B-Human Team Report and Code Release 2011**.<br/>
-[PDF](http://www.b-human.de/../downloads/bhuman11_coderelease.pdf)
+[PDF](https://b-human.de/downloads/publications/2011/bhuman11_coderelease.pdf)
 
-Röfer, Thomas, Tim Laue, Judith Müller, Alexander Fabisch, Katharina Gillmann, Colin Graf, Alexander Härtl, Arne Humann, and Felix Wenk:<br/>
+Röfer, T., Laue, T., Müller, J., Fabisch, A., Gillmann, K., Graf, C., Härtl, A., Humann, A., Wenk, F. (2011).<br/>
 **B-Human Team Description for RoboCup 2011**.<br/>
-In *RoboCup 2011: Robot Soccer World Cup XV Preproceedings* (2011), edited by Thomas Röfer, Norbert Michael Mayer, Jesus Savage and Uluc Saranli.<br/>
-[PDF](http://www.b-human.de/../downloads/bhuman11_tdp.pdf)
+In T. Röfer, N. M. Mayer, J. Savage and U. Saranli (Eds.), RoboCup 2011: Robot Soccer World Cup XV Preproceedings.<br/>
+[PDF](https://b-human.de/downloads/publications/2011/bhuman11_tdp.pdf)
 
-Fabisch, Alexander, Tim Laue, and Thomas Röfer:<br/>
+Fabisch, A., Laue, T., Röfer, T. (2010).<br/>
 **Robot Recognition and Modeling In the RoboCup Standard Platform League**.<br/>
-In *Proceedings of the Fifth Workshop On Humanoid Soccer Robots (Humanoids)* (2010), edited by Enrico Pagello, Changjiu Zhou, Sven Behnke, Emanuele Menegatti, Thomas Röfer and Peter Stone.<br/>
-[PDF](http://www.informatik.uni-bremen.de/kogrob/papers/Humanoids-Fabisch-etal-10.pdf)
+In E. Pagello, C. Zhou, S. Behnke, E. Menegatti, T. Röfer and P. Stone (Eds.), Proceedings of the Fifth Workshop On Humanoid Soccer Robots (Humanoids).<br/>
+[PDF](https://www.b-human.de/downloads/publications/2010/Humanoids-Fabisch-etal-10.pdf)
 
-Röfer, Thomas, Tim Laue, Judith Müller, Armin Burchardt, Erik Damrose, Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf, Thijs Jeffry de Haas, Alexander Härtl, Daniel Honsel, Philipp Kastner, Tobias Kastner, Benjamin Markowsky, Michael Mester, Jonas Peter, Ole Jan Lars Riemann, Martin Ring, Wiebke Sauerland, André Schreck, Ingo Sieverdingbeck, Felix Wenk, and Jan-Hendrik Worch:<br/>
+Röfer, T., Laue, T., Müller, J., Burchardt, A., Damrose, E., Fabisch, A., Feldpausch, F., Gillmann, K., Graf, C., de Haas, T. J., Härtl, A., Honsel, D., Kastner, P., Kastner, T., Markowsky, B., Mester, M., Peter, J., Riemann, O. J. L., Ring, M., Sauerland, W., Schreck, A., Sieverdingbeck, I., Wenk, F., Worch, J.-H. (2010).<br/>
 **B-Human Team Report and Code Release 2010**<br/>
 [PDF](http://www.b-human.de/../downloads/bhuman10_coderelease.pdf)
 
-Röfer, Thomas, Tim Laue, Colin Graf, Tobias Kastner, Alexander Fabisch, and Christian Thedieck:<br/>
+Röfer, T., Laue, T., Graf, C., Kastner, T., Fabisch, A., Thedieck, C. (2010).<br/>
 **B-Human Team Description For RoboCup 2010**.<br/>
-In *RoboCup 2010: Robot Soccer World Cup XIV Preproceedings* (2010), edited by Eric Chown, Akihiro Matsumoto, Paul Ploeger and Javier Ruiz–del–Solar.<br/>
+In E. Chown, A. Matsumoto, P. Ploeger, Ruiz–del–Solar, J. (Eds.), RoboCup 2010: Robot Soccer World Cup XIV Preproceedings.<br/>
 [PDF](http://www.b-human.de/../downloads/bhuman10_tdp.pdf)
 
 Talks
 -----
 
-Fabisch, Alexander:<br/>
+Fabisch, A. (2023).<br/>
 **Transformations in Three Dimensions.**<br/>
 At *EuroSciPy 2023*<br/>
 [Abstract](https://pretalx.com/euroscipy-2023/talk/TVJEAD/)
 
-Michalec, Romain, Xavier Martinez-Gonzalez, Alexander Fabisch:<br/>
+Michalec, R., Martinez-Gonzalez, X., Fabisch, A. (2019).<br/>
 **"It works on my machine" - working as a research software engineer in a multi-partner international research project**.<br/>
 At *RSEConUK 2019*<br/>
 [Abstract](https://rseconuk2019.sched.com/event/OdK2) [Slides](https://static.sched.com/hosted_files/rseconuk2019/6c/main.pdf)
