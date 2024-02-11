@@ -41,7 +41,7 @@ DOI: 10.1109/Humanoids53995.2022.10000165<br/>
 Fabisch, A., Kirchner, F. (2021).<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
 In A. Bewley, I. Gilitschenski, M. Itkina, H. Kasaei, J. Kober, N. Lambert, J. Perez, R. Senanayake, V. Vanhoucke, M. Wulfmeier (Eds.), 4th Robot Learning Workshop: Self-Supervised and Lifelong Learning at Neural Information Processing Systems (NeurIPS).<br/>
-[PDF](http://www.robot-learning.ml/2021/files/A1.pdf) [Code](https://github.com/AlexanderFabisch/vtae)
+[PDF](http://www.robot-learning.ml/2021/files/A1.pdf) [Slides](https://slideslive.com/38970804/sampleefficient-policy-search-with-a-trajectory-autoencoder) [Code](https://github.com/AlexanderFabisch/vtae)
 
 Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2019).<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
