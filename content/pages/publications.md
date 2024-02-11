@@ -211,8 +211,8 @@ I maintain a quite popular answer at Stack Overflow that contains links to
 the most popular open source libraries for neural networks:
 [link](https://stackoverflow.com/a/11477815/915743).
 
-Acknowledgements
-----------------
+Acknowledgments
+---------------
 
 I have also been mentioned in acknowledgements of the following publications:
 
