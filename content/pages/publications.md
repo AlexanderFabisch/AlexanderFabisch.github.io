@@ -27,6 +27,12 @@ You can also find an overview of my publications at
 Robot Skill Learning
 --------------------
 
+Fabisch, A. (2024).<br/>
+**Learning of Cartesian Motion with Movement Primitives**.<br/>
+Journal of Open Source Software, 9(97).<br/>
+DOI: 10.21105/joss.06695<br/>
+[JOSS](https://joss.theoj.org/papers/10.21105/joss.06695) [Code](https://github.com/dfki-ric/movement_primitives/)
+
 Laux, M., Singh, C., Fabisch, A. (2023).<br/>
 **Grasping 3D Deformable Objects via Reinforcement Learning: A Benchmark and Evaluation**.<br/>
 In D. Seita, M. Lippi, M. C. Welle & F. Zhang (Eds.), 3rd Workshop on Representing and Manipulating Deformable Objects @ ICRA2023.<br/>
