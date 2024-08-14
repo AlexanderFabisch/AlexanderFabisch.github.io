@@ -27,6 +27,11 @@ You can also find an overview of my publications at
 Robot Skill Learning
 --------------------
 
+Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2024).<br/>
+**A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
+DFKI RIC Research Report, RR-24-01.<br/>
+[DFKI](https://robotik.dfki-bremen.de/de/forschung/publikationen/15168) [arxiv.org](https://arxiv.org/abs/1906.01868)
+
 Fabisch, A. (2024).<br/>
 **Learning of Cartesian Motion with Movement Primitives**.<br/>
 Journal of Open Source Software, 9(97).<br/>
@@ -48,11 +53,6 @@ Fabisch, A., Kirchner, F. (2021).<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
 In A. Bewley, I. Gilitschenski, M. Itkina, H. Kasaei, J. Kober, N. Lambert, J. Perez, R. Senanayake, V. Vanhoucke, M. Wulfmeier (Eds.), 4th Robot Learning Workshop: Self-Supervised and Lifelong Learning at Neural Information Processing Systems (NeurIPS).<br/>
 [PDF](http://www.robot-learning.ml/2021/files/A1.pdf) [Slides](https://slideslive.com/38970804/sampleefficient-policy-search-with-a-trajectory-autoencoder) [Code](https://github.com/AlexanderFabisch/vtae)
-
-Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2019).<br/>
-**A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
-Status: preprint.<br/>
-[Preprint](https://arxiv.org/abs/1906.01868)
 
 Fabisch, A., Langosz, M., Kirchner, F. (2020).<br/>
 **BOLeRo: Behavior Optimization and Learning for Robots**.<br/>
