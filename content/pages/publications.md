@@ -217,11 +217,21 @@ I maintain a quite popular answer at Stack Overflow that contains links to
 the most popular open source libraries for neural networks:
 [link](https://stackoverflow.com/a/11477815/915743).
 
+Review Activities
+-----------------
+
+* Workshops: various NeurIPS workshops
+* Conferences: IEEE ICRA, IEEE IROS, IEEE Humanoids
+* Journals: AI Perspectives, IEEE RA-L, Journal of Open Source Software
+* Funding agencies: DFG
+
 Acknowledgments
 ---------------
 
 I have also been mentioned in acknowledgements of the following publications:
 
+* [Quantum Deep Reinforcement Learning for Robot Navigation Tasks](https://arxiv.org/pdf/2202.12180)
+* [PhysWM: Physical World Models for Robot Learning](https://www.cs.ox.ac.uk/isg/conferences/tmp-proceedings/NeSy2023/paper24.pdf)
 * [Perception for Autonomous Systems (PAZ)](https://arxiv.org/abs/2010.14541)
 * [A Capacity Scaling Law for Artificial Neural Networks](https://arxiv.org/abs/1708.06019)
 * [A Practical Approach to Sizing Neural Networks](https://arxiv.org/abs/1810.02328)
