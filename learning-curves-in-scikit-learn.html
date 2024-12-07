@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <title>Alexander Fabisch - Learning Curves in scikit learn</title>
-      <meta charset="utf-8" />
-      <meta name="generator" content="Pelican" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+          <title>Alexander Fabisch - Learning Curves in scikit learn</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
         <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
         <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
 
@@ -31,27 +30,38 @@
 
 
 
-  </head>
+</head>
 
-  <body>
-    <header>
-      <hgroup><h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1></hgroup>
-      <nav><ul>
-            <li><a href="http://alexanderfabisch.github.io/pages/about.html" >About</a></li>
-            <li><a href="http://alexanderfabisch.github.io/pages/software.html" >Software</a></li>
-            <li><a href="http://alexanderfabisch.github.io/pages/publications.html" >Publications</a></li>
-            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html" >Teaching</a></li>
-            <li><a href="http://alexanderfabisch.github.io/category/blog.html"  aria-current="page" >Blog</a></li>
-      </ul></nav>
-    </header>
-    <main>
-  <article>
-    <header>
-      <h2>
-        <a href="http://alexanderfabisch.github.io/learning-curves-in-scikit-learn.html" rel="bookmark"
-           title="Permalink to Learning Curves in scikit learn">Learning Curves in scikit learn</a></h2>
-      
-    </header>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://alexanderfabisch.github.io/learning-curves-in-scikit-learn.html" rel="bookmark"
+         title="Permalink to Learning Curves in scikit learn">Learning Curves in scikit learn</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2014-01-12T14:49:00+01:00">
+      So 12 Januar 2014
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
+    </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
     <p><a href="https://github.com/scikit-learn/scikit-learn">scikit learn</a> is a great
 machine learning library for Python. It offers broad range of machine
 learning algorithms and tools. <em>Learning curves</em> are a new tool that
@@ -61,7 +71,7 @@ scikit learn is such a great library.</p>
 number of training samples. It is a tool that can be used to find out
 whether we benefit from more training samples. At a first look, it seems to
 be very easy to implement. We could do something like:</p>
-<div class="highlight"><pre><span></span><code><span class="n">estimator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<div class="highlight"><pre><span></span><span class="n">estimator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
 <span class="n">X_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">X_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 <span class="n">n_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_train</span><span class="p">.</span><span class="n">shape</span><span class="o">[</span><span class="n">0</span><span class="o">]</span>
 <span class="n">train_scores</span><span class="p">,</span><span class="w"> </span><span class="n">test_scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="p">,</span><span class="w"> </span><span class="err">[]</span>
@@ -71,7 +81,8 @@ be very easy to implement. We could do something like:</p>
 <span class="w">    </span><span class="n">test_scores</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">estimator</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">))</span>
 <span class="n">plot</span><span class="p">(</span><span class="k">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">n_samples</span><span class="p">),</span><span class="w"> </span><span class="n">train_scores</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="k">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">n_samples</span><span class="p">),</span><span class="w"> </span><span class="n">test_scores</span><span class="p">)</span>
-</code></pre></div>
+</pre></div>
+
 
 <p>However, there are some flaws in the code that make the implementation
 actually much worse than the version that is implemented in scikit learn:</p>
@@ -101,13 +112,14 @@ actually much worse than the version that is implemented in scikit learn:</p>
 generated in just one call to <code>sklearn.learning_curve.learning_curve</code>
 without all these flaws.</p>
 <p>Lets take a look at the signature of the function <code>learning_curve</code>:</p>
-<div class="highlight"><pre><span></span><code>train_sizes_abs, train_scores, test_scores = \
+<div class="highlight"><pre><span></span>train_sizes_abs, train_scores, test_scores = \
     learning_curve(estimator, X, y,
                    train_sizes=np.linspace(0.1, 1.0, 10),
                    cv=None, scoring=None,
                    exploit_incremental_learning=False,
                    n_jobs=1, pre_dispatch=&quot;all&quot;, verbose=0)
-</code></pre></div>
+</pre></div>
+
 
 <p>It takes an <code>estimator</code> and the whole training set <code>(X, y)</code> where <code>y</code>
 could be <code>None</code>. We already have a good default for <code>train_sizes</code>:
@@ -140,24 +152,13 @@ we can now plot beautiful learning curves like these:</p>
 with grid search or random search, a pipeline that combines preprocessing
 and learners, simple dataset access and dataset generators and a really
 great explanatory documentation.</p>
-    <footer>
-      <p>Published: <time datetime="2014-01-12T14:49:00+01:00">
-        So 12 Januar 2014
-      </time></p>
-        <address>
-          By             <a href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
-        </address>
-        <p>
-          Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
-        </p>
-    </footer>
-  </article>
-    </main>
-    <footer>
-      <address>
-        Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
-        which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-      </address>
-    </footer>
-  </body>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
 </html>
