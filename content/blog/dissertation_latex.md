@@ -930,3 +930,9 @@ checkpdfa:
   tags:
     - docker
 ```
+
+
+# Source Code
+
+The source code of my thesis without images and literature is available
+[here](../downloads/public_source.zip).

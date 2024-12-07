@@ -13,6 +13,8 @@ Theses
 
 * [Dissertation](https://media.suub.uni-bremen.de/handle/elib/4585),
   about learning behaviors for robots
+  ([source code](../downloads/public_source.zip), without images and
+  literature)
 * [Diploma thesis (German)](../downloads/diplomarbeit.pdf),
   in the field of artificial neural networks
 
