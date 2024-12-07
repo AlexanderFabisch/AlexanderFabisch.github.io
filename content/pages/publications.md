@@ -21,7 +21,8 @@ in the field of artificial neural networks and my
 [dissertation](https://media.suub.uni-bremen.de/handle/elib/4585) about
 learning behaviors for robots.
 
-You can also find an overview of my publications at
+My ORCID is [0000-0003-2824-7956](https://orcid.org/0000-0003-2824-7956).
+You can find an overview of my publications at
 [Google scholar](http://scholar.google.de/citations?user=HhlbbxMAAAAJ).
 
 Robot Skill Learning
