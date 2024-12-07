@@ -2,28 +2,19 @@ Title: Publications
 Date: 2013-09-02 07:40:59
 Category: Publications
 
-I am a researcher at the DFKI RIC and I currently work in the project
-[APRIL](https://robotik.dfki-bremen.de/en/research/projects/april/).
-Previously I worked in
-[TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html),
-[COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html),
-and [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html).
-At the moment my scientific work focuses on imitation learning and
-reinforcement learning. Before joining DFKI I worked at the Robotics Research
-Group of the University of Bremen in the project
-[BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
-As a student I participated in the RoboCup SPL team
-[B-Human](http://www.b-human.de/).
-
-I wrote my
-[diploma thesis (German)](../downloads/diplomarbeit.pdf)
-in the field of artificial neural networks and my
-[dissertation](https://media.suub.uni-bremen.de/handle/elib/4585) about
-learning behaviors for robots.
-
 My ORCID is [0000-0003-2824-7956](https://orcid.org/0000-0003-2824-7956).
 You can find an overview of my publications at
 [Google scholar](http://scholar.google.de/citations?user=HhlbbxMAAAAJ).
+I use this page to collect all information about my publications,
+including posters, presentations, video, data, and code.
+
+Theses
+------
+
+* [Dissertation](https://media.suub.uni-bremen.de/handle/elib/4585),
+  about learning behaviors for robots
+* [Diploma thesis (German)](../downloads/diplomarbeit.pdf),
+  in the field of artificial neural networks
 
 Robot Skill Learning
 --------------------
