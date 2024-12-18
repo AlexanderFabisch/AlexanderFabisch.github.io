@@ -8,16 +8,6 @@ You can find an overview of my publications at
 I use this page to collect all information about my publications,
 including posters, presentations, video, data, and code.
 
-Theses
-------
-
-* [Dissertation](https://media.suub.uni-bremen.de/handle/elib/4585),
-  about learning behaviors for robots
-  ([source code](../downloads/public_source.zip), without images and
-  literature)
-* [Diploma thesis (German)](../downloads/diplomarbeit.pdf),
-  in the field of artificial neural networks
-
 Robot Skill Learning
 --------------------
 
@@ -196,6 +186,21 @@ Michalec, R., Martinez-Gonzalez, X., Fabisch, A. (2019).<br/>
 **"It works on my machine" - working as a research software engineer in a multi-partner international research project**.<br/>
 At *RSEConUK 2019*<br/>
 [Abstract](https://rseconuk2019.sched.com/event/OdK2) [Slides](https://static.sched.com/hosted_files/rseconuk2019/6c/main.pdf)
+
+Theses
+------
+
+Fabisch, A. (2020).<br/>
+**Learning and generalizing behaviors for robots from human demonstration**<br/>
+\[Doctoral dissertation, University of Bremen\], DOI: 10.26092/elib/382<br/>
+[SuUB Bremen](https://media.suub.uni-bremen.de/handle/elib/4585)
+[LaTeX](../downloads/public_source.zip) (without images and literature)
+[Slides](../downloads/phd_defense_wo_backup.pdf) (without backup slides)
+
+Fabisch, A. (2012).<br/>
+**Learning in Compressed Space (German: Lernen im komprimierten Raum)**<br/>
+\[Diploma thesis, University of Bremen\].<br/>
+[PDF](../downloads/diplomarbeit.pdf)
 
 Other Publications
 ------------------
