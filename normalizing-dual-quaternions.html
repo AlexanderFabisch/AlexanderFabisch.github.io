@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Alexander Fabisch - Normalizing Dual Quaternions</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="http://alexanderfabisch.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Full Atom Feed" />
+        <link href="http://alexanderfabisch.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Alexander Fabisch Categories Atom Feed" />
+
+        <link rel="stylesheet" href="http://alexanderfabisch.github.io/theme/css/rdark.css" />
+	<link rel="stylesheet" type="text/css" href="http://alexanderfabisch.github.io/theme/css/main.css" />
+        <link href="http://alexanderfabisch.github.io/" type="application/atom+xml" rel="alternate" title="Alexander Fabisch ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+
+
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://alexanderfabisch.github.io/">Alexander Fabisch</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://alexanderfabisch.github.io/pages/about.html">About</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/software.html">Software</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/publications.html">Publications</a></li>
+            <li><a href="http://alexanderfabisch.github.io/pages/teaching.html">Teaching</a></li>
+            <li class="active"><a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://alexanderfabisch.github.io/normalizing-dual-quaternions.html" rel="bookmark"
+         title="Permalink to Normalizing Dual Quaternions">Normalizing Dual Quaternions</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2025-03-08T16:30:00+01:00">
+      Sa 08 März 2025
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://alexanderfabisch.github.io/author/alexander-fabisch.html">Alexander Fabisch</a>
+    </address>
+    <div class="category">
+        Category: <a href="http://alexanderfabisch.github.io/category/blog.html">Blog</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+ .highlight pre  .hll { background-color: #ffffcc }
+ .highlight pre  { background: #ffffff; color: #000080 }
+ .highlight pre  .c { color: #696969 } /* Comment */
+ .highlight pre  .err { color: #800000 } /* Error */
+ .highlight pre  .esc { color: #000080 } /* Escape */
+ .highlight pre  .g { color: #000080 } /* Generic */
+ .highlight pre  .k { color: #000080 } /* Keyword */
+ .highlight pre  .l { color: #EE0000 } /* Literal */
+ .highlight pre  .n { color: #008000 } /* Name */
+ .highlight pre  .o { color: #000080 } /* Operator */
+ .highlight pre  .x { color: #000080 } /* Other */
+ .highlight pre  .p { color: #000080 } /* Punctuation */
+ .highlight pre  .ch { color: #696969 } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #696969 } /* Comment.Multiline */
+ .highlight pre  .cp { color: #696969 } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #696969 } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #696969 } /* Comment.Single */
+ .highlight pre  .cs { color: #696969 } /* Comment.Special */
+ .highlight pre  .gd { color: #000080 } /* Generic.Deleted */
+ .highlight pre  .ge { color: #000080 } /* Generic.Emph */
+ .highlight pre  .gr { color: #000080 } /* Generic.Error */
+ .highlight pre  .gh { color: #000080 } /* Generic.Heading */
+ .highlight pre  .gi { color: #000080 } /* Generic.Inserted */
+ .highlight pre  .go { color: #000080 } /* Generic.Output */
+ .highlight pre  .gp { color: #000080 } /* Generic.Prompt */
+ .highlight pre  .gs { color: #000080 } /* Generic.Strong */
+ .highlight pre  .gu { color: #000080 } /* Generic.Subheading */
+ .highlight pre  .gt { color: #000080 } /* Generic.Traceback */
+ .highlight pre  .kc { color: #000080 } /* Keyword.Constant */
+ .highlight pre  .kd { color: #000080 } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #000080 } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #000080 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #000080 } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #000080 } /* Keyword.Type */
+ .highlight pre  .ld { color: #EE0000 } /* Literal.Date */
+ .highlight pre  .m { color: #EE0000 } /* Literal.Number */
+ .highlight pre  .s { color: #EE0000 } /* Literal.String */
+ .highlight pre  .na { color: #008000 } /* Name.Attribute */
+ .highlight pre  .nb { color: #008000 } /* Name.Builtin */
+ .highlight pre  .nc { color: #008000 } /* Name.Class */
+ .highlight pre  .no { color: #008000 } /* Name.Constant */
+ .highlight pre  .nd { color: #008000 } /* Name.Decorator */
+ .highlight pre  .ni { color: #008000 } /* Name.Entity */
+ .highlight pre  .ne { color: #008000 } /* Name.Exception */
+ .highlight pre  .nf { color: #008000 } /* Name.Function */
+ .highlight pre  .nl { color: #008000 } /* Name.Label */
+ .highlight pre  .nn { color: #008000 } /* Name.Namespace */
+ .highlight pre  .nx { color: #008000 } /* Name.Other */
+ .highlight pre  .py { color: #008000 } /* Name.Property */
+ .highlight pre  .nt { color: #008000 } /* Name.Tag */
+ .highlight pre  .nv { color: #008000 } /* Name.Variable */
+ .highlight pre  .ow { color: #000080 } /* Operator.Word */
+ .highlight pre  .pm { color: #000080 } /* Punctuation.Marker */
+ .highlight pre  .w { color: #000080 } /* Text.Whitespace */
+ .highlight pre  .mb { color: #EE0000 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #EE0000 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #EE0000 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #EE0000 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #EE0000 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #EE0000 } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #EE0000 } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #EE0000 } /* Literal.String.Char */
+ .highlight pre  .dl { color: #EE0000 } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #EE0000 } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #EE0000 } /* Literal.String.Double */
+ .highlight pre  .se { color: #EE0000 } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #EE0000 } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #EE0000 } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #EE0000 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #EE0000 } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #EE0000 } /* Literal.String.Single */
+ .highlight pre  .ss { color: #EE0000 } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #008000 } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #008000 } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #008000 } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #008000 } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #008000 } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #EE0000 } /* Literal.Number.Integer.Long */</style><body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Implementing proper normalization for unit dual quaternions is not straightforward. I got it wrong the first time and I got it wrong the second time I tried it, but this tought me more about dual numbers and dual quaternions, which I want to summarize in this article. The correct normalization procedure can be very simple in the end. It is a case in which several pages of calculations lead to a concise and simple solution that requires about 4 lines of code. Most of the things discussed here were extracted from <a href="https://github.com/scipy/scipy/pull/22618">this pull request</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Background">Background<a class="anchor-link" href="#Background">&#182;</a></h2><p>Let's first establish some fundamentals. A dual number $r + d \epsilon$ consists of a real part $r$ and a dual part $d$ with $\epsilon^2 = 0$ and $\epsilon \neq 0$. A quaternion $r + \boldsymbol{v}$ consists of a real part $r \in \mathbb{R}$ and a vector part $\boldsymbol{v} \in \mathbb{R}^3$. A dual quaternion is a combination of the two. A dual quaternion $\sigma = p + q \epsilon$ consists of a real quaternion $p = r_p + \boldsymbol{v}_p$ and a dual quaternion $q = r_q + \boldsymbol{v}_q$. Normalizing a dual quaternion means the dual quaternion should have unit norm, that is, $\sigma \cdot \sigma^* = 1$ (with the dual quaternion product $\cdot$). It is often assumed that it is enough to ensure that the real quaternion has unit norm by dividing the whole dual quaternion by the norm of the real quaternion. This works for most cases, but it is an approximation. We see this immediately, when we write the unit norm property correctly: $\sigma \cdot \sigma^* = 1 + 0 \epsilon$. Ensuring that the dual part is 0 is not trivial. There is a great solution that I found on stackoverflow <a href="https://stackoverflow.com/a/76313524/915743">here</a>, but it lacks some details that I would like to write down here.</p>
+<p>The following definitions and properties of quaternions, dual quaternions, and dual numbers are required to understand the solution.</p>
+<h3 id="Quaternion-Product">Quaternion Product<a class="anchor-link" href="#Quaternion-Product">&#182;</a></h3>$$q_1 \cdot q_2 = r_1 r_2 - \boldsymbol{v}_1^T \boldsymbol{v}_2 + r_1 \boldsymbol{v}_2 + r_2 \boldsymbol{v}_1 + \boldsymbol{v}_1 \times \boldsymbol{v}_2$$<h3 id="Quaternion-Conjugate">Quaternion Conjugate<a class="anchor-link" href="#Quaternion-Conjugate">&#182;</a></h3>$$q^* = (r + \boldsymbol{v})^* = r - \boldsymbol{v}$$<h3 id="Quaternion-Product-with-Conjugate">Quaternion Product with Conjugate<a class="anchor-link" href="#Quaternion-Product-with-Conjugate">&#182;</a></h3><p>From the last two definitions, we can see easily that</p>
+$$q \cdot q^* = r^2 + \boldsymbol{v}^T\boldsymbol{v} - r \boldsymbol{v} + r \boldsymbol{v} - \boldsymbol{v} \times \boldsymbol{v} = r^2 + \boldsymbol{v}^T \boldsymbol{v},$$<p>which is just a real number without the vector part.</p>
+<h3 id="Dual-Quaternion-Product">Dual Quaternion Product<a class="anchor-link" href="#Dual-Quaternion-Product">&#182;</a></h3>$$\sigma_1 \cdot \sigma_2 = (p_1 + q_1 \epsilon) \cdot (p_2 + q_2 \epsilon) = p_1 \cdot p_2 + (p_1 \cdot q_2 + p_2 \cdot q_1) \epsilon$$<h3 id="Dual-Quaternion-Conjugate">Dual Quaternion Conjugate<a class="anchor-link" href="#Dual-Quaternion-Conjugate">&#182;</a></h3><p>There are three different dual quaternion conjugates. We will use the quaternion conjugate of the two individual quaternions, which is the inverse in the case of unit dual quaternions.</p>
+$$\sigma^* = (p + q \epsilon)^* = p^* + q^* \epsilon$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Norm-of-a-Dual-Quaternion">Norm of a Dual Quaternion<a class="anchor-link" href="#Norm-of-a-Dual-Quaternion">&#182;</a></h2><p>Now we can start computing the (squared) norm of a dual quaternion. We need the dual quaternion product and the dual quaternion conjugate:</p>
+$$\sigma \cdot \sigma^* = (p + q \epsilon) \cdot (p + q \epsilon)^* = p \cdot p^* + (p q^* + q p^*) \epsilon$$<p>We can further break this down with $p = r_p + \boldsymbol{v}_p$ and $q = r_q + \boldsymbol{v}_q$ to</p>
+$$p \cdot p^* = r_p^2 + \boldsymbol{v}_p^T \boldsymbol{v}_p$$$$p q^* = r_p r_q + \boldsymbol{v}_p^T \boldsymbol{v}_q - r_p \boldsymbol{v}_q + r_q \boldsymbol{v}_p - \boldsymbol{v}_p \times \boldsymbol{v}_q$$$$q p^* = r_q r_p + \boldsymbol{v}_q^T \boldsymbol{v}_p - r_q \boldsymbol{v}_p + r_p \boldsymbol{v}_q - \boldsymbol{v}_q \times \boldsymbol{v}_p$$<p>With $\boldsymbol{v}_p \times \boldsymbol{v}_q = - \boldsymbol{v}_q \times \boldsymbol{v}_p$, we can furthermore simplify (underlined terms cancel each other)
+$$p q^* + q p^* = (r_p r_q + \boldsymbol{v}_p^T \boldsymbol{v}_q \underline{- r_p \boldsymbol{v}_q + r_q \boldsymbol{v}_p} - \underline{\boldsymbol{v}_p \times \boldsymbol{v}_q}) + (r_q r_p + \boldsymbol{v}_q^T \boldsymbol{v}_p \underline{- r_q \boldsymbol{v}_p + r_p \boldsymbol{v}_q} - \underline{\boldsymbol{v}_q \times \boldsymbol{v}_p}) = 2 (r_p r_q + \boldsymbol{v}_p^T \boldsymbol{v}_q),$$</p>
+<p>which does not contain a vector part anymore.</p>
+<p>To summarize, the squared norm of a dual quaternion is a dual number of the form</p>
+$$\sigma \cdot \sigma^* = r_p^2 + \boldsymbol{v}_p^T \boldsymbol{v}_p + 2 (r_p r_q + \boldsymbol{v}_p^T \boldsymbol{v}_q) \epsilon,$$<p>that is, the vector parts of the quaternions are $0$.</p>
+<p>When we write $p = (r_p, v_{1p} v_{2p}, v_{3p})^T$ and $q = (r_q, v_{1q} v_{2q}, v_{3q})^T$ as 4d vectors, $r_p^2 + \boldsymbol{v}_p^T \boldsymbol{v}_p = p^T p = ||p||_2^2$ is the squared Euclidean norm of the real quaternion and $r_p r_q + \boldsymbol{v}_p^T \boldsymbol{v}_q = p^T q$ is the dot product of the real and dual quaternion, hence</p>
+$$\sigma \cdot \sigma^* = p^T p + 2 p^T q \epsilon.$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h3><p>The following function will compute the squared norm. It returns an array of shape <code>(2,)</code> with the real part in the first component and the dual part in the second component.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pytransform3d.transformations</span> <span class="k">as</span> <span class="nn">pt</span>
+
+
+<span class="k">def</span> <span class="nf">dual_quaternion_squared_norm</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">concatenate_dual_quaternions</span><span class="p">(</span>
+        <span class="n">sigma</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">dq_q_conj</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also use our simplified expression to implement the norm:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dual_quaternion_squared_norm_simplified</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+    <span class="n">real</span> <span class="o">=</span> <span class="n">p</span> <span class="o">@</span> <span class="n">p</span>
+    <span class="n">dual</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">p</span> <span class="o">@</span> <span class="n">q</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">real</span><span class="p">,</span> <span class="n">dual</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's try to generate an arbitrary 8d vector, interpret it as a dual quaternion and compute its norm.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">sigma</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.30471708, -1.03998411,  0.7504512 ,  0.94056472, -1.95103519,
+       -1.30217951,  0.1278404 , -0.31624259])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dual_quaternion_squared_norm</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2.62225842, 1.11644721])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dual_quaternion_squared_norm_simplified</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2.62225842, 1.11644721])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Normalization-Procedure-(Direct-Solution)">Normalization Procedure (Direct Solution)<a class="anchor-link" href="#Normalization-Procedure-(Direct-Solution)">&#182;</a></h2><p>To normalize a dual quaternion, we multiply it with the inverse square root of its squared norm.</p>
+<h3 id="Inverse-Square-Root-of-a-Dual-Number">Inverse Square Root of a Dual Number<a class="anchor-link" href="#Inverse-Square-Root-of-a-Dual-Number">&#182;</a></h3><p>Computing the inverse square root of a dual number is not trivial. One derivation is outlined <a href="https://stackoverflow.com/a/76313524/915743">here</a>. However, I find the following more easy to understand.</p>
+<p>We define the inverse square root of a dual number $s + t \epsilon$ as</p>
+$$\frac{1}{\sqrt{s + t \epsilon}} = u + v \epsilon$$<p>and square the expression on both sides to</p>
+$$\frac{1}{s + t \epsilon} = u^2 + 2uv \epsilon.$$<p>We multiply by $s + t \epsilon$ and get</p>
+$$1 + 0 \epsilon = (u^2 + 2uv \epsilon)(s + t \epsilon) = u^2s + (u^2t + 2uvs) \epsilon,$$<p>which we can split into</p>
+$$1 = u^2s \Leftrightarrow u = \pm\frac{1}{\sqrt{s}}$$$$0 \epsilon = (u^2t + 2uvs) \epsilon \Leftrightarrow v \epsilon = - \frac{0.5 t}{(\pm \sqrt{s})^3} \epsilon$$<h3 id="Normalization">Normalization<a class="anchor-link" href="#Normalization">&#182;</a></h3><p>Hence, to normalize a dual quaternion, we multiply the dual quaternion with the dual number</p>
+$$\frac{1}{\sqrt{s + t \epsilon}} = \pm\left(\frac{1}{\sqrt{s}} - \frac{0.5 t}{(\sqrt{s})^3} \epsilon\right).$$<p>We will only use the positive solution here, multiplying this normalization factor with the dual quaternion gives us the solution</p>
+$$(p + q \epsilon) \left(\frac{1}{\sqrt{s}} - \frac{0.5 t}{(\sqrt{s})^3} \epsilon\right) = \frac{p}{\sqrt{s}} + \left(\frac{q}{\sqrt{s}} - \frac{0.5 t}{(\sqrt{s})^3} p \right) \epsilon.$$<p>Plugging in $s = p^T p$ and $t = 2 p^T q$ from the dual quaternion norm, we would get the normalization factor</p>
+$$\frac{1}{\sqrt{s + t \epsilon}} = \pm\left(\frac{1}{\sqrt{p^T p}} - \frac{p^Tq}{\left(\sqrt{p^Tp}\right)^3} \epsilon\right),$$<p>hence,</p>
+$$(p + q \epsilon) \left(\frac{1}{\sqrt{s}} - \frac{0.5 t}{(\sqrt{s})^3} \epsilon\right) = \frac{p}{\sqrt{p^T p}} + \left(\frac{q}{\sqrt{p^T p}} - \frac{p^Tq}{\left(\sqrt{p^Tp}\right)^3} p \right) \epsilon.$$<h3 id="Side-Note:-Two-Solutions">Side Note: Two Solutions<a class="anchor-link" href="#Side-Note:-Two-Solutions">&#182;</a></h3><p>Why are there two solutions? As you can see, the difference is the sign of the normalization factor. Multiplying any unit dual quaternion by $-1$ gives us a unit dual quaternion that represents exactly the same transformation just like it is the case for unit quaternions and rotations.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">norm_dual_quaternion</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="n">sigma_prod</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">concatenate_dual_quaternions</span><span class="p">(</span>
+        <span class="n">sigma</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">dq_q_conj</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">sigma_prod</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">sigma_prod</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="o">*</span> <span class="n">u</span> <span class="o">+</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">v</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again, we can write down a simplified version that we derived above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">norm_dual_quaternion_simplified</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">p</span> <span class="o">@</span> <span class="n">p</span>
+
+    <span class="n">u</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">p</span> <span class="o">@</span> <span class="n">q</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="o">*</span> <span class="n">u</span> <span class="o">+</span> <span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">v</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_unit</span> <span class="o">=</span> <span class="n">norm_dual_quaternion</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">sigma_unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.18817376, -0.64222759,  0.4634306 ,  0.58083254, -1.24489263,
+       -0.66742595, -0.01970857, -0.31893819])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dual_quaternion_squared_norm</span><span class="p">(</span><span class="n">sigma_unit</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1., 0.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_unit</span> <span class="o">=</span> <span class="n">norm_dual_quaternion_simplified</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">sigma_unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.18817376, -0.64222759,  0.4634306 ,  0.58083254, -1.24489263,
+       -0.66742595, -0.01970857, -0.31893819])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dual_quaternion_squared_norm</span><span class="p">(</span><span class="n">sigma_unit</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 1., -0.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We see that both functions convert an arbitrary 8d vector to a unit dual quaternion with squared norm $1 + 0 \epsilon$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Edge-Case">Edge Case<a class="anchor-link" href="#Edge-Case">&#182;</a></h2><p>It could also happen that the real quaternion $p = 0$. In this case, $u$ is not defined. We will omit this case here, but the solution would be to set $p = 1$ and then proceed with the normalization procedure.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">norm_dual_quaternion</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/tmp/ipykernel_3400/3139420.py:7: RuntimeWarning: divide by zero encountered in scalar divide
+  u = 1.0 / np.sqrt(s)
+/tmp/ipykernel_3400/3139420.py:8: RuntimeWarning: invalid value encountered in scalar divide
+  v = -0.5 * t / np.sqrt(s)**3
+/tmp/ipykernel_3400/3139420.py:10: RuntimeWarning: invalid value encountered in multiply
+  p = sigma[:4] * u
+/tmp/ipykernel_3400/3139420.py:11: RuntimeWarning: invalid value encountered in multiply
+  q = sigma[4:] * u + sigma[:4] * v
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([nan, nan, nan, nan, nan, nan, nan, nan])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Normalization-in-Two-Steps">Normalization in Two Steps<a class="anchor-link" href="#Normalization-in-Two-Steps">&#182;</a></h2><p>To simplify the terms involved in the normalization procedure, we can split the normalization up into two steps:</p>
+<ol>
+<li>Multiply $\sigma$ with the normalization factor $\frac{1}{\sqrt{s}} = \frac{1}{\sqrt{p^T p}}$ for the real quaternion to obtain $\sigma' = \frac{\sigma}{\sqrt{s}}$, which ensures that the norm is $1 + t' \epsilon$.</li>
+<li>Multiply $\sigma' = p' + q' \epsilon$ with the normalization factor $(1 - \frac{t'}{2} \epsilon)$ for the dual quaternion (since s' = 1) to obtain $\sigma'' = p' + q' \epsilon - p'^T q' p' \epsilon$.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">norm_dual_quaternion_two_steps</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">sigma</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">sigma</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+
+    <span class="c1"># 1. ensure unit norm of the real quaternion</span>
+    <span class="n">real_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">@</span> <span class="n">p</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">/=</span> <span class="n">real_norm</span>
+    <span class="n">q</span> <span class="o">/=</span> <span class="n">real_norm</span>
+
+    <span class="c1"># 2. ensure orthogonality</span>
+    <span class="n">q</span> <span class="o">-=</span> <span class="n">p</span> <span class="o">@</span> <span class="n">q</span> <span class="o">*</span> <span class="n">p</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_unit</span> <span class="o">=</span> <span class="n">norm_dual_quaternion_two_steps</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">sigma_unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.18817376, -0.64222759,  0.4634306 ,  0.58083254, -1.24489263,
+       -0.66742595, -0.01970857, -0.31893819])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dual_quaternion_squared_norm</span><span class="p">(</span><span class="n">sigma_unit</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 1., -0.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The solution is simple. The way to get there was not so simple.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Geometrical-Interpretation">Geometrical Interpretation<a class="anchor-link" href="#Geometrical-Interpretation">&#182;</a></h2><p>Considering that unit dual quaternion
+$$\sigma = p + q \epsilon = p + 0.5 (0 + \boldsymbol{t}) p \epsilon,$$
+represents a rigid transformation with a rotation quaternion $p$ and a translation vector $\boldsymbol{t}$, the procedure makes sense geometrically. We have to divide both quaternions by the norm of the real quaternion because it is part of both quaternions $p$ and $q$. In the second step, we remove the part of $q$ that is not orthogonal to $q$: the vector projection of $q$ on $p$, which is $p^T q p$ when $p^T p = 1$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mistakes">Mistakes<a class="anchor-link" href="#Mistakes">&#182;</a></h2><p>So what were the errors that I saw / made when I implemented the normalization procedure? Here is a list of the most important ones.</p>
+<ol>
+<li>Ignoring the orthogonality constraint. In the beginning I thought it would be enough to divide the dual quaternion by the norm of the real quaternion. This is even suggested in several tutorials, such as <a href="https://xbdev.net/misc_demos/demos/dual_quaternions_beyond/paper.pdf">this</a>. I guess it is good enough as an approximation for most use cases, but sometimes it is not.</li>
+<li>Dividing only the real quaternion by its norm and forgetting about the dual quaternion. Both quaternions should be devided by the norm of the real quaternion.</li>
+<li>Forgetting to take the square root of the real component $s$ of the squared dual quaternion norm. Since we never compute the actual norm $\sqrt{\sigma \sigma^*}$, but only the squared norm $\sigma \sigma^*$ of a dual quaternion $\sigma$ in the direct solution, this has to be kept in mind.</li>
+<li>Using the updated real quaternion to update the dual quaternion in the direct solution. This is necessary in the two-step solution, but it leads to confusing errors in the direct solution.</li>
+</ol>
+
+</div>
+</div>
+</div>
+ 
+
+</body>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
