@@ -1,6 +1,7 @@
 Title: Generating Python Bindings
 Date: 2017-11-26 21:00
 Category: Blog
+Summary: I wrote a tool to generate Cython wrappers for C++ code that I presented in this article.
 
 I often write C++ code and I often use Python. I usually want to use my C++ code in Python.
 There are many tools that simplify the work of writing Python bindings ([Cython](http://docs.cython.org/en/latest/src/tutorial/clibraries.html), [SWIG](http://www.swig.org/), [Boost.Python](https://wiki.python.org/moin/boost.python), [pybind11](https://github.com/wjakob/pybind11), [CLIF](https://github.com/google/clif), ...). I personally like Cython. Most C++ features can be translated directly to Python with it.

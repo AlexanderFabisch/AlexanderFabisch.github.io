@@ -1,6 +1,7 @@
 Title: Learning Curves in scikit learn
 Date: 2014-01-12 14:49
 Category: Blog
+Summary: A tutorial on the new learning curve feature of scikit-learn.
 
 [scikit learn](https://github.com/scikit-learn/scikit-learn) is a great
 machine learning library for Python. It offers broad range of machine

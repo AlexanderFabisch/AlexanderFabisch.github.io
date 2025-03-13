@@ -1,6 +1,7 @@
 Title: LaTeX for Dissertations
 Date: 2020-10-04 14:00
 Category: Blog
+Summary: This is a brief summary of how the LaTeX code of my dissertation is structured.
 
 Since writing a dissertation is usually something that you do only once,
 I gathered a lot of knowledge that I probably won't need anymore. This is

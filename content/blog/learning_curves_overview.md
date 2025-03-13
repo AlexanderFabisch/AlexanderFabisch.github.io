@@ -1,6 +1,7 @@
 Title: Learning Curves #2
 Date: 2017-10-31 10:40
 Category: Blog
+Summary: What does the term learning curve mean?
 
 Almost everyone working in the field of machine learning is usually pretty
 sure about what a learning curve is. It seems to be intuitive. The problem

@@ -1,6 +1,7 @@
 Title: Slither
 Date: 2017-01-20 01:00
 Category: Blog
+Summary: A private replacement for online training logs.
 
 All the commercial services that allow you to record your sport activities
 like [Polar Flow](https://flow.polar.com/),

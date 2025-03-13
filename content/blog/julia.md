@@ -1,6 +1,7 @@
 Title: Julia
 Date: 2013-09-08 12:11
 Category: Blog
+Summary: My opinion on the Julia programming language.
 
 [Julia](http://julialang.org/) is a new programming language for the
 scientific community. Its main advantage over Matlab, R, etc. is its

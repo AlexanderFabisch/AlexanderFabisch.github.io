@@ -1,3 +1,4 @@
 Title: How to Provide a Reinforcement Learning Environment with Gymnasium
 Date: 2024-10-12 15:40
 Category: Blog
+Summary: This is a guide on how to set up a reinforcement learning (RL) environment that is compatible to the Gymnasium 1.0 interface.
