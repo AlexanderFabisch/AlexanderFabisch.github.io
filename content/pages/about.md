@@ -4,7 +4,7 @@ Category: About
 
 Contact me at afabisch+contact at googlemail.com
 
-## Brief CV:
+## Brief CV
 
 Alexander Fabisch received his diploma degree in computer science
 from the University of Bremen in 2012. From 2012 to 2017 he worked
