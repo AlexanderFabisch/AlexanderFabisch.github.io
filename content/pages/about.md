@@ -25,5 +25,5 @@ My research was conducted in various projects, mainly the following:
 * 2019-2021: [TransFIT](https://robotik.dfki-bremen.de/en/research/projects/transfit.html)
 * 2017-2019: [COROMA](https://robotik.dfki-bremen.de/en/research/projects/coroma.html)
 * 2017-2019: [InFuse](https://robotik.dfki-bremen.de/en/research/projects/infuse-og3.html)
-* 2012-2016: [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html) (at the University of Bremen)
+* 2012-2016: [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman.html) (at the University of Bremen)
 * 2009-2011: [B-Human](http://www.b-human.de/) (as a student I participated in the RoboCup SPL)
