@@ -8,6 +8,20 @@ Here are some of my open source projects.
 <table align="center" style="border-spacing: 15px; border-collapse: separate; max-width:800px;">
   <tbody>
     <tr>
+      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/gmr">gmr</a>
+        - An implementation of Gaussian mixture models for clustering and regression. (Python)<br/>
+        There is an implementation of Gaussian Mixture Models for clustering in scikit-learn as well. Regression could not be easily integrated in the interface of sklearn. That is the reason why I put the code in a separate repository.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">
+        <img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=75% />
+      </td>
+    </tr>
+    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/gmr?style=social"/><a href="https://pypi.org/project/gmr/"><img src="https://img.shields.io/pypi/dm/gmr"/></a></td></tr>
+    <tr><td></td><td></td></tr>
+
+    <tr>
       <td style="vertical-align:top;">
         <a href="https://github.com/dfki-ric/pytransform3d">pytransform3d</a>
         - A tool for handling transformations (conversions, plotting, editing, ...) (Python)<br/>
@@ -37,20 +51,6 @@ Here are some of my open source projects.
     <tr><td></td></tr>
 
     <tr>
-      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/gmr">gmr</a>
-        - An implementation of Gaussian mixture models for clustering and regression. (Python)<br/>
-        There is an implementation of Gaussian Mixture Models for clustering in scikit-learn as well. Regression could not be easily integrated in the interface of sklearn. That is the reason why I put the code in a separate repository.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">
-        <img src="https://raw.githubusercontent.com/AlexanderFabisch/gmr/master/gmr.png" width=75% />
-      </td>
-    </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/gmr?style=social"/><a href="https://pypi.org/project/gmr/"><img src="https://img.shields.io/pypi/dm/gmr"/></a></td></tr>
-    <tr><td></td><td></td></tr>
-
-    <tr>
       <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/distance3d">distance3d</a>
         - Distance computation and collision detection in 3D. (Python)<br/>
         Various collision detection and distance calculation methods as well as contact normal and force computation.
@@ -62,6 +62,20 @@ Here are some of my open source projects.
       </td>
     </tr>
     <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/distance3d?style=social"/><a href="https://pypi.org/project/distance3d/"><img src="https://img.shields.io/pypi/dm/distance3d"/></a></td></tr>
+    <tr><td></td></tr>
+
+    <tr>
+      <td style="vertical-align:top;"><a href="https://github.com/mlaux1/rl-blox">RL-BLOX</a>
+        - Reinforcement learning algorithm building blocks. (Python)<br/>
+        This project contains modular implementations of various model-free and model-based RL algorithms and consists of deep neural network-based as well as tabular representation of Q values, policies, etc. which can be used interchangeably. The goal of this project is for the authors to learn by reimplementing various RL algorithms and to eventually provide an algorithmic toolbox for research purposes.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">
+        <img src="https://raw.githubusercontent.com/mlaux1/rl-blox/refs/heads/main/doc/source/_static/blox.svg" width=75% />
+      </td>
+    </tr>
+    <tr><td><img src="https://img.shields.io/github/stars/mlaux1/rl-blox?style=social"/></td></tr>
     <tr><td></td></tr>
 
     <tr>
@@ -88,20 +102,6 @@ Here are some of my open source projects.
 
     <tr>
       <td style="vertical-align:top;">
-        <a href="https://github.com/rock-learning/bolero">BOLeRo</a> - Behavior Optimization and Learning for Robots. (C++, Python)<br/>
-        BOLeRo provides tools to learn behaviors for robots. It includes behavior representations as well as reinforcement learning, black-box optimization, evolutionary algorithms, and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">
-        <img src="https://raw.githubusercontent.com/rock-learning/bolero/master/doc/source/_static/logo.png" width=75% />
-      </td>
-    </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/rock-learning/bolero?style=social"/></td></tr>
-    <tr><td></td></tr>
-
-    <tr>
-      <td style="vertical-align:top;">
         <a href="https://github.com/OpenANN/OpenANN">OpenANN</a>
         - A library for artificial neural networks. (C++, Python)<br/>
         OpenANN is an open source library for artificial neural networks. It is open for users that want to apply ANN to their problems, developers and researchers that want to implement new technologies and students that want to understand the tricks that are required to implement neural networks. It follows a minimal dependency policy, i.e. we rely on only a few libraries and tools. It is not designed to use the full potential of GPUs though, but it is possible to run it on very limited systems, e.g. robotic platforms.</td>
@@ -112,34 +112,6 @@ Here are some of my open source projects.
       </td>
     </tr>
     <tr><td><img src="https://img.shields.io/github/stars/OpenANN/OpenANN?style=social"/></td></tr>
-    <tr><td></td></tr>
-
-    <tr>
-      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/CMA-ESpp">CMA-ESpp</a>
-        - Implementation of the derivative-free optimization algorithm CMA-ES. (C++)<br/>
-        The code is based on Hansen's ANSI C implementation of CMA-ES.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Concept_of_directional_optimization_in_CMA-ES_algorithm.png" width=75% />
-      </td>
-    </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/CMA-ESpp?style=social"/></td></tr>
-    <tr><td></td></tr>
-
-    <tr>
-      <td style="vertical-align:top;"><a href="https://github.com/AlexanderFabisch/cythonwrapper">cythonwrapper</a>
-        - Automatically generates a Cython wrapper for C++ code. (Python, Cython)<br/>
-        This tool is able to parse C++ headers and automatically generate Python bindings from it. It makes use of Clang for parsing and Cython for to build the extension.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">
-        <img src="../images/code_cythonwrapper.png" width=75% />
-      </td>
-    </tr>
-    <tr><td><img src="https://img.shields.io/github/stars/AlexanderFabisch/cythonwrapper?style=social"/></td></tr>
     <tr><td></td></tr>
   </tbody>
 </table>
