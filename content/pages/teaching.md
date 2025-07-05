@@ -16,3 +16,6 @@ Projects
 
 **03-IBPJ-GRIPS4ST Project GRIPS4Students (computer science, bachelor)** (WiSe 24/25 - SoSe 2025)
 [➤ Project description (German)](https://robotik.dfki-bremen.de/en/teaching/student-projects/details/grips4students)
+
+**Project GRIPS4Students (computer science, master)** (WiSe 25/26 - SoSe 2026)
+[➤ Project description (German)](https://robotik.dfki-bremen.de/en/teaching/student-projects/details/grips4students)
