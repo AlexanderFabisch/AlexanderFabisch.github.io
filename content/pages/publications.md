@@ -12,7 +12,7 @@ Robotic Manipulation
 --------------------
 
 Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2025).<br/>
-**Do Robots Really Need Anthropomorphic Hands?**.<br/>
+**Do Robots Really Need Anthropomorphic Hands?**<br/>
 Submitted.<br/>
 [arxiv.org](https://arxiv.org/abs/2508.05415)
 
