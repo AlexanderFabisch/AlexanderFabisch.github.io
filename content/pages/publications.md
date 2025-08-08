@@ -8,6 +8,14 @@ You can find an overview of my publications at
 I use this page to collect all information about my publications,
 including posters, presentations, video, data, and code.
 
+Robotic Manipulation
+--------------------
+
+Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2025).<br/>
+**Do Robots Really Need Anthropomorphic Hands?**.<br/>
+Submitted.<br/>
+[arxiv.org](https://arxiv.org/abs/2508.05415)
+
 Robot Skill Learning
 --------------------
 
