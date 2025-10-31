@@ -185,10 +185,20 @@ In E. Chown, A. Matsumoto, P. Ploeger, Ruiz–del–Solar, J. (Eds.), RoboCup 20
 Talks
 -----
 
+Fabisch, A. (2025).<br/>
+**Robotics, AI, and the Language of Movement.**<br/>
+At *OHB NextGen Speakersnight with DFKI*<br/>
+Slides available on request
+
+Fabisch, A. (2025).<br/>
+**Learning Robotic Manipulation from Human Demonstrations.**<br/>
+At *L3S's Robot Learning Seminar (Leibniz Universität Hannover)*<br/>
+Slides available on request
+
 Fabisch, A. (2023).<br/>
 **Transformations in Three Dimensions.**<br/>
 At *EuroSciPy 2023*<br/>
-[Abstract](https://pretalx.com/euroscipy-2023/talk/TVJEAD/)
+[Abstract](https://pretalx.com/euroscipy-2023/talk/TVJEAD/) [Video](https://youtu.be/lNorqFwivTE?si=K7ZArAY7ktrRHD-I)
 
 Michalec, R., Martinez-Gonzalez, X., Fabisch, A. (2019).<br/>
 **"It works on my machine" - working as a research software engineer in a multi-partner international research project**.<br/>
