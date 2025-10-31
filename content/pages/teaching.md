@@ -19,3 +19,15 @@ Projects
 
 **Project GRIPS4Students (computer science, master)** (WiSe 25/26 - SoSe 2026)
 [➤ Project description (German)](https://robotik.dfki-bremen.de/en/teaching/student-projects/details/grips4students)
+
+Supervised Theses
+-----------------
+
+* 2015, Master's thesis: Contextual Policy Search for Ball-Throwing on a Real Robot
+* 2017, Bachelor's thesis: Generative Adversarial Networks for Enhancement of Robotic Simulations (Original: Generative Adversarial Networks zur Verbesserung robotischer Simulationen)
+* 2019, Master's thesis: Systematic Analysis of Machine Learning Approaches to Solve the Problem of Inverse Kinematics (Original: Systematische Analyse maschineller Lernverfahren zur Lösung des Problems der inversen Kinematik)
+* 2022, Master's thesis: Human Hand Motion Embodiment Mapping from RGB Images to Robotic Hands
+* 2022, Master's thesis: Moral Responsibility and Meaningful Human Control in Lethal Autonomous Weapon Systems (Original: Moralische Verantwortung und Meaningful Human Control bei Letalen Autonomen Waffensystemen (LAWS))
+* 2023, Bachelor's thesis: Experimental Comparison of Goal-Conditioned Reinforcement Learning and Contextual Policy Search (Original: Experimenteller Vergleich von Goal-Conditioned Reinforcement Learning und Contextual Policy Search)
+* 2024, Master's thesis: Evaluation of Metrics for Human-Like Grasps
+* 2025, Master's thesis: Grasp Stability Estimation for an Anthropomorphic Hand
