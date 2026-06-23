@@ -16,8 +16,19 @@ Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2025).<br/>
 Submitted.<br/>
 [arxiv.org](https://arxiv.org/abs/2508.05415)
 
+Fabisch, A., Uliano, M., Marschner, D., Laux, M., Brust, J., Controzzi, M. (2022).<br/>
+**A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
+In K. Mombaur, D. Lee & J. Park (Eds.), IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS).<br/>
+DOI: 10.1109/Humanoids53995.2022.10000165<br/>
+[IEEE](https://ieeexplore.ieee.org/document/10000165) [Preprint](https://arxiv.org/abs/2203.02778) [Slides](../downloads/2022_humanoids_slides.pptx) [Code](https://github.com/dfki-ric/hand_embodiment) [Dataset](https://doi.org/10.5281/zenodo.7130208)
+
 Robot Skill Learning
 --------------------
+
+Lödige, M., Fabisch, A., Gutzeit, L. (2026).<br/>
+**Qualitative Comparison between Marker-Based and Video-Based Human Pose Estimation in the context of Imitation Learning**.<br/>
+In D. Wolter, G. Schwalbe (Eds.), KI 2026: Advances in Artificial Intelligence. Springer.<br/>
+Accepted.
 
 Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2024).<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
@@ -34,12 +45,6 @@ Laux, M., Singh, C., Fabisch, A. (2023).<br/>
 **Grasping 3D Deformable Objects via Reinforcement Learning: A Benchmark and Evaluation**.<br/>
 In D. Seita, M. Lippi, M. C. Welle & F. Zhang (Eds.), 3rd Workshop on Representing and Manipulating Deformable Objects @ ICRA2023.<br/>
 [PDF](https://deformable-workshop.github.io/icra2023/spotlight/03-Laux-spotlight.pdf) [Video](https://www.youtube.com/watch?v=uREUpPOUn9g) [Code](https://github.com/dfki-ric/deformable_gym)
-
-Fabisch, A., Uliano, M., Marschner, D., Laux, M., Brust, J., Controzzi, M. (2022).<br/>
-**A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
-In K. Mombaur, D. Lee & J. Park (Eds.), IEEE-RAS International Conference on Humanoids Robots (HUMANOIDS).<br/>
-DOI: 10.1109/Humanoids53995.2022.10000165<br/>
-[IEEE](https://ieeexplore.ieee.org/document/10000165) [Preprint](https://arxiv.org/abs/2203.02778) [Slides](../downloads/2022_humanoids_slides.pptx) [Code](https://github.com/dfki-ric/hand_embodiment) [Dataset](https://doi.org/10.5281/zenodo.7130208)
 
 Fabisch, A., Kirchner, F. (2021).<br/>
 **Sample-Efficient Policy Search with a Trajectory Autoencoder**.<br/>
@@ -96,8 +101,32 @@ Künstliche Intelligenz, 28, 15-20.<br/>
 DOI: 10.1007/s13218-013-0280-1<br/>
 [Springer](http://link.springer.com/article/10.1007/s13218-013-0280-1) [Preprint](https://www.dfki.de/fileadmin/user_upload/import/7056_131009_Towards_Learning_of_Generic_Skills_for_Robotic_Manipulation_KI_Metzen.pdf)
 
+Space
+-----
+
+De Lucas Alvarez, M., Laux, M., Martin, M., Caroselli, E., Kirchner, F., Fabisch, A. (2026).<br/>
+**Attribution and Uncertainty Behavior of Learned Residual Gyro Correction for Gyro-Stellar Estimation**.<br/>
+Proceedings of the Second International Workshop on Explainable AI in Space (EASi).<br/>
+Accepted.
+
+Fabisch, A., Laux, M., De Lucas Alvarez, M., Caroselli, E., Theis, J. (2026).<br/>
+**Deep Reinforcement Learning for Spacecraft Attitude Control During Atmospheric Re-Entry**.<br/>
+Reinforcement Learning Journal.<br/>
+Accepted.
+
+Caroselli, E., Martin, M., de Freitas Precht, A., De Luca, M., Cuko, N., Theis, J., Laux, M., De Lucas Alvarez, M., Fabisch, A. (2026).<br/>
+**Hybrid AI Architectures for Enhanced Spacecraft AOCS: Design, Verification, and FPGA Deployment on Critical Benchmarks**.<br/>
+ESA GNC & ICATT Conference.<br/>
+Accepted.
+
 Software Development
 --------------------
+
+Fabisch, A., Popescu, M. (2026).<br/>
+**New Features of pytransform3d for Robotics Research: Transformation Graphs, Uncertainty, and 3D Visualization in Python**.<br/>
+Frontiers in Robotics and AI.<br/>
+Accepted.<br/>
+[pytransform3d](https://github.com/dfki-ric/pytransform3d) [Code](https://github.com/AlexanderFabisch/pytransform3d-frontiers-rai)
 
 Fabisch, A. (2021).<br/>
 **gmr: Gaussian Mixture Regression**.<br/>
@@ -174,7 +203,7 @@ In E. Pagello, C. Zhou, S. Behnke, E. Menegatti, T. Röfer and P. Stone (Eds.), 
 [PDF](https://www.b-human.de/downloads/publications/2010/Humanoids-Fabisch-etal-10.pdf)
 
 Röfer, T., Laue, T., Müller, J., Burchardt, A., Damrose, E., Fabisch, A., Feldpausch, F., Gillmann, K., Graf, C., de Haas, T. J., Härtl, A., Honsel, D., Kastner, P., Kastner, T., Markowsky, B., Mester, M., Peter, J., Riemann, O. J. L., Ring, M., Sauerland, W., Schreck, A., Sieverdingbeck, I., Wenk, F., Worch, J.-H. (2010).<br/>
-**B-Human Team Report and Code Release 2010**<br/>
+**B-Human Team Report and Code Release 2010**.<br/>
 [PDF](https://b-human.de/downloads/publications/2010/bhuman10_coderelease.pdf)
 
 Röfer, T., Laue, T., Graf, C., Kastner, T., Fabisch, A., Thedieck, C. (2010).<br/>
