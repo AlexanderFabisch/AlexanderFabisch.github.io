@@ -112,7 +112,8 @@ Accepted.
 Fabisch, A., Laux, M., De Lucas Alvarez, M., Caroselli, E., Theis, J. (2026).<br/>
 **Deep Reinforcement Learning for Spacecraft Attitude Control During Atmospheric Re-Entry**.<br/>
 Reinforcement Learning Journal.<br/>
-Accepted.
+Accepted.<br/>
+[Website](https://dfki-ric.github.io/rlc-spacecraft-attitude/) [arxiv](https://arxiv.org/abs/2606.31291) [Code (rl-blox)](https://github.com/mlaux1/rl-blox/)
 
 Caroselli, E., Martin, M., de Freitas Precht, A., De Luca, M., Cuko, N., Theis, J., Laux, M., De Lucas Alvarez, M., Fabisch, A. (2026).<br/>
 **Hybrid AI Architectures for Enhanced Spacecraft AOCS: Design, Verification, and FPGA Deployment on Critical Benchmarks**.<br/>
