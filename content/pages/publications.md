@@ -150,12 +150,12 @@ DOI: 10.21105/joss.01159<br/>
 Post, M., Michalec, R., Bianco, A., Yan, X., De Maio, A., Labourey, Q., Lacroix, S., Gancet, J., Govindaraj, S., Martinez-Gonzalez, X., Dalati, I., Domínguez, R., Wehbe, B., Fabisch, A., Rohrig, E., Souvannavong, F., Bissonnette, F., Smisek, M., Oumer, N. W., Meyer, L., Marton, Z.-C.. (2018).<br/>
 **InFuse data fusion methodology for space robotics, awareness and machine learning**.<br/>
 In 69th International Astronautical Congress (IAC). Curran Associates, Inc.<br/>
-[Preprint](https://hal.laas.fr/hal-02092238/document)
+[Preprint](https://laas.hal.science/hal-02092238v1/file/POST-IAC-2018.pdf)
 
 Dominguez, R., Govindaraj, S., Gancet, J., Post, M., Michalec, R., Oumer, N., Wehbe, B., Bianco, A., Fabisch, A., Lacroix, S., de Maio, A., Labourey, Q., Souvannavong, F., Bissonnette, V., Smisek, M., Yan, X. (2018).<br/>
 **A Common Data Fusion Framework for Space Robotics: Architecture and Data Fusion Methods**.<br/>
 In *International Symposium on Artificial Intelligence, Robotics and Automation in Space* (2018)<br/>
-[Preprint](https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf)
+[Preprint]([https://strathprints.strath.ac.uk/64166/14/Dominguez_etal_I_SAIRAS_2018_A_common_data_fusion_framework_for_space.pdf](https://www.dfki.de/fileadmin/user_upload/import/9821_Data_Fusion_Framework_and_Methods_-_i-SAIRAS_2018.pdf))
 
 Govindaraj, S., Gancet, J., Post, M., Dominguez, R., Souvannavong, F., Lacroix, S., Smisek, M., Hildalgo-Carrio, J., Wehbe, B., Fabisch, A., De Maio, A., Oumer, N., Bissonnette, V., Marton, Z.-C., Kottath, S., Nissler, C., Yan, X., Trieble, R., Nuzzolo, F. (2017).<br/>
 **InFuse: A Comprehensive Framework for Data Fusion in Space Robotics**.<br/>
