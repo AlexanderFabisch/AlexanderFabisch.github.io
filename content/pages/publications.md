@@ -25,10 +25,10 @@ DOI: 10.1109/Humanoids53995.2022.10000165<br/>
 Robot Skill Learning
 --------------------
 
-Lödige, M., Fabisch, A., Gutzeit, L. (2026).<br/>
+Lödige, M., Fabisch, A., Gutzeit, L. (2027).<br/>
 **Qualitative Comparison between Marker-Based and Video-Based Human Pose Estimation in the context of Imitation Learning**.<br/>
-In D. Wolter, G. Schwalbe (Eds.), KI 2026: Advances in Artificial Intelligence. Springer.<br/>
-Accepted.
+In: Wolter, D., Schwalbe, G. (Eds.) KI 2026: Advances in Artificial Intelligence. KI 2026. Lecture Notes in Computer Science, vol 16830. Springer, Cham. https://doi.org/10.1007/978-3-032-32335-4_22<br/>
+[Springer](https://link.springer.com/chapter/10.1007/978-3-032-32335-4_22) [Preprint]()
 
 Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2024).<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
