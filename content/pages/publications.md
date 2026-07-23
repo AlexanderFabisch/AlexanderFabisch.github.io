@@ -13,8 +13,8 @@ Robotic Manipulation
 
 Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2025).<br/>
 **Do Robots Really Need Anthropomorphic Hands?**<br/>
-Submitted.<br/>
-[arxiv.org](https://arxiv.org/abs/2508.05415) [Code](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
+Journal of Intelligent & Robotic Systems 112(3).<br/>
+[Springer](https://doi.org/10.1007/s10846-026-02431-8) [arxiv.org](https://arxiv.org/abs/2508.05415) [Code](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
 
 Fabisch, A., Uliano, M., Marschner, D., Laux, M., Brust, J., Controzzi, M. (2022).<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
