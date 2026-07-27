@@ -11,7 +11,7 @@ including posters, presentations, video, data, and code.
 Robotic Manipulation
 --------------------
 
-Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2025).<br/>
+Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2026).<br/>
 **Do Robots Really Need Anthropomorphic Hands?**<br/>
 Journal of Intelligent & Robotic Systems 112(3).<br/>
 [Springer](https://doi.org/10.1007/s10846-026-02431-8) [arxiv.org](https://arxiv.org/abs/2508.05415) [Code](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
