@@ -14,7 +14,7 @@ Robotic Manipulation
 Fabisch, A., Zai El Amri, W., Singh, C., Navarro-Guerrero, N. (2026).<br/>
 **Do Robots Really Need Anthropomorphic Hands?**<br/>
 Journal of Intelligent & Robotic Systems 112(3).<br/>
-[Springer](https://doi.org/10.1007/s10846-026-02431-8) [arxiv.org](https://arxiv.org/abs/2508.05415) [Code](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
+[Springer](https://doi.org/10.1007/s10846-026-02431-8) [Preprint](https://arxiv.org/abs/2508.05415) [Code](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
 
 Fabisch, A., Uliano, M., Marschner, D., Laux, M., Brust, J., Controzzi, M. (2022).<br/>
 **A Modular Approach to the Embodiment of Hand Motions from Human Demonstrations**.<br/>
@@ -107,7 +107,8 @@ Space
 De Lucas Alvarez, M., Laux, M., Martin, M., Caroselli, E., Kirchner, F., Fabisch, A. (2026).<br/>
 **Attribution and Uncertainty Behavior of Learned Residual Gyro Correction for Gyro-Stellar Estimation**.<br/>
 Proceedings of the Second International Workshop on Explainable AI in Space (EASi).<br/>
-Accepted.
+Accepted.<br/>
+[Preprint](https://arxiv.org/abs/2607.24608)
 
 Fabisch, A., Laux, M., De Lucas Alvarez, M., Caroselli, E., Theis, J. (2026).<br/>
 **Deep Reinforcement Learning for Spacecraft Attitude Control During Atmospheric Re-Entry**.<br/>
