@@ -119,7 +119,8 @@ Accepted.<br/>
 Caroselli, E., Martin, M., de Freitas Precht, A., De Luca, M., Cuko, N., Theis, J., Laux, M., De Lucas Alvarez, M., Fabisch, A. (2026).<br/>
 **Hybrid AI Architectures for Enhanced Spacecraft AOCS: Design, Verification, and FPGA Deployment on Critical Benchmarks**.<br/>
 ESA GNC & ICATT Conference.<br/>
-Accepted.
+Accepted.<br/>
+[Website](https://dfki-ric.github.io/ric-gyrostellar-xai-uq/)
 
 Software Development
 --------------------
