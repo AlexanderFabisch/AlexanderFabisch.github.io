@@ -104,10 +104,9 @@ DOI: 10.1007/s13218-013-0280-1<br/>
 Space
 -----
 
-De Lucas Alvarez, M., Laux, M., Martin, M., Caroselli, E., Kirchner, F., Fabisch, A. (2026).<br/>
+De Lucas Alvarez, M., Laux, M., Martin, M., Caroselli, E., Kirchner, F., Fabisch, A. (2027).<br/>
 **Attribution and Uncertainty Behavior of Learned Residual Gyro Correction for Gyro-Stellar Estimation**.<br/>
-Proceedings of the Second International Workshop on Explainable AI in Space (EASi).<br/>
-Accepted.<br/>
+In: J. Nalepa, P. Biecek, K. Kotowski, L. Tulczyjew, M. Kraft, N. Longepe, E. V. Ntagiou, A. M. Wijata (Eds.), Proceedings of the Second International Workshop for Explainable AI in Space, EASi 2026, Held in Conjunction with the 35th International Joint Conference on Artificial Intelligence, IJCAI-ECAI 2026. August 17, Bremen, Germany, Pages 124-144, Communications in Computer and Information Science (CCIS), Vol. 3107, ISBN 978-3-032-36805-8 / 978-3-032-36806-5, Springer Nature, Cham, Switzerland, 2027.<br/>
 [Preprint](https://arxiv.org/abs/2607.24608)
 
 Fabisch, A., Laux, M., De Lucas Alvarez, M., Caroselli, E., Theis, J. (2026).<br/>
