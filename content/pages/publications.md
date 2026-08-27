@@ -111,9 +111,9 @@ In: J. Nalepa, P. Biecek, K. Kotowski, L. Tulczyjew, M. Kraft, N. Longepe, E. V.
 
 Fabisch, A., Laux, M., De Lucas Alvarez, M., Caroselli, E., Theis, J. (2026).<br/>
 **Deep Reinforcement Learning for Spacecraft Attitude Control During Atmospheric Re-Entry**.<br/>
-Reinforcement Learning Journal.<br/>
+Reinforcement Learning Journal 7.<br/>
 Accepted.<br/>
-[Website](https://dfki-ric.github.io/rlc-spacecraft-attitude/) [Preprint](https://arxiv.org/abs/2606.31291) [Code (rl-blox)](https://github.com/mlaux1/rl-blox/) [Poster](https://dfki-ric.github.io/rlc-spacecraft-attitude/static/pdfs/poster.pdf) [Slides](https://dfki-ric.github.io/rlc-spacecraft-attitude/static/pdfs/slides.pdf)
+[RLJ](https://rlj.cs.umass.edu/2026/papers/Paper5.html) [Website](https://dfki-ric.github.io/rlc-spacecraft-attitude/) [Preprint](https://arxiv.org/abs/2606.31291) [Code (rl-blox)](https://github.com/mlaux1/rl-blox/) [Poster](https://dfki-ric.github.io/rlc-spacecraft-attitude/static/pdfs/poster.pdf) [Slides](https://dfki-ric.github.io/rlc-spacecraft-attitude/static/pdfs/slides.pdf)
 
 Caroselli, E., Martin, M., de Freitas Precht, A., De Luca, M., Cuko, N., Theis, J., Laux, M., De Lucas Alvarez, M., Fabisch, A. (2026).<br/>
 **Hybrid AI Architectures for Enhanced Spacecraft AOCS: Design, Verification, and FPGA Deployment on Critical Benchmarks**.<br/>
