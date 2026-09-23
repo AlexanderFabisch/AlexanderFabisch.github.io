@@ -31,3 +31,4 @@ Supervised Theses
 * 2023, Bachelor's thesis: Experimental Comparison of Goal-Conditioned Reinforcement Learning and Contextual Policy Search (Original: Experimenteller Vergleich von Goal-Conditioned Reinforcement Learning und Contextual Policy Search)
 * 2024, Master's thesis: Evaluation of Metrics for Human-Like Grasps
 * 2025, Master's thesis: Grasp Stability Estimation for an Anthropomorphic Hand
+* 2026, Bachelor's thesis: Applicability of Model-Based Reinforcement Learning to Continuous Control Tasks in the Real World
