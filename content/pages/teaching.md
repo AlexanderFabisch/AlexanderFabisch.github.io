@@ -32,3 +32,4 @@ Supervised Theses
 * 2024, Master's thesis: Evaluation of Metrics for Human-Like Grasps
 * 2025, Master's thesis: Grasp Stability Estimation for an Anthropomorphic Hand
 * 2026, Bachelor's thesis: Applicability of Model-Based Reinforcement Learning to Continuous Control Tasks in the Real World
+* 2026, Bachelor's thesis: Benchmarking Collision Detection Algorithms in Complex Collision Environments in the Context of Dual-Arm Robots
