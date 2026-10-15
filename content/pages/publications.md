@@ -270,7 +270,7 @@ Review Activities
 
 * Workshops: various NeurIPS workshops
 * Conferences: IEEE ICRA, IEEE IROS, IEEE Humanoids
-* Journals: AI Perspectives, IEEE RA-L, Journal of Open Source Software, Frontiers in Robotics and AI
+* Journals: AI Perspectives, IEEE RA-L, IEEE Transactions on Robot Lerning, Journal of Open Source Software, Frontiers in Robotics and AI
 * Funding agencies: DFG
 
 Acknowledgments
