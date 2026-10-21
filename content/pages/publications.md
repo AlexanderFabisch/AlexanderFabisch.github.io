@@ -126,9 +126,9 @@ Software Development
 
 Fabisch, A., Popescu, M. (2026).<br/>
 **New Features of pytransform3d for Robotics Research: Transformation Graphs, Uncertainty, and 3D Visualization in Python**.<br/>
-Frontiers in Robotics and AI.<br/>
-Accepted.<br/>
-[pytransform3d](https://github.com/dfki-ric/pytransform3d) [Code](https://github.com/AlexanderFabisch/pytransform3d-frontiers-rai)
+Frontiers in Robotics and AI 13:1860457.<br/>
+DOI: 10.3389/frobt.2026.1860457<br/>
+[Frontiers](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1860457/full) [pytransform3d](https://github.com/dfki-ric/pytransform3d) [Code](https://github.com/AlexanderFabisch/pytransform3d-frontiers-rai)
 
 Fabisch, A. (2021).<br/>
 **gmr: Gaussian Mixture Regression**.<br/>
