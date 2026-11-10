@@ -25,10 +25,15 @@ DOI: 10.1109/Humanoids53995.2022.10000165<br/>
 Robot Skill Learning
 --------------------
 
+Origanti, V.K., Fabisch, A., Kirchner, F. (2026).<br/>
+**CVLAMP: Compliant Vision Language Action Movement Primitives.**<br/>
+In Late-Breaking Result, IEEE/RSJ International Conference on Intelligent Robots and Systems.<br/>
+[DFKI](https://robotik.dfki-bremen.de/en/research/publications/17787)
+
 Lödige, M., Fabisch, A., Gutzeit, L. (2027).<br/>
 **Qualitative Comparison between Marker-Based and Video-Based Human Pose Estimation in the context of Imitation Learning**.<br/>
 In: Wolter, D., Schwalbe, G. (Eds.) KI 2026: Advances in Artificial Intelligence. KI 2026. Lecture Notes in Computer Science, vol 16830. Springer, Cham. https://doi.org/10.1007/978-3-032-32335-4_22<br/>
-[Springer](https://link.springer.com/chapter/10.1007/978-3-032-32335-4_22) [Preprint]()
+[Springer](https://link.springer.com/chapter/10.1007/978-3-032-32335-4_22)
 
 Fabisch, A., Petzoldt, C., Otto, M., Kirchner, F. (2024).<br/>
 **A Survey of Behavior Learning Applications in Robotics - State of the Art and Perspectives**.<br/>
